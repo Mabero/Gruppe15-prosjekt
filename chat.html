@@ -1,15 +1,17 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <script src="index.js"></script>
+        <script src="chat.js"></script>
+        <link rel="stylesheet" type="text/css" href="chat.css">
+
         
         <div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Tabula Chat</h1>
+  <form action="messeage send" class="form-container">
+    <h1 style="color: #ff7f50">Tabula Chat</h1>
 
     <label for="msg"><b>Message</b></label>
     <textarea placeholder="Type message.." name="msg" required></textarea>
-           <link rel="stylesheet" type="text/css" href="index.css">
-
+           
     <button type="submit" class="btn">Send</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
