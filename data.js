@@ -42,5 +42,5 @@ let team = [
 
 
 let assignments = [
-  
+
 ];
