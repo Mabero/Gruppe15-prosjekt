@@ -6,10 +6,10 @@
     </header>
     <body>
         <div id=background>
-            <div class="listWrap" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="list"  id=list_1 >
+            <div class="listWrap">
+                <div class="list" ondrop="drop(event)" ondragover="allowDrop(event)" id=list_1 >
                     
-                    <div class="card" id=card_1 draggable="true" ondragstart="drag(event)">
+                    <div class="card" id=card_1 draggable="true" ondragstart="drag(event)" ondrop=>
                         <p> test </p>
                     </div>
                     <div class=card id=card_2 draggable="true" ondragstart="drag(event)">
@@ -17,8 +17,8 @@
                     </div>
                 </div>
             </div>
-            <div class="listWrap" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="list" id=list_2>
+            <div class="listWrap">
+                <div class="list" ondrop="drop(event)" ondragover="allowDrop(event)"id=list_2>
                     
                     <div class=card id=card_3 draggable="true" ondragstart="drag(event)">
                         <p> test 3</p>
