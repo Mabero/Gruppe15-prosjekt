@@ -108,6 +108,35 @@ body {
     top: 5px;
 }
 
+/* Representasjon av hvordan et prosjekt kan se ut i kalenderen */
+
+#project1{
+  height: 5px;
+  width: 270px;
+  background: rgb(127, 127, 255);
+  position: absolute;
+  top: 70px;
+  left: 200px;
+  box-shadow: 0px 0px 5px #fff;
+}
+
+#dot1{
+  left: 0px;
+}
+
+#dot2{
+  right: 0px;
+}
+
+.projectDots{
+  top: -2px;
+  height: 10px;
+  width: 10px;
+  background: rgb(37, 150, 243);
+  border-radius: 50%;
+  position: absolute;
+}
+
 
 
 
