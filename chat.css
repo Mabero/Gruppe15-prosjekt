@@ -1,14 +1,14 @@
 /* button to get the pop up chat*/
 .open-button {
-  background-color: #555555;
+  background-color: #566360;
   color: #ffffff;
-  padding: 20px 20px;
+  padding: 15px 0px;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0,2;
   position: fixed;
   top: 0px;
   right: 28px;
-  width: 280px;
+  width: 150px;
 }
 
 /*  popup chat  */
@@ -21,7 +21,16 @@
   z-index: 19;
 }
 
+/* writing in placeholder */
+#msg-1{
+   font-family: sans-serif;
+   font-size: 12px;
 
+}
+#msg-2{
+tab-size: 900px;
+}
+/* box size */
 .form-container {
   max-width: 300px;
   padding: 10px;
@@ -33,7 +42,7 @@
   width: 100%;
   padding: 0px;
   margin: 0px 0px 0px;
-  border: none;
+  border-radius:0px;
   background: #f1f1f1;
   resize: none;
   min-height: 200px;
@@ -41,8 +50,9 @@
 
 /* textarea */
 .form-container textarea:focus {
-  background-color: #dddddd;
-  outline: none;
+  background-color: #ffffff;
+  outline-color: #900000;
+    
 }
 
 /* send button */

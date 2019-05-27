@@ -10,10 +10,13 @@
 <button class="open-button" onclick="openForm()">Chat</button>
 
 <div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1 style="color:orange;"> Tabula chat</h1>
+  <form action="Message received" class="form-container">
+    <h1 style="color:#ff6000;"> Tabula chat</h1>
     
-    <textarea placeholder="Type message.." name="msg" required></textarea>
+    <textarea placeholder="Type message.." id="msg-1" required></textarea>
+      
+      
+      
 
     <button type="submit" class="btn">Send</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
