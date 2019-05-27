@@ -8,5 +8,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+/*const registerBtn = document.getElementById("registerBtn");
+const loginBtn = document.getElementById("loginBtn");
+const dropDown = document.getElementById("")
 
-awdawd
+registerBtn.addEventListener('click', function() {
+   // alert("funkaa")
+    if(dropDown.style.display === "block") {
+        dropDown.style.display = "none"
+    } else {
+        dropDown.style.display = "block"
+    }
+    
+})*/
