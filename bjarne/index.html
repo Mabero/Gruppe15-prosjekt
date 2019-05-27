@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <header>
         <meta charset="UTF-8">
@@ -5,25 +6,25 @@
     </header>
     <body>
         <div id=background>
-            <div class=listWrap ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class=list id=list_1 ondragstart="drag(event)">
+            <div class="listWrap" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="list"  id=list_1 >
                     
-                    <div class=card id=card_1>
+                    <div class="card" id=card_1 draggable="true" ondragstart="drag(event)">
                         <p> test </p>
                     </div>
-                    <div class=card id=card_2>
+                    <div class=card id=card_2 draggable="true" ondragstart="drag(event)">
                         <p> test 2 </p>
                     </div>
                 </div>
             </div>
-            <div class=listWrap>
-                <div class=list id=list_2>
+            <div class="listWrap" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="list" id=list_2>
                     
-                    <div class=card id=card_21>
-                        <p> test </p>
+                    <div class=card id=card_3 draggable="true" ondragstart="drag(event)">
+                        <p> test 3</p>
                     </div>
-                    <div class=card id=card_22>
-                        <p> test 2 </p>
+                    <div class=card id=card_4 draggable="true" ondragstart="drag(event)">
+                        <p> test 4 </p>
                     </div>
                 </div>
             </div>
