@@ -1,12 +1,12 @@
-#open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
+/* button to get the pop up chat*/
+.open-button {
+  background-color: #555555;
+  color: #ffffff;
+  padding: 20px 20px;
   cursor: pointer;
   opacity: 0.8;
-  position: relative;
-  bottom: 23px;
+  position: fixed;
+  top: 0px;
   right: 28px;
   width: 280px;
 }
@@ -17,7 +17,7 @@
   position: fixed;
   bottom: 0;
   right: 15px;
-  border: px solid #f1f1f1;
+  border: 3px solid #f1f1f1;
   z-index: 19;
 }
 
@@ -39,13 +39,13 @@
   min-height: 200px;
 }
 
-/* Endre textarea når det er i bruk */
+/* textarea */
 .form-container textarea:focus {
   background-color: #dddddd;
   outline: none;
 }
 
-/* login */
+/* send button */
 .form-container .btn {
   background-color: #ff5f00;
   color: #ffffff;
@@ -62,7 +62,7 @@
   background-color: #4b0082 ;
 }
 
-/* hover effeckter på button  */
+/* hover effect on button  */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
