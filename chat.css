@@ -1,5 +1,25 @@
+#open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: relative;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
 
-
+/*  popup chat  */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: px solid #f1f1f1;
+  z-index: 19;
+}
 
 
 .form-container {
