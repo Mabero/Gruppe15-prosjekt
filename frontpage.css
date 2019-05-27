@@ -62,6 +62,7 @@ body {
     padding: 20px;
     margin-top: 10px;
     min-width: 160px;
+    height: 100px;
     right: -17px;
     z-index: 1;
   }
@@ -100,6 +101,10 @@ body {
       background-color: #3ca048;
       cursor: pointer;
       transition: 0.5s;
+  }
+
+  .feedback {
+      font-size: 10px;
   }
 
 /*=========== HERO AREA ==============*/
