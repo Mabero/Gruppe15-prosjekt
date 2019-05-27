@@ -33,6 +33,7 @@ let cards = [
         // and give it some content
         var cardTitle = document.createTextNode(input-cardTitle.value);
         var description = document.createTextNode(input-cardDesc.value);
+        newDiv.setAttribute("id", "Div1");
         // add the text node to the newly created div
         newDiv.appendChild(newContent);
 
