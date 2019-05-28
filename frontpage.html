@@ -16,16 +16,18 @@
         <a class="navLeft" href="#featuresSection">Features</a>
         <a class="navRight dropdown" href="#about">Login
                 <div class="dropdown-content">
-                        <input type="text" placeholder="Enter Username">
-                        <input type="password" placeholder="Enter Password">
-                        <button>Login</button>
+                        <input id="inputUsername" type="text" placeholder="Enter Username">
+                        <input id="inputPassword" type="password" placeholder="Enter Password">
+                        <button id="loginBtn">Login</button>
+                        <p id="loginFeedback" class="feedback"><p>
                 </div>
         </a>
         <a class="navRight dropdown" href="#about">Register
                 <div id="registerBox" class="dropdown-content">
-                        <input type="text" placeholder="Choose Your Username">
-                        <input type="password" placeholder="Choose Your Password">
-                        <button>Register</button>
+                        <input id="registerName" type="text" placeholder="Choose Your Username">
+                        <input id="registerPassword" type="password" placeholder="Choose Your Password">
+                        <button id="registerBtn">Register</button>
+                        <p id="registerFeedback" class="feedback"><p>
                 </div>
         </a>
     </div>
@@ -92,12 +94,10 @@
 
     </div>
     <div id="footer">
-        <a href="index.html">
+        <a href="frontpage.html">
             <h1>Back to top</h1>
         </a>
     </div>
-    <script src="front.js"></script>
-    test
+    <script src="frontpage.js"></script>
 </body>
-
 </html>
