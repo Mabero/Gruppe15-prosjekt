@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
-html {
+* {
     font-family: 'Montserrat', sans-serif;
 }
 body {
@@ -112,7 +112,7 @@ body {
 header {
     height: 110vh;
     width: 100%;
-    background-image: url(/bilder/Hero-bg.png);
+    background-image: url("/git/bilder/Hero-bg.png");
     background-position-y: -100px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -237,7 +237,7 @@ header {
 /*=========== TOUR SECTION ==============*/
 
 #tourSection {
-    background-image: url("../bilder/Footer-bg.png");
+    background-image: url("/git/bilder/Footer-bg.png");
     height: 900px;
     width: 100%;
     margin-top: -150px;
