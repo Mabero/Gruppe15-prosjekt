@@ -6,12 +6,10 @@ function createDiv() {
   var newDiv = document.createElement('div');
   var textTitle = document.createElement("textarea");
   var button = document.createElement('button');
+  document.body.appendChild(newDiv);
+  newDiv.appendChild(textTitle);
+  newDiv.appendChild(button);
 
-  textTitle.setAttribute("class","inputTitle");
-  button.setAttribute("id", "progressButton");
-
-
-  newDiv.setAttribute("class", "test-div");
   newDiv.style.height = "100px";
   newDiv.style.width = "200px";
   newDiv.style.color = 'white';
@@ -20,13 +18,12 @@ function createDiv() {
   newDiv.style.border = "solid black";
   newDiv.style.opacity = "0.7";
 
-  document.body.appendChild(newDiv);
-  newDiv.appendChild(textTitle);
-  newDiv.appendChild(button);
+  textTitle.setAttribute("class","inputTitle");
+  pButton.setAttribute("id", "progressButton");
+  newDiv.setAttribute("class", "test-div");
 };
 
-
-/* var cardList = [
+ var cardList = [
   {
     title: document.getElementbyId("inputTitle"),
     description: document.getElementById("inputDesc"),
