@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
          <meta charset="UTF-8">
-     <script src="chat.js"></script>
         <link rel="stylesheet" type="text/css" href="chat.css">
     </head>
 <body>
@@ -10,15 +9,18 @@
 <button class="open-button" onclick="openForm()">Chat</button>
 
 <div class="chat-popup" id="myForm">
-  <form  class="form-container">
-    <h1 style="color:#ff6000;"> Tabula chat</h1>
     
-    <textarea placeholder= "Hi, Welcome to tabula chat" id="msg" ></textarea>
+    <form class="form-container">
+    <h2 style="color:#ff6000;">Tabula chat</h2>
+    
+     <div  id="output">Hi, welcome to tabula chat</div>
       <input id="input"required placeholder="type name, epost and your messeage."/>
 
     <button id="btn-1" class="btn">Send</button>
     <button id="btn-2" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+    
+    </form>
 </div>
+    <script src="chat.js"></script>
 </body>
 </html>

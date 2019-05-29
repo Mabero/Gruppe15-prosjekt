@@ -3,19 +3,22 @@ function openForm() {
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  document.getElementById("myForm").style.display = "none";  
 }
 
 var inputElement = document.getElementById("input");
-var msgElement = document.getElementById("msg");
-
-
+var outputElement = document.getElementById("output");
 var btnElement = document.getElementById("btn-1");
 
-btnElement.addEventListener("click", function() {
-	if(inputElement.value === "hei"){
-		msg.innerText ="hdhdhhd";
-	}
-       });
+btnElement.addEventListener("click", function(event){
+    
+    event.preventDefault();
+    outputElement.innerHTML += "<br/>User: " + inputElement.value
+     inputElement.value = "";
+    });
 
+
+
+    
+    
 
