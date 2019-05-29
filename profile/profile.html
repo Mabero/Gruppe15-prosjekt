@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel=stylesheet type="text/css" href="profile.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
-    <style> 
+    <style>
     </style>
 </head>
+
 <body>
-    <!-- Placeholder for å vise at der er profilen -->
-    <h1 id="header">Profil</h1>
-
-    <div class="textContainer">
-        <p class="text" id="name">Bjarne Wilhelm Haugen</p>
-        <p class="text" id="rating">Rating:</p>
+    <div class="topnav">
+        <a id="logo" class="navLeft" href="#home"><img src="/bilder/LogoStor.png" height="90px"></a>
+        <a class="navLeft" href="#tourVideo">Tour</a>
+        <a class="navLeft" href="#featuresSection">Features</a>
+        <a class="navRight" href="/git/frontpage.html">Log out</a>
+        <a class="navRight" href="/git/boards/boards.html">Tools</a>
     </div>
-
-    <img id="profilePicture" src="https://scontent.fosl1-1.fna.fbcdn.net/v/t1.0-9/21686039_10154721823456010_2240514104369205118_n.jpg?_nc_cat=107&_nc_ht=scontent.fosl1-1.fna&oh=9e78a07668056836b4a0dbc254bc4ea2&oe=5D9B6341">
-
-    <script src="profile.js"></script> 
+    <!-- Placeholder for å vise at der er profilen -->
+    <div id="profileContainer">
+        <h1 id="header">Profile</h1>
+        <img id="profilePicture" src="https://scontent.fosl1-1.fna.fbcdn.net/v/t1.0-9/21686039_10154721823456010_2240514104369205118_n.jpg?_nc_cat=107&_nc_ht=scontent.fosl1-1.fna&oh=9e78a07668056836b4a0dbc254bc4ea2&oe=5D9B6341">
+        <div class="textContainer">
+            <p class="text" id="name">Bjarne Wilhelm Haugen</p>
+            <p class="text" id="rating">Rating:</p>
+        </div>
+    </div>
+    <script src="profile.js"></script>
 </body>
+
 </html>

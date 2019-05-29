@@ -23,27 +23,27 @@ const registerFail = document.getElementById("registerFail");
 let users = [
 {
     username: "mats",
-    password: "matspassord"
+    password: "mats"
 },
 {
     username: "stian",
-    password: "stianpassord"
+    password: "stian"
 },
 {
     username: "bjarne",
-    password: "bjarnepassord"
+    password: "bjarne"
 },
 {
     username: "martin",
-    password: "martinpassord"
+    password: "martin"
 },
 {
     username: "fazal",
-    password: "fazalpassord"
+    password: "fazal"
 },
 {
     username: "even",
-    password: "evenpassord"
+    password: "even"
 }
 ];
 
@@ -69,7 +69,7 @@ registerBtn.addEventListener("click", function(){
 loginBtn.addEventListener("click", function(){
     for(i = 0; i < users.length; i++) {
         if (inputUsername.value === users[i].username && inputPassword.value === users[i].password){
-            location.href = "https://qph.fs.quoracdn.net/main-qimg-5c0199ca5b3ef206be5ae41fcce5f1f2.webp"
+            location.href = "/git/boards/boards.html"
             return false;
         } else {
             loginFeedback.innerHTML = "Wrong username or password"
