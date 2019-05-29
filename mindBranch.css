@@ -18,6 +18,14 @@ body {
     right: 50%;
     bottom: 200px;
     position: absolute;
+    z-index: 50;
+  }
+
+  #mainNode:hover{
+    z-index: 0;
+    height: 220px;
+    width: 220px;
+    transition: all 0.2s ease-out;
   }
   
    #node1{
@@ -71,29 +79,42 @@ body {
     outline: none;
   } */
   
-  input[type="submit"] {
+  input[type="button"] {
     appearance: none;
-    opacity: .99;
-    width:120px;
+    opacity: .90;
+    width:50px;
+    height: 50px;
     background: rgb(250, 119, 119);
     box-shadow: inset 0 1px 2px rgba(241, 130, 130, 0.918), 0px 1px 6px rgba(252, 72, 213, 0.438);
     border: 1px solid #ff6f6f;
-    border-radius: 4px;
+    border-radius: 50%;
     color: rgb(255, 254, 254);
     cursor: pointer;
     text-shadow:0px -1px 0px rgba(0,0,0,.5);
-    top: 60px;
-    left: 35px;
-    position: absolute;
+    top: -150px;
+    right: -85px;
+    position: relative;
+  }
+
+  #mainNode.input[type="button"]:hover{
+    opacity: 0.99;
+    background: #FFF;
   }
   
-  input[type="submit"]:hover {
-    background: rgb(252, 109, 99);
-    width:120px;
-    border: 1px solid #7931675d;
-    border-radius: 3px;
-    box-shadow: inset 0px 3px 16px rgba(0,0,0,.25),0px 1px 10px rgba(250, 117, 117, 0.836),inset 0px -1px 2px rgba(250, 129, 129, 0.644);
+  input[type="button"]:hover {
+    background: rgb(247, 145, 138);
+    border: 1px solid #ff00bf46;
+    border-radius: 50%;
+    box-shadow: inset 0px 3px 16px rgba(255, 0, 0, 0.664),0px 1px 10px rgba(250, 117, 117, 0.836),inset 0px -1px 2px rgb(250, 129, 129);
     text-shadow:0px 1px 1px rgba(0,0,0,.65);
     -webkit-transition: all 0.40s ease-out;
     transition: all 0.40s ease-out;
+    opacity: .90;
+  }
+
+  input[type="button"]::before {
+  font-weight: bold;
+  color: navy;
+  content: "+";
+  z-index: 99;
   }

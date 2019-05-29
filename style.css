@@ -1,0 +1,30 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+    display: inline-block;
+}
+
+h1 {
+    
+    color: navy;
+}
+
+p {
+  color: black;
+}
+
+.test-div {
+  float: left;
+}
+
+.btn {
+
+}
+
+.inputDesc {
+
+}
+
+.inputTitle {
+
+}
