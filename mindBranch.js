@@ -1,26 +1,23 @@
-
-
-
-
 var array1 = [];
 var array2 = [];
 var array3 = [];
 var array4 = [];
-var array5 = [];
-var array6 = [];
-var array7 = [];
-var array8 = [];
 
 
 console.log(array1);
+
+
 
 
 function createDiv() {
   var newDiv = document.createElement('div');
   var textTitle = document.createElement("textarea");
   var button = document.createElement('button');
+  
 
   array1.push(newDiv);
+
+  
 
   console.log(array1);
 
@@ -65,7 +62,6 @@ function createDiv() {
   button.textContent.fontsize ="100px";
   button.style.background = "#ff00bf46";
 };
-
 
 
 
@@ -144,6 +140,7 @@ function createDiv3() {
 
   textTitle3.setAttribute("class","inputTitle");
   button3.setAttribute("id", "progressButton");
+  button3.setAttribute("onclick", "createDiv4()");
 
   
   document.body.appendChild(newDiv3);
@@ -184,11 +181,61 @@ function createDiv3() {
 };
 
 
+// Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
+
+console.log(array4);
 
 
+function createDiv4() {
+  var newDiv4 = document.createElement('div');
+  var textTitle4 = document.createElement("textarea");
+  var button4 = document.createElement('button');
+
+  array4.push(newDiv4);
+
+  console.log(array4);
+
+  textTitle4.setAttribute("class","inputTitle");
+  button4.setAttribute("id", "progressButton");
+
+  
+  document.body.appendChild(newDiv4);
+  newDiv4.appendChild(textTitle4);
+  newDiv4.appendChild(button4);
 
 
+  // Div styling
+  newDiv4.setAttribute("class", "test-div");
+  newDiv4.style.height = "80px";
+  newDiv4.style.width = "80px";
+  newDiv4.style.color = 'white';
+  newDiv4.style.backgroundColor = "rgba(250, 250, 90, 0.9)";
+  newDiv4.style.borderRadius = "20px";
+  newDiv4.style.border = "solid orange";
+  newDiv4.style.opacity = "0.7";
+  newDiv4.style.borderRadius = "50%";
 
 
+  //Text box styling
+  textTitle4.style.left ="30%";
+  textTitle4.style.top ="20%";
+  textTitle4.style.width = "40px";
+  textTitle4.style.position = "relative";
 
 
+  // button4 styling
+  button4.style.height = "40px";
+  button4.style.width = "40px";
+  button4.style.top = "0%";
+  button4.style.left = "40%";
+  button4.style.position = "relative";
+  button4.style.borderRadius ="50%";
+  button4.style.opacity = "0.90";
+  button4.textContent = "+";
+  button4.textContent.fontsize ="100px";
+  button4.style.background = "#ff00bf46";
+  button4.style.opacity = "0";
+};
+
+
+array1[0] = array2;
