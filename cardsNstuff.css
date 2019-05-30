@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+* {
+font-family: 'Montserrat', sans-serif;
+}
+
+body {
+margin: 0px;
+overflow-y: hidden;
+overflow-x: hidden;
+background-color: #f2f2f2;
+}
+
+.topnav {
+background-image: url("/git/bilder/headerImage.png");
+padding-top: 20px;
+background-size: 100vw 100vh;
+z-index: 10;
+height: 150px;
+padding-left: 5vw;
+width: 100vw;
+display: grid;
+grid-template-columns: 30vw 30vw 30vw;
+
+}
+
+#logo {
+margin-top: -40px;
+transform: scale(1) !important;
+}
+
+.navRight {
+text-decoration: none;
+float: right;
+}
+
+.topCenter {
+height: 45px;
+border-bottom: 2px solid #ffd460;
+}
+
+.topLeft {
+
+}
+
+.topRight {
+
+}
+
+.currentLink {
+color: #ffd460 !important;
+}
+
+.topnav a {
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+font-weight: 500;
+cursor: pointer;
+}
+
+.topnav a:active {
+color: #ffd460;
+}
+
+#logo {
+margin-top: -40px;
+transform: scale(1) !important;
+}
+
+.navLeft {
+float: left;
+}
+
+.navRight {
+float: Right;
+}
+
+.topnav a:hover {
+color: #ffd460;
+text-decoration: none;
+transition: 0.5s;
+transform: scale(1.2);
+}
+
+/* ============= BOARDS ==============*/
+
+#tavleContainer {
+display: flex;
+height: 70vh;
+width: auto;
+margin-left: auto;
+margin-right: auto;
+}
+
+#tavleContainer * {
+margin-left: 50px;
+}
+
+#tavleContainer button {
+padding: 10px;
+padding-left: 50px;
+padding-right: 50px;
+color: #f2f2f2;
+background-color: #50D160;
+font-weight: 600;
+font-size: 14px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+height: 40px;
+}
+
+#cardBtn button {
+padding: 5px;
+padding-left: 10px;
+padding-right: 10px;
+color: #f2f2f2;
+background-color: #50D160;
+font-size: 10px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+height: 40px;
+}
+
+.tavle {
+background-color: #4F6076;
+height: flex;
+width: 250px;
+text-align: center;
+color: #f2f2f2;
+border-radius: 15px;
+}
