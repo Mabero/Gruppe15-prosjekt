@@ -1,42 +1,42 @@
 /* button to get the pop up chat*/
 .open-button {
-  background-color: #ff4600;
-  color: #ffffff;
-  padding: 7px 12px;
-  cursor: pointer;
-  opacity: 0,2;
-  position: fixed;
-  bottom: 1px;
-  right: 28px;
-  width: 150px;
+    background-color: #ff4600;
+    color: #ffffff;
+    padding: 5px 10px;
+    position: fixed;
+    bottom: 0px;
+    right: 28px;
+    width: 150px;
+    border-bottom-color: #ffffff;
+    border-radius: 8px;
 }
 
-/*  popup chat  */
+/* popup chat */
 .chat-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 10px;
-  border: 3px solid #f1f1f1;
-
-  
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    border: 3px solid #f1f1f1;
 }
+
 /* box size */
 .form-container {
-  max-width: 300px;
-  padding: 4px;
-  height: 414px;
-  background-color:#000000 ;
+    max-width: 300px;
+    padding: 4px;
+    height: 414px;
+    background-color:#000000 ;
 }
+
 /*input area */
 #input{
     width: 296px;
     height: 60px;
     font-family: sans-serif;
     font-size: 12px;
-    
 }
-/* output */
+
+/* output area */
 #output{
     width: 300px;
     height: 200px;
@@ -50,23 +50,23 @@
 
 /* button */
 .form-container .btn {
-  background-color: #ff5f00;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:4px;
-  opacity: 0.8;
-  width: 300px;
+    background-color: #ff5f00;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:4px;
+    opacity: 0.8;
+    width: 300px;
 }
 
 /* cancel button */
 .form-container .cancel {
-  background-color: #4b0082 ;
+    background-color: #4b0082 ;
 }
 
 /* hover effect on button  */
 .form-container .btn:hover, .open-button:hover {
-  opacity: 2;
+    opacity: 2;
 }
