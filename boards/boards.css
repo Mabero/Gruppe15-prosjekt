@@ -12,13 +12,22 @@ body {
 .topnav {
     background-image: url("/git/bilder/headerImage.png");
     padding-top: 20px;
-    background-size: 100vw 100vh;
     z-index: 10;
+    background-size: 100vw 100vh;
     height: 150px;
-    padding-left: 5vw;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 30vw 30vw 30vw;
+    position: relative;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-bottom: -1px;
+}
+
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
 }
 
 #logo {
@@ -26,22 +35,19 @@ body {
     transform: scale(1) !important;
 }
 
+.navLeft {
+    float: left;
+}
+
 .navRight {
-    text-decoration: none;
     float: right;
 }
 
-.topCenter {
-    height: 45px;
-    border-bottom: 2px solid #ffd460;
-}
-
-.topLeft {
-    
-}
-
-.topRight {
-    
+.topnav a:hover {
+  color: #ffd460;
+  text-decoration: none;
+  transition: 0.5s;
+  transform: scale(1.2);
 }
 
 .currentLink {
@@ -66,22 +72,6 @@ body {
     margin-top: -40px;
     transform: scale(1) !important;
 }
-
-.navLeft {
-    float: left;
-}
-
-.navRight {
-    float: Right;
-}
-
-.topnav a:hover {
-  color: #ffd460;
-  text-decoration: none;
-  transition: 0.5s;
-  transform: scale(1.2);
-}
-
 /* ============= BOARDS ==============*/
 
 #boardsContainer {
