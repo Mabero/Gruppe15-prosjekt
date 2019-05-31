@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+            <link rel="stylesheet" type="text/css" href="checkbox.css">
+
+    </head> 
+    <body>
+                <input type="text" id="prod" placeholder="Add task " autofocus />
+            <p>
+                <input type="button" id="taskButton" value="Create Checkbox" onclick="createCheckBox(prod)" />
+            </p>
+        
+            <p id="boxContainer"></p>
+        </body>
+      
+    </body>
+
+    <script> 
+        var i = 1;     
+
+    function createCheckBox(obj) {
+        if (obj.value !== "") {
+
+            var checkbox = document.createElement("input");  
+            checkbox.setAttribute("type", "checkbox");      
+            checkbox.setAttribute("id", "prodName" + i);    
+            checkbox.setAttribute("value", obj.value);
+            checkbox.setAttribute("name", "products");
+
+            var label = document.createElement("label");  
+            label.setAttribute("for", "prodName" + i);
+            
+            label.appendChild(document.createTextNode(obj.value));
+            
+            boxContainer.appendChild(checkbox);
+            boxContainer.appendChild(label);
+
+            obj.value = "";
+            document.getElementById(obj.id).focus();
+
+            i = i + 1;
+        }
+    }
+        </script>   
+
+</html>
