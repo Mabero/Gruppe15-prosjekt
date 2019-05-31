@@ -7,12 +7,17 @@ var array4 = [];
 console.log(array1);
 
 
-
-
 function createDiv() {
   var newDiv = document.createElement('div');
   var textTitle = document.createElement("input");
   var button = document.createElement('button');
+
+
+   var inputText = document.querySelector(".nodeText").value;
+   var commitText = document.createElement("p");
+   var pos = document.getElementById("mainNode")
+   commitText.textContent = inputText;
+
   
 
   array1.push(newDiv);
@@ -30,6 +35,11 @@ function createDiv() {
   nodeContainer.appendChild(newDiv);
   newDiv.appendChild(textTitle);
   newDiv.appendChild(button);
+  pos.appendChild(commitText);
+  nodeContainer.appendChild(pos);
+
+
+
 
 
   // Div styling
@@ -52,6 +62,10 @@ function createDiv() {
   textTitle.style.top ="0%";
   textTitle.style.width = "40px";
   textTitle.style.position = "relative";
+
+  commitText.style.left = "0%";
+  commitText.style.top = "-260px";
+  commitText.style.position = "relative";
 
 
   // Button styling
@@ -79,6 +93,7 @@ function createDiv2() {
   var newDiv2 = document.createElement('div');
   var textTitle2 = document.createElement("input");
   var button2 = document.createElement('button');
+  
 
   array2.push(newDiv2);
 
@@ -257,3 +272,5 @@ function createDiv4() {
 
 
 array1[0] = array2;
+
+
