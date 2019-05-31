@@ -14,37 +14,25 @@ boardsBtn.addEventListener("click", function(){
     newDiv.appendChild(newContent);
     boardsContainer.appendChild(newDiv);
     newDiv.after(boardsBtn);
-    newCardBtn.after(cardDiv);
+    newCardBtn.after(newCard);
     return newDiv;
-})
-
-/* function createCard() {
-    var cardDiv = document.createElement('div');
-    var textTitle = document.createElement("textarea");
-    newDiv.appendChild(cardDiv);
-    cardDiv.appendChild(textTitle);
-    cardDiv.appendChild(button);
-    cardDiv.className = "card";
-    textTitle.className = "inputTitle";
-    cardDiv.setAttribute("draggable","true");
-    cardDiv.setAttribute("ondragstart","drag(event)");
-
-    cardDiv.style.height = "100px";
-    cardDiv.style.width = "200px";
-    cardDiv.style.color = '#f2f2f2';
-    cardDiv.style.backgroundColor = "#4F6006";
-    cardDiv.style.borderRadius = "20px";
-    cardDiv.style.border = "solid black";
-    cardDiv.style.opacity = "0.7";
-    cardDiv.style.margin = "10px";
-
-}; */
+});
 
  function createCard(nr) {
-   var newCard = document.createElement('div');
+   var newCard = document.createElement("div");
+   var text = document.createElement("INPUT");
+   var button = document.createElement("button");
+   text.setAttribute("type", "text");
+   text.setAttribute("class", "textInput");
+   button.setAttribute("id", "popUpBtn");
    newCard.id = 'card';
    newCard.className = 'card';
+   newCard.appendChild(button);
+   newCard.appendChild(text);
    document.getElementById("tavle" + nr).appendChild(newCard);
+   newCard.setAttribute("draggable","true");
+   newCard.setAttribute("ondragstart","drag(event)");
+   button.onclick=popUp();
 
    newCard.style.height = "100px";
    newCard.style.width = "200px";
@@ -54,15 +42,24 @@ boardsBtn.addEventListener("click", function(){
    newCard.style.border = "solid black";
    newCard.style.opacity = "0.9";
    newCard.style.margin = "10px";
-
-   parentElement = newCard.parentElement;
-   if (newCard.id == parentElement.id) {
-
    }
-};
 
 
- var dragget;
+function popUp() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+
+
+
+
+
+
+
+
+
+var dragget;
 var source;
 var dragged;
 
@@ -79,7 +76,7 @@ function drag(ev) {
 
 function drop(ev) {
     ev.preventDefault();
-    if ( ev.target.className == "list" && dragget == "card" )  {
+    if ( ev.target.className == "tavle" && dragget == "card" )  {
         var data = ev.dataTransfer.getData("text");
         ev.target.appendChild(dragged);
         console.log("yes");
@@ -88,15 +85,12 @@ function drop(ev) {
 
 function drop1(ev) {
     ev.preventDefault();
-    if ( event.target.className == "listWrap" && dragget == "list" ) {
+    if ( ev.target.className == "listWrap" && dragget == "tavle" ) {
 
         var data = ev.dataTransfer.getData("text");
         source.innerHTML = ev.target.innerHTML;
         ev.target.innerHTML = "";
         ev.target.appendChild(dragged);
+        console.log("wrap");
     }
 }
-
-
-/*
-let cards = []; */

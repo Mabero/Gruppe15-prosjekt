@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="boards.css">
+    <link rel="stylesheet" href="cardsNstuff.css">
 
     <title>Boards</title>
 </head>
@@ -28,12 +28,27 @@
     </div>
 
     <div id="tavleContainer">
-      <div id= "tavle1" class="tavle"><button id="cardBtn" onclick="createCard(1);">new card</button></div>
-      <div id= "tavle2" class="tavle"><button id="cardBtn" onclick="createCard(2);">new card</button></div>
-      <div id= "tavle3" class="tavle"><button id="cardBtn" onclick="createCard(3);">new card</button></div>
+
+      <div class="listWrap" ondrop="drop1(event)" ondragover="allowDrop(event)">
+          <div id= "tavle1" class="tavle" draggable="true" ondrag="(event)" ondrop="drop(event)" ondragover="allowDrop(event)"><button id="cardBtn" onclick="createCard(1)">new card</button></div>
+      </div>
+
+      <div class="listWrap" ondrop="drop1(event)" ondragover="allowDrop(event)">
+          <div id= "tavle2" class="tavle" draggable="true" ondrag="(event)" ondrop="drop(event)" ondragover="allowDrop(event)"><button id="cardBtn" onclick="createCard(2)">new card</button></div>
+      </div>
+
+      <div class="listWrap" ondrop="drop1(event)" ondragover="allowDrop(event)">
+        <div id= "tavle3" class="tavle" draggable="true" ondrag="(event)" ondrop="drop(event)" ondragover="allowDrop(event)"><button id="cardBtn" onclick="createCard(3)">new card</button></div>
+      </div>
+
       <button id="boardsBtn" style:"float: left;">+ Add new board</button>
     </div>
-    <script src="boards.js"></script>
+
+    <div class="popup" onclick="popUp()">popUp test
+      <span class="popuptext" id="myPopup">Popup text...</span>
+    </div>
+
+    <script src="cardsNstuff.js"></script>
 </body>
 
 </html>
