@@ -21,12 +21,12 @@ body {
     z-index: 50;
   }
 
-  #mainNode:hover{
+  /* #mainNode:hover{
     z-index: 0;
     height: 220px;
     width: 220px;
     transition: all 0.2s ease-out;
-  }
+  } */
   
    #node1{
     height: 150px;
@@ -112,9 +112,4 @@ body {
     opacity: .90;
   }
 
-  input[type="button"]::before {
-  font-weight: bold;
-  color: navy;
-  content: "+";
-  z-index: 99;
-  }
+  
