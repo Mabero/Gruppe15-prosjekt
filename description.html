@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="description.css">
+            
+            
+    </head>
+<body>
+<p>Description</p>
+<textarea id="descriptionArea" name="tekst" placeholder ="Type description here"></textarea>
+        <button type="button" id="descriptionButton" onclick="text2()">Add</button>
+<script>
+
+function text2 (){
+    var inputText = document.getElementsByName("tekst")[0].value;
+    var newText = document.createElement("p");
+    document.body.appendChild(newText);
+    newText.textContent = inputText;
+}
+
+</script>
+
+
+</body>
+</html>
+ 
