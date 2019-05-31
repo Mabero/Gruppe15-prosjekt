@@ -36,10 +36,10 @@ function createDiv(obj) {
 
     array1.push(newDiv);
 
-  
+  const index = obj.children.length
 
     console.log(array1);
-    const index = obj.children.length
+    
 
     textTitle.setAttribute("class","inputTitle");
     button.setAttribute("id", "progressButton");
