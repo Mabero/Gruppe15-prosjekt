@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
 body {
     background-color:#f2f2f2;
   }
@@ -8,81 +10,20 @@ body {
     position: absolute;
     width: 100%;          
     height: 480px;     
-    bottom: 1px;              
+    bottom: 0px;              
     right: 0px;
 
   }
   
 
   /* Har prøvd å få flexet de greiene her men har ikke fått det til enda. */
-  #boards{
-      position: absolute;
-      bottom: 490px;
-      left: 120px;
-  }
-
-  #calendarButton{
-    position: absolute;
-    bottom: 490px;
-    left: 850px;
-}
-
-#mindBranching{
-    position: absolute;
-    bottom: 490px;
-    left: 1550px;
-}  
-
-.btnContainer{
-    display: flex 3;
-    justify-content: space-between;
-}
-
-.btnContainer div{
-    padding: 10px;
-}
-
-.buttons{
-    background:#f06969;
-    color:#fff;
-    border:none;
-    position:relative;
-    height:60px;
-    font-size:1.6em;
-    padding:0 2em;
-    cursor:pointer;
-    transition:150ms ease all;
-    outline:none;
-  }
-  .buttons:hover{
-    background:#fff;
-    color:#f06969;
-  }
-  .buttons:before,.buttons:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background: #f06969;
-    transition:400ms ease all;
-  }
-  .buttons:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
-  .buttons:hover:before,.buttons:hover:after{
-    width:100%;
-    transition:800ms ease all;
-  }
+ 
 
 
 .daysContainer > div{
     background: #F29696;
     padding: 1em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .daysContainer > div:nth-child(odd){
@@ -102,13 +43,21 @@ body {
 }
 
 #projectTab{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    width: 95px;
+    height: 480px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
     position: absolute;
-    top: 5px;
+    top: 0px;
+    background: rgb(180, 180, 255);
 }
 
-/* Representasjon av hvordan et prosjekt kan se ut i kalenderen */
+.projectText{
+  font-size: 16px;
+}
+
+/* Representasjon av hvordan et prosjekt kan se ut i kalenderen 
+Her hadde det vært fett om vi kunne trykke på prosjektet så kommer du til tavlen*/
 
 #project1{
   height: 5px;
@@ -138,5 +87,32 @@ body {
 }
 
 
+/*====================================Her er den kalender som jeg la inn========================*/
 
-
+.monthPre{
+  color: gray;
+  text-align: center;
+ }
+ .monthNow{
+  color: blue;
+  text-align: center;
+ }
+ .dayNow{
+  border: 2px solid black;
+  color: #FF0000;
+  text-align: center;
+ }
+ .calendar td{
+  htmlContent: 2px;
+  width: 40px;
+ }
+ .monthNow th{
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+ }
+ .dayNames{
+  background: #0FF000;
+  color: #FFFFFF;
+  text-align: center;
+ }
