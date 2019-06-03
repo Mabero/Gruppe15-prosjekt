@@ -85,7 +85,7 @@ transition: 0.5s;
 transform: scale(1.2);
 }
 
-/* ============= BOARDS ==============*/
+/* ============= Tavler ==============*/
 
 #tavleContainer {
 display: flex;
@@ -148,7 +148,7 @@ display: table;
   cursor: pointer;
 }
 
-/* The actual popup (appears on top) */
+/* Dette er selve pop up */
 .popup .popuptext {
   visibility: hidden;
   width: 350px;
@@ -177,14 +177,14 @@ display: table;
   border-color: #555 transparent transparent transparent;
 }
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
+/* toggle hide/show på popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s
 }
 
-/* Add animation (fade in the popup) */
+/* Animasjoner fade in pop up */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}

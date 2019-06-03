@@ -9,10 +9,9 @@ boardsBtn.addEventListener("click", function(){
     newDiv = document.createElement("div")
     newContent = document.createTextNode("test")
     newCardBtn = document.getElementById("newCardBtn")
-    newDiv.className = "board";
-    cards.push(newDiv);
+    newDiv.className = "tavle";
     newDiv.appendChild(newContent);
-    boardsContainer.appendChild(newDiv);
+    tavleContainer.appendChild(newDiv);
     newDiv.after(boardsBtn);
     newCardBtn.after(newCard);
     return newDiv;
@@ -24,7 +23,7 @@ boardsBtn.addEventListener("click", function(){
    var button = document.createElement("button");
    text.setAttribute("type", "text");
    text.setAttribute("class", "textInput");
-   button.setAttribute("id", "popUpBtn");
+   button.setAttribute("class", "popUpBtn");
    newCard.id = 'card';
    newCard.className = 'card';
    newCard.appendChild(button);
@@ -32,7 +31,6 @@ boardsBtn.addEventListener("click", function(){
    document.getElementById("tavle" + nr).appendChild(newCard);
    newCard.setAttribute("draggable","true");
    newCard.setAttribute("ondragstart","drag(event)");
-   button.onclick=popUp();
 
    newCard.style.height = "100px";
    newCard.style.width = "200px";
@@ -44,17 +42,15 @@ boardsBtn.addEventListener("click", function(){
    newCard.style.margin = "10px";
    }
 
+   function createPopup(){
+  var popup = open("", "Popup", "width=300,height=200");
+  var txtOk = popup.document.createElement("TEXTAREA");
+  var aOk = popup.document.createElement("a");
+  aOk.innerHTML = "Click here";
 
-function popUp() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-
-
-
-
-
-
+  popup.document.body.appendChild(txtOk);
+  popup.document.body.appendChild(aOk);
+  }
 
 
 
