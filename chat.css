@@ -1,4 +1,4 @@
-/* button to get the pop up chat*/
+/* knappen til å få pop up chat*/
 .open-button {
     background-color: #ff4600;
     color: #ffffff;
@@ -11,7 +11,7 @@
     border-radius: 8px;
 }
 
-/* popup chat */
+/* Pop up chat */
 .chat-popup {
     display: none;
     position: fixed;
@@ -20,7 +20,7 @@
     border: 3px solid #f1f1f1;
 }
 
-/* box size */
+/* Box størrelse */
 .form-container {
     max-width: 300px;
     padding: 4px;
@@ -28,7 +28,7 @@
     background-color:#000000 ;
 }
 
-/*input area */
+/* Input område */
 #input{
     width: 296px;
     height: 60px;
@@ -36,7 +36,7 @@
     font-size: 12px;
 }
 
-/* output area */
+/* Output område */
 #output{
     width: 300px;
     height: 200px;
@@ -48,7 +48,7 @@
     overflow: auto;
 }
 
-/* button */
+/* knapper */
 .form-container .btn {
     background-color: #ff5f00;
     color: #ffffff;
@@ -61,12 +61,12 @@
     width: 300px;
 }
 
-/* cancel button */
+/* Close knapp */
 .form-container .cancel {
     background-color: #4b0082 ;
 }
 
-/* hover effect on button  */
+/* Hover effect på knapp */
 .form-container .btn:hover, .open-button:hover {
     opacity: 2;
 }
