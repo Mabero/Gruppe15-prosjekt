@@ -5,6 +5,9 @@ var newDiv;
 var newContent;
 var newCardBtn;
 
+var flagCounter = 0;
+var cardCounter = 0;
+
 boardsBtn.addEventListener("click", function(){
     newDiv = document.createElement("div")
     newContent = document.createTextNode("test")
@@ -20,24 +23,100 @@ boardsBtn.addEventListener("click", function(){
  function createCard(nr) {
    var newCard = document.createElement("div");
    var text = document.createElement("INPUT");
-   var button = document.createElement("button");
+   var modalBtn = document.createElement("button");
+   var modalDiv = document.createElement("div");
+   var flagDiv = document.createElement("div");
+   var span = document.createElement("span");
+   var flagSpan = document.createElement("span");
+   var prioDiv = document.createElement("div");
+   const stars = [document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p")]
+
+   stars.forEach((star, i) => {
+     star.setAttribute("id", nr + "s" + i);
+     star.setAttribute("onclick", "changeColor1(i)");
+     star.innerHTML = "☆"
+     console.log(star);
+     prioDiv.appendChild(star);
+   })
+
+
+
+
+
+   flagSpan.innerHTML = "⚑";
+      var flagged = 0;
+   flagSpan.onclick = function changeColor() {
+       if (flagged == 0) {
+         flagSpan.style.color = "#f06969"
+         flagged = 1
+         console.log(1)
+         return false;
+       }
+       else {
+         flagSpan.style.color = "#000000"
+         flagged = 0
+         console.log(0)
+         return false;
+       }
+   }
+    console.log(flagCounter);
+
+    function changeColor1(nr) {
+        console.log(nr)
+        for(var i = 1; i <= 5; i++) {
+            if(i <= nr) {
+                document.getElementById('star' + i).style.color = "gold"
+                document.getElementById('star'+i).innerHTML = "★"
+            } else {
+                document.getElementById('star' + i).style.color = "gold"
+                document.getElementById('star'+i).innerHTML = "☆"
+            }
+        }
+    }
+
+   flagDiv.setAttribute("id", "flag" + flagCounter);
+   modalDiv.setAttribute("id","myModal");
+   modalDiv.setAttribute("class","modal");
+   modalBtn.setAttribute("id","myBtn");
    text.setAttribute("type", "text");
    text.setAttribute("class", "textInput");
-   button.setAttribute("class", "popUpBtn");
    newCard.id = 'card';
    newCard.className = 'card';
-   newCard.appendChild(button);
+   newCard.appendChild(flagDiv);
+   flagDiv.appendChild(flagSpan);
+   newCard.appendChild(modalBtn);
+   modalDiv.appendChild(span);
    newCard.appendChild(text);
+   newCard.appendChild(prioDiv);
    document.getElementById("tavle" + nr).appendChild(newCard);
    newCard.setAttribute("draggable","true");
    newCard.setAttribute("ondragstart","drag(event)");
-<<<<<<< HEAD
-=======
-   button.onclick = function popUp() {
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-  } 
->>>>>>> 6abb31b3496e463ad50c2710235bd29fee77a0ad
+
+   // Get the modal
+   var modal = document.getElementById("myModal");
+
+   // Get the button that opens the modal
+   var btn = document.getElementById("myBtn");
+
+   // Get the <span> element that closes the modal
+   var span = document.getElementsByClassName("close")[0];
+
+   // When the user clicks on the button, open the modal
+   modalBtn.onclick = function() {
+     modal.style.display = "block";
+   }
+
+   // When the user clicks on <span> (x), close the modal
+   span.onclick = function() {
+     modal.style.display = "none";
+   }
+
+   // When the user clicks anywhere outside of the modal, close it
+   window.onclick = function(event) {
+     if (event.target == modal) {
+       modal.style.display = "none";
+     }
+   }
 
    newCard.style.height = "100px";
    newCard.style.width = "200px";
@@ -47,22 +126,9 @@ boardsBtn.addEventListener("click", function(){
    newCard.style.border = "solid black";
    newCard.style.opacity = "0.9";
    newCard.style.margin = "10px";
+
+   flagCounter = flagCounter + 1;
    }
-
-   function createPopup(){
-  var popup = open("", "Popup", "width=300,height=200");
-  var txtOk = popup.document.createElement("TEXTAREA");
-  var aOk = popup.document.createElement("a");
-  aOk.innerHTML = "Click here";
-
-<<<<<<< HEAD
-  popup.document.body.appendChild(txtOk);
-  popup.document.body.appendChild(aOk);
-  }
-
-
-=======
->>>>>>> 6abb31b3496e463ad50c2710235bd29fee77a0ad
 
 
 var dragget;
