@@ -12,37 +12,11 @@
 </head>
 <body>
     <!-- Placeholder for å vise at der er profilen -->
-    <h1>Profil</h1>
 
     <div id="calendarx">
-        <div class="daysContainer">
-            <div id="todayx"></div>
-            <div id="todayx2"></div>
-            <div id="todayx3">24</div>
-            <div id="todayx4"></div>
-            <div id="todayx5"></div>
-            <div id="todayx6"></div>
-            <div id="todayx7"></div>
-            <div id="todayx8"></div>
-            <div id="todayx9"></div>
-            <div id="todayx10"></div>
-            <div id="todayx11"></div>
-            <div id="todayx12"></div>
-            <div id="todayx13"></div>
-            <div id="todayx14"></div>
-            <div id="todayx15"></div>
-            <div id="todayx16"></div>
-            <div id="todayx17"></div>
-            <div id="todayx18"></div>
-            <div id="todayx19"></div>
-            <div id="todayx20"></div>
-            <div id="todayx21"></div>
-            <div id="todayx22"></div>
-            <div id="todayx23"></div>
-            <div id="todayx24"></div>
-            <div id="todayx25"></div>
-            <div id="todayx26"></div>
+        <div id="daysContainer" class="daysContainer">
         </div>
+        <div id="month"></div>
         <div id="projectTab"><b>Prosjekter</b>
                 <br><br><br>
 
@@ -51,10 +25,11 @@
             <p class="projectText" id="firstProject">Eksamen</p>
         </div>
         <div id="projects">
-            <div class="projects" id="project1">
-                <div class="projectDots" id="dot1"></div>
-                <div class="projectDots" id="dot2"></div>
+            <div class="projects" id="project1">Prosjektrapport
+                <button id="calendarToBoard">Go To Board</button>
+                <button id="exitTask" onclick="closeForm()">X</button>
             </div>
+            <button class="projectButtons" id="projectButton" onclick="openForm()">Prosjektrapport</button>
         </div>
     </div>
 
@@ -63,7 +38,7 @@
 
 
  
-    <div id="calendar"></div> 
+    <div class="chat-popup" id="myForm">
 
 
 
