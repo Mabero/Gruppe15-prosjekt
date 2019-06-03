@@ -3,109 +3,111 @@ var array2 = [];
 var array3 = [];
 var array4 = [];
 
+var root = {
+    children: [],
+    name: '',
+    info: ''
+}
+
 
 console.log(array1);
 
 
-function createDiv() {
-  var newDiv = document.createElement('div');
-  var textTitle = document.createElement("input");
-  var button = document.createElement('button');
 
 
-   var inputText = document.querySelector(".nodeText").value;
-   var commitText = document.createElement("p");
-   var pos = document.getElementById("mainNode")
-   commitText.textContent = inputText;
+
+
+
+function createDiv(obj) {
+    var newDiv = document.createElement('div');
+    var textTitle = document.createElement("textarea");
+    var button = document.createElement('button');
+    
+    
+    obj.children.push({
+        children: [],
+        name: '',
+        info: ''
+    });
+    console.log(obj.children);
+    
+
+
+
+    array1.push(newDiv);
+
+  const index = obj.children.length
+
+    console.log(array1);
+    
+
+    textTitle.setAttribute("class","inputTitle");
+    button.setAttribute("id", "progressButton");
+    button.setAttribute("onclick", "createDiv()"); 
 
   
-
-  array1.push(newDiv);
-
-  
-
-  console.log(array1);
-
-  textTitle.setAttribute("class","inputTitle");
-  textTitle.setAttribute("placeholder", "Idea");
-  button.setAttribute("id", "progressButton");
-  button.setAttribute("onclick", "createDiv2()"); 
-
-  
-  nodeContainer.appendChild(newDiv);
-  newDiv.appendChild(textTitle);
-  newDiv.appendChild(button);
-  pos.appendChild(commitText);
-  nodeContainer.appendChild(pos);
-
-
-
+    document.body.appendChild(newDiv);
+    newDiv.appendChild(textTitle);
+    newDiv.appendChild(button);
 
 
   // Div styling
-  newDiv.setAttribute("class", "test-div");
-  newDiv.style.height = "150px";
-  newDiv.style.width = "150px";
-  newDiv.style.color = 'white';
-  newDiv.style.backgroundColor = "rgba(150, 70, 150, 0.9)";
-  newDiv.style.borderRadius = "20px";
-  newDiv.style.border = "solid black";
-  newDiv.style.opacity = "0.7";
-  newDiv.style.borderRadius = "50%";
-  newDiv.style.left = "30%";
-  newDiv.style.position = "relative";
-  newDiv.style.margin = "1em";
+    newDiv.setAttribute("class", "test-div");
+    newDiv.style.height = "150px";
+    newDiv.style.width = "150px";
+    newDiv.style.color = 'white';
+    newDiv.style.backgroundColor = "rgba(150, 70, 150, 0.9)";
+    newDiv.style.borderRadius = "20px";
+    newDiv.style.border = "solid black";
+    newDiv.style.opacity = "0.7";
+    newDiv.style.borderRadius = "50%";
 
 
   //Text box styling
-  textTitle.style.left ="0%";
-  textTitle.style.top ="0%";
-  textTitle.style.width = "40px";
-  textTitle.style.position = "relative";
-
-  commitText.style.left = "0%";
-  commitText.style.top = "-260px";
-  commitText.style.position = "relative";
+    textTitle.style.left ="30%";
+    textTitle.style.top ="20%";
+    textTitle.style.width = "40px";
+    textTitle.style.position = "relative";
 
 
-  // Button styling
-  button.style.height = "40px";
-  button.style.width = "40px";
-  button.style.top = "-100px";
-  button.style.left = "70%";
-  button.style.position = "relative";
-  button.style.borderRadius ="50%";
-  button.style.opacity = "0.90";
-  button.textContent = "+";
-  button.textContent.fontsize ="100px";
-  button.style.background = "#ff00bf46";
+    // Button styling
+    button.style.height = "40px";
+    button.style.width = "40px";
+    button.style.top = "0%";
+    button.style.left = "40%";
+    button.style.position = "relative";
+    button.style.borderRadius ="50%";
+    button.style.opacity = "0.90";
+    button.textContent = "+";
+    button.textContent.fontsize ="100px";
+    button.style.background = "#ff00bf46";
 };
 
 
 
 // Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
 
+/*
 
 console.log(array2);
 
 
+
 function createDiv2() {
   var newDiv2 = document.createElement('div');
-  var textTitle2 = document.createElement("input");
+  var textTitle2 = document.createElement("textarea");
   var button2 = document.createElement('button');
-  
 
   array2.push(newDiv2);
 
   console.log(array2);
 
   textTitle2.setAttribute("class","inputTitle");
-  textTitle2.setAttribute("placeholder", "Idea");
   button2.setAttribute("id", "progressButton");
   button2.setAttribute("onclick", "createDiv3()"); 
 
   
-  nodeContainer.appendChild(newDiv2);
+  document.body.appendChild(newDiv2);
   newDiv2.appendChild(textTitle2);
   newDiv2.appendChild(button2);
 
@@ -117,17 +119,14 @@ function createDiv2() {
   newDiv2.style.color = 'white';
   newDiv2.style.backgroundColor = "rgba(50, 70, 250, 0.9)";
   newDiv2.style.borderRadius = "20px";
-  newDiv2.style.border = "solid purple";
+  newDiv2.style.border = "solid yellow";
   newDiv2.style.opacity = "0.7";
   newDiv2.style.borderRadius = "50%";
-  newDiv2.style.left = "25%";
-  newDiv2.style.position = "relative";
-  newDiv2.style.margin = "1em";
 
 
   //Text box styling
-  textTitle2.style.left ="0%";
-  textTitle2.style.top ="0%";
+  textTitle2.style.left ="30%";
+  textTitle2.style.top ="20%";
   textTitle2.style.width = "40px";
   textTitle2.style.position = "relative";
 
@@ -154,7 +153,7 @@ console.log(array3);
 
 function createDiv3() {
   var newDiv3 = document.createElement('div');
-  var textTitle3 = document.createElement("input");
+  var textTitle3 = document.createElement("textarea");
   var button3 = document.createElement('button');
 
   array3.push(newDiv3);
@@ -162,12 +161,11 @@ function createDiv3() {
   console.log(array3);
 
   textTitle3.setAttribute("class","inputTitle");
-  textTitle3.setAttribute("placeholder", "Idea");
   button3.setAttribute("id", "progressButton");
   button3.setAttribute("onclick", "createDiv4()");
 
   
-  nodeContainer.appendChild(newDiv3);
+  document.body.appendChild(newDiv3);
   newDiv3.appendChild(textTitle3);
   newDiv3.appendChild(button3);
 
@@ -179,18 +177,14 @@ function createDiv3() {
   newDiv3.style.color = 'white';
   newDiv3.style.backgroundColor = "rgba(50, 250, 90, 0.9)";
   newDiv3.style.borderRadius = "20px";
-  newDiv3.style.border = "solid blue";
+  newDiv3.style.border = "solid red";
   newDiv3.style.opacity = "0.7";
   newDiv3.style.borderRadius = "50%";
-  newDiv3.style.left = "20%";
-  newDiv3.style.position = "relative";
-  newDiv3.style.margin = "1em";
-  
 
 
   //Text box styling
-  textTitle3.style.left ="0%";
-  textTitle3.style.top ="0%";
+  textTitle3.style.left ="30%";
+  textTitle3.style.top ="20%";
   textTitle3.style.width = "40px";
   textTitle3.style.position = "relative";
 
@@ -216,7 +210,7 @@ console.log(array4);
 
 function createDiv4() {
   var newDiv4 = document.createElement('div');
-  var textTitle4 = document.createElement("input");
+  var textTitle4 = document.createElement("textarea");
   var button4 = document.createElement('button');
 
   array4.push(newDiv4);
@@ -224,11 +218,10 @@ function createDiv4() {
   console.log(array4);
 
   textTitle4.setAttribute("class","inputTitle");
-  textTitle4.setAttribute("placeholder", "Idea");
   button4.setAttribute("id", "progressButton");
 
   
-  nodeContainer.appendChild(newDiv4);
+  document.body.appendChild(newDiv4);
   newDiv4.appendChild(textTitle4);
   newDiv4.appendChild(button4);
 
@@ -240,18 +233,14 @@ function createDiv4() {
   newDiv4.style.color = 'white';
   newDiv4.style.backgroundColor = "rgba(250, 250, 90, 0.9)";
   newDiv4.style.borderRadius = "20px";
-  newDiv4.style.border = "solid green";
+  newDiv4.style.border = "solid orange";
   newDiv4.style.opacity = "0.7";
   newDiv4.style.borderRadius = "50%";
-  newDiv4.style.left = "15%";
-  newDiv4.style.position = "relative";
-  newDiv4.style.margin = "1em";
-  newDiv4.style.bottom = "20%";
 
 
   //Text box styling
-  textTitle4.style.left ="0%";
-  textTitle4.style.top ="-20%";
+  textTitle4.style.left ="30%";
+  textTitle4.style.top ="20%";
   textTitle4.style.width = "40px";
   textTitle4.style.position = "relative";
 
@@ -270,7 +259,4 @@ function createDiv4() {
   button4.style.opacity = "0";
 };
 
-
-array1[0] = array2;
-
-
+*/

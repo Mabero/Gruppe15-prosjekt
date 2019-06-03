@@ -31,6 +31,13 @@ boardsBtn.addEventListener("click", function(){
    document.getElementById("tavle" + nr).appendChild(newCard);
    newCard.setAttribute("draggable","true");
    newCard.setAttribute("ondragstart","drag(event)");
+<<<<<<< HEAD
+=======
+   button.onclick = function popUp() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+  } 
+>>>>>>> 6abb31b3496e463ad50c2710235bd29fee77a0ad
 
    newCard.style.height = "100px";
    newCard.style.width = "200px";
@@ -48,11 +55,14 @@ boardsBtn.addEventListener("click", function(){
   var aOk = popup.document.createElement("a");
   aOk.innerHTML = "Click here";
 
+<<<<<<< HEAD
   popup.document.body.appendChild(txtOk);
   popup.document.body.appendChild(aOk);
   }
 
 
+=======
+>>>>>>> 6abb31b3496e463ad50c2710235bd29fee77a0ad
 
 
 var dragget;
