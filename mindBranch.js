@@ -13,10 +13,10 @@ function createDiv() {
   var button = document.createElement('button');
 
 
-   var inputText = document.querySelector(".nodeText").value;
-   var commitText = document.createElement("p");
-   var pos = document.getElementById("mainNode")
-   commitText.textContent = inputText;
+  var inputText = document.querySelector(".nodeText").value;
+  var commitText = document.createElement("p");
+  var pos = document.getElementById("mainNode");
+  commitText.textContent = inputText;
 
   
 
