@@ -1,49 +1,40 @@
-    
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel=stylesheet type="text/css" href="calendar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calendar</title>
-    <style> 
+    <style>
+
     </style>
 </head>
-<body>
-    <!-- Placeholder for å vise at der er profilen -->
 
+<body>
+    <!-- Kalenderen og en fane for prosjekter-->
     <div id="calendarx">
         <div id="daysContainer" class="daysContainer">
         </div>
         <div id="month"></div>
+
         <div id="projectTab"><b>Prosjekter</b>
-                <br><br><br>
-
-
-                <!-- Her må vi få det til slik at det er automatisert med prosjekter -->
+            <br><br><br>
             <p class="projectText" id="firstProject">Eksamen</p>
         </div>
+
+        <!-- Eksempel på hvordan et prosjekt vil se ut og fungere. -->
         <div id="projects">
             <div class="projects" id="project1">Prosjektrapport
+                <div id="projectDesc">Må skrive ferdig en prosjektrapport</div>
                 <button id="calendarToBoard">Go To Board</button>
                 <button id="exitTask" onclick="closeForm()">X</button>
             </div>
             <button class="projectButtons" id="projectButton" onclick="openForm()">Prosjektrapport</button>
         </div>
     </div>
-
-
-
-
-
- 
-    <div class="chat-popup" id="myForm">
-
-
-
-
-
-    <script src="calendar.js"></script> 
+    <script src="calendar.js"></script>
 </body>
+
 </html>
