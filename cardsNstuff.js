@@ -24,7 +24,7 @@ boardsBtn.addEventListener("click", function(){
    var button = document.createElement("button");
    text.setAttribute("type", "text");
    text.setAttribute("class", "textInput");
-   button.setAttribute("id", "popUpBtn");
+   button.setAttribute("class", "popUpBtn");
    newCard.id = 'card';
    newCard.className = 'card';
    newCard.appendChild(button);
@@ -32,7 +32,10 @@ boardsBtn.addEventListener("click", function(){
    document.getElementById("tavle" + nr).appendChild(newCard);
    newCard.setAttribute("draggable","true");
    newCard.setAttribute("ondragstart","drag(event)");
-   button.onclick=popUp();
+   button.onclick = function popUp() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+  } 
 
    newCard.style.height = "100px";
    newCard.style.width = "200px";
@@ -43,18 +46,6 @@ boardsBtn.addEventListener("click", function(){
    newCard.style.opacity = "0.9";
    newCard.style.margin = "10px";
    }
-
-
-function popUp() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-
-
-
-
-
-
 
 
 
