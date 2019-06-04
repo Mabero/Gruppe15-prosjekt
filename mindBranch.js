@@ -7,6 +7,16 @@ var counter = 1;
 
 console.log(array1);
 
+jsPlumb.ready(function() {
+  jsPlumb.makeSource($('.test-div'), {
+    connector: 'StateMachine'
+  });
+  jsPlumb.makeTarget($('.test-div'), {
+    anchor: 'Continuous'
+  });
+
+
+});
 
 
 function createDiv() {
@@ -62,9 +72,7 @@ function createDiv() {
   button.textContent.fontsize = "100px";
   button.style.background = "#ff00bf46";
 
-
-  adjustLine();
-  counter = counter++;
+  counter = counter + 1;
 };
 
 // Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
@@ -127,7 +135,7 @@ function createDiv2() {
   button2.textContent.fontsize = "100px";
   button2.style.background = "#ff00bf46";
 
-  counter = counter++;
+  counter = counter + 1;
 };
 
 // Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
@@ -190,7 +198,7 @@ function createDiv3() {
   button3.textContent.fontsize = "100px";
   button3.style.background = "#ff00bf46"
 
-  counter = counter++;
+  counter = counter + 1;
 };
 
 // Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
@@ -253,6 +261,6 @@ function createDiv4() {
   button4.style.background = "#ff00bf46";
   button4.style.opacity = "0";
 
-  counter = counter++;
+  counter = counter + 1;
 };
 
