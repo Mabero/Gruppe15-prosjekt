@@ -107,6 +107,15 @@ function createPopUp() {
   var textArea = document.createElement("TEXTAREA");
   var descBtn = document.createElement("button");
   var addFile = document.createElement("INPUT");
+  var dueDateDiv = document.createElement("div");
+  var dueDateLabel = document.createElement("label");
+  var dueDateInput = document.createElement("input");
+
+  dueDateLabel.setAttribute("class","dueDateLabel");
+  dueDateInput.setAttribute("type", "date");
+  dueDateInput.setAttribute("class", "dueDate")
+
+  dueDateDiv.setAttribute("class", "dueDateDiv");
 
   // &times; lager (x) til pop up vindu.
   exitSpan.innerHTML = "&times;";
@@ -136,6 +145,7 @@ function createPopUp() {
     newText.textContent = inputText;
   }
 
+  //?????????????
   var i = 1;
 
   chckbxBtn.onclick = function createCheckBox(obj) {
@@ -176,7 +186,14 @@ function createPopUp() {
   //Gir class til modal vindu (pop up)
   modalDiv.setAttribute("class", "modal");
 
+  // set daddy (dueDateDiv) til kalenderstuff.
+  dueDateDiv.appendChild(dueDateLabel);
+  dueDateDiv.appendChild(dueDateInput);
+
+  //set daddy (document.body) til pop up vindu (modalDiv).
   document.body.appendChild(modalDiv)
+
+  //set daddy (descDiv) til textarea og button.
   descDiv.appendChild(textArea)
   descDiv.appendChild(descBtn)
 
@@ -185,6 +202,7 @@ function createPopUp() {
   chckbxDiv.appendChild(chckbxBtn)
 
   // set daddy (modalDiv) til alt innhold i pop up
+  modalDiv.appendChild(dueDateDiv);
   modalDiv.appendChild(exitSpan);
   modalDiv.appendChild(headerDiv);
   modalDiv.appendChild(descDiv)
