@@ -105,13 +105,15 @@ function createPopUp() {
   var headerDiv = document.createElement("div");
   var exitSpan = document.createElement("span");
   var title = document.createElement("h1");
-  var textArea = document.createElement("TEXTAREA");
   var chckbx = document.createElement("input");
   var chckbxDiv = document.createElement("div");
   var chckbxBtn = document.createElement("button");
   var uploadBtn = document.createElement("button");
   var fileTextSpan = document.createElement("span");
   var fileInput = document.createElement("input");
+  var descDiv = document.createElement("div");
+  var textArea = document.createElement("TEXTAREA");
+  var descBtn = document.createElement("button");
   fileInput.setAttribute("type","file");
   fileTextSpan.setAttribute("id","fileBtn");
   chckbx.setAttribute("id","prod");
@@ -119,6 +121,21 @@ function createPopUp() {
   var addFile = document.createElement("INPUT");
   addFile.setAttribute("type", "file");
   addFile.setAttribute("class","chckbxBtn")
+  descDiv.setAttribute("class", "description")
+  textArea.setAttribute("name","tekst");
+  textArea.placeholder = "Type description here";
+  textArea.setAttribute("class", "descArea");
+  descBtn.setAttribute("class", "descBtn");
+  descBtn.innerHTML = "Add";
+
+  descBtn.onclick = function text2 (){
+      var inputText = document.getElementsByName("tekst")[0].value;
+      var newText = document.createElement("p");
+      descDiv.appendChild(newText);
+      newText.textContent = inputText;
+  }
+
+
 
   var i = 1;
   chckbxBtn.onclick = function createCheckBox(obj) {
@@ -157,10 +174,12 @@ function createPopUp() {
   modalDiv.appendChild(exitSpan);
   modalDiv.appendChild(headerDiv)
   document.body.appendChild(modalDiv)
-  modalDiv.appendChild(textArea)
+  descDiv.appendChild(textArea)
   modalDiv.appendChild(chckbxDiv)
+  modalDiv.appendChild(descDiv)
   chckbxDiv.appendChild(chckbx)
   chckbxDiv.appendChild(chckbxBtn)
+  descDiv.appendChild(descBtn)
   modalDiv.appendChild(addFile);
 
   headerDiv.innerHTML = document.getElementById("input").value;
