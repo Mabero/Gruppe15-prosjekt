@@ -139,6 +139,11 @@ display: table;
 .tavle div{
   display: table;
 }
+.textInput {
+  border-radius: 7px;
+  border:none;
+  width: 140px;
+}
 
 /* ============== MODAL BOX ============== */
 
@@ -190,8 +195,8 @@ display: table;
 }
 
 .chckbxBtn {
-  height:auto;
-  width: auto;
+   height:auto;
+   width: auto;
    border-radius: 4px;
    background-color:#50D160;
    color:#fff;
@@ -200,8 +205,8 @@ display: table;
 }
 
 .descBtn {
-  height:auto;
-  width: auto;
+   height:auto;
+   width: auto;
    border-radius: 4px;
    background-color:#50D160;
    color:#fff;
@@ -229,33 +234,4 @@ display: table;
 p {
     margin: 10px auto;
     margin-top: 30px;
-}
-
-[type="date"] {
-  background:rgb(253, 138, 138) url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  95% 50% no-repeat ;
-}
-
-[type="date"]::-webkit-inner-spin-button {
-  display: none;
-  }
-
-[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-
-/* custom styles */
-body {
-  padding: 3em;
-  src: url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap);
-  font: 13px/1.4 'Montserrat', sans-serif;
-}
-.dueDateLabel {
-  display: block;
-}
-.dueDate {
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 3px 5px;
-  width: 120px;
 }

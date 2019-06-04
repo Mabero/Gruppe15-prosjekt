@@ -43,8 +43,7 @@ function createCard(nr) {
       flagged = 1
       console.log(1)
       return false;
-    }
-    else {
+    } else {
       flagSpan.style.color = "#fff"
       flagged = 0
       console.log(0)
