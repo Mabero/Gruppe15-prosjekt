@@ -3,84 +3,77 @@ var array2 = [];
 var array3 = [];
 var array4 = [];
 
-var root = {
-    children: [],
-    name: '',
-    info: ''
+root = {
+  children: [],
+  name: '',
+  level: 1
 }
 
 
 console.log(array1);
 
 
-
-
-
-
-
 function createDiv(obj) {
-    var newDiv = document.createElement('div');
-    var textTitle = document.createElement("textarea");
-    var button = document.createElement('button');
-    
-    
-    obj.children.push({
-        children: [],
-        name: '',
-        info: ''
-    });
-    console.log(obj.children);
-    
+  var newDiv = document.createElement('div');
+  var textTitle = document.createElement("textarea");
+  var button = document.createElement('button');
+
+  var leveld = obj.level + 1;
+
+  kukk = {
+    children: [],
+    name: '',
+    level: leveld
+  }
+
+  obj.children.push(kukk);
 
 
 
-    array1.push(newDiv);
+  console.log(obj.children);
 
-  const index = obj.children.length
 
-    console.log(array1);
-    
 
-    textTitle.setAttribute("class","inputTitle");
-    button.setAttribute("id", "progressButton");
-    button.setAttribute("onclick", "createDiv()"); 
+  textTitle.setAttribute("class", "inputTitle");
+  button.setAttribute("id", "progressButton");
+  button.setAttribute("onclick", "createDiv(kukk)");
 
-  
-    document.body.appendChild(newDiv);
-    newDiv.appendChild(textTitle);
-    newDiv.appendChild(button);
+
+  document.body.appendChild(newDiv);
+  newDiv.appendChild(textTitle);
+  newDiv.appendChild(button);
 
 
   // Div styling
-    newDiv.setAttribute("class", "test-div");
-    newDiv.style.height = "150px";
-    newDiv.style.width = "150px";
-    newDiv.style.color = 'white';
-    newDiv.style.backgroundColor = "rgba(150, 70, 150, 0.9)";
-    newDiv.style.borderRadius = "20px";
-    newDiv.style.border = "solid black";
-    newDiv.style.opacity = "0.7";
-    newDiv.style.borderRadius = "50%";
+  newDiv.setAttribute("class", "test-div");
+  newDiv.style.height = "150px";
+  newDiv.style.width = "150px";
+  newDiv.style.color = 'white';
+  newDiv.style.backgroundColor = "rgba(150, 70, 150, 0.9)";
+  newDiv.style.borderRadius = "20px";
+  newDiv.style.border = "solid black";
+  newDiv.style.opacity = "0.7";
+  newDiv.style.borderRadius = "50%";
 
 
   //Text box styling
-    textTitle.style.left ="30%";
-    textTitle.style.top ="20%";
-    textTitle.style.width = "40px";
-    textTitle.style.position = "relative";
+  textTitle.style.left = "30%";
+  textTitle.style.top = "20%";
+  textTitle.style.width = "40px";
+  textTitle.style.position = "relative";
 
 
-    // Button styling
-    button.style.height = "40px";
-    button.style.width = "40px";
-    button.style.top = "0%";
-    button.style.left = "40%";
-    button.style.position = "relative";
-    button.style.borderRadius ="50%";
-    button.style.opacity = "0.90";
-    button.textContent = "+";
-    button.textContent.fontsize ="100px";
-    button.style.background = "#ff00bf46";
+  // Button styling
+  button.style.height = "40px";
+  button.style.width = "40px";
+  button.style.top = "0%";
+  button.style.left = "40%";
+  button.style.position = "relative";
+  button.style.borderRadius = "50%";
+  button.style.opacity = "0.90";
+  button.textContent = "+";
+  button.textContent.fontsize = "100px";
+  button.style.background = "#ff00bf46";
 };
 
 
@@ -104,9 +97,9 @@ function createDiv2() {
 
   textTitle2.setAttribute("class","inputTitle");
   button2.setAttribute("id", "progressButton");
-  button2.setAttribute("onclick", "createDiv3()"); 
+  button2.setAttribute("onclick", "createDiv3()");
 
-  
+
   document.body.appendChild(newDiv2);
   newDiv2.appendChild(textTitle2);
   newDiv2.appendChild(button2);
@@ -164,7 +157,7 @@ function createDiv3() {
   button3.setAttribute("id", "progressButton");
   button3.setAttribute("onclick", "createDiv4()");
 
-  
+
   document.body.appendChild(newDiv3);
   newDiv3.appendChild(textTitle3);
   newDiv3.appendChild(button3);
@@ -199,7 +192,7 @@ function createDiv3() {
   button3.style.opacity = "0.90";
   button3.textContent = "+";
   button3.textContent.fontsize ="100px";
-  button3.style.background = "#ff00bf46"  
+  button3.style.background = "#ff00bf46"
 };
 
 
@@ -220,7 +213,7 @@ function createDiv4() {
   textTitle4.setAttribute("class","inputTitle");
   button4.setAttribute("id", "progressButton");
 
-  
+
   document.body.appendChild(newDiv4);
   newDiv4.appendChild(textTitle4);
   newDiv4.appendChild(button4);
