@@ -1,14 +1,20 @@
 const boardsBtn = document.getElementById("boardsBtn");
 const boardsContainer = document.getElementById("boardsContainer");
 
+
+// diverse counters
 var flagCounter = 0;
 var cardCounter = 0;
 
+//funskjon som lager ny tavle
 boardsBtn.addEventListener("click", function(){
+  //DOM elementer
   var newDiv = document.createElement("div")
   var newContent = document.createTextNode("test")
   var newCardBtn = document.getElementById("newCardBtn")
   newDiv.className = "tavle";
+
+  //append child for ny tavle:
   newDiv.appendChild(newContent);
   tavleContainer.appendChild(newDiv);
   newDiv.after(boardsBtn);
@@ -16,7 +22,9 @@ boardsBtn.addEventListener("click", function(){
   return newDiv;
 });
 
+//funksjon som lager kortene
 function createCard(nr) {
+  //DOM elementer
   var newCard = document.createElement("div");
   var popUpBtn = document.createElement("button");
   var text = document.createElement("INPUT");
@@ -27,6 +35,7 @@ function createCard(nr) {
   var flagged = 0;
   const stars = [document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p")]
 
+  //Flagg og onclick funskjon som endrer fargen på flagget.
   flagSpan.innerHTML = "⚑";
   flagSpan.onclick = function changeColor() {
     if (flagged == 0) {
@@ -44,36 +53,23 @@ function createCard(nr) {
   }
   console.log(flagCounter);
 
-  stars.forEach((star, i) => {
-    star.setAttribute("id", nr + "s" + i);
-    star.setAttribute("onclick", "changeColor1(i)");
-    star.setAttribute("style","display: inline");
-    star.innerHTML = "☆"
-    console.log(star);
-    prioDiv.appendChild(star);
-  })
-
-  function changeColor1(nr) {
-    console.log(nr)
-    for(var i = 1; i <= 5; i++) {
-      if(i <= nr) {
-        document.getElementById('s' + i).style.color = "gold"
-        document.getElementById('s'+ i).innerHTML = "★"
-      } else {
-        document.getElementById('s' + i).style.color = "gold"
-        document.getElementById('s'+i).innerHTML = "☆"
-      }
-    }
-  }
-
-  text.setAttribute("id","input");
+  //plasserer <span> som flagget er plassert i riktig div.
   flagDiv.setAttribute("id", "flag" + flagCounter);
+  flagDiv.appendChild(flagSpan);
+
+  //Det her gidder jeg ikke å kommentere.
+  text.setAttribute("id","input");
   text.setAttribute("type", "text");
   text.setAttribute("class", "textInput");
-  flagDiv.appendChild(flagSpan);
+
+  //Append child kort til riktig tavle.
   document.getElementById("tavle" + nr).appendChild(newCard);
+
+  //onclick funksjon (modal) på knapp.
   popUpBtn.setAttribute("onclick", "createPopUp()");
 
+  /* Styler og setter daddy (new card) til alle elementene som
+   skal være på kortet. */
   newCard.appendChild(text);
   newCard.appendChild(prioDiv);
   newCard.setAttribute("draggable","true");
@@ -91,6 +87,7 @@ function createCard(nr) {
   newCard.style.opacity = "0.9";
   newCard.style.margin = "10px";
 
+  // f l a g c o u n t e r
   flagCounter = flagCounter + 1;
 }
 
@@ -110,6 +107,10 @@ function createPopUp() {
   var textArea = document.createElement("TEXTAREA");
   var descBtn = document.createElement("button");
   var addFile = document.createElement("INPUT");
+
+  // &times; lager (x) til pop up vindu.
+  exitSpan.innerHTML = "&times;";
+  exitSpan.setAttribute("class", "close");
 
   fileInput.setAttribute("type","file");
   fileTextSpan.setAttribute("id","fileBtn");
@@ -135,9 +136,8 @@ function createPopUp() {
     newText.textContent = inputText;
   }
 
-
-
   var i = 1;
+
   chckbxBtn.onclick = function createCheckBox(obj) {
     if (obj.value !== "") {
 
@@ -166,32 +166,35 @@ function createPopUp() {
   chckbxBtn.innerHTML = "Create task";
   chckbxDiv.setAttribute("class","chckbxDiv");
   chckbx.placeholder = "Add task";
+
+  //Gir class til textarea
   textArea.setAttribute("class", "textArea");
-  exitSpan.innerHTML = "&times;";
+
+  //gir class til headerDiv
   headerDiv.setAttribute("class", "headerDiv");
+
+  //Gir class til modal vindu (pop up)
   modalDiv.setAttribute("class", "modal");
-  exitSpan.setAttribute("class", "close");
-  modalDiv.appendChild(exitSpan);
-  modalDiv.appendChild(headerDiv)
+
   document.body.appendChild(modalDiv)
   descDiv.appendChild(textArea)
-  modalDiv.appendChild(chckbxDiv)
-  modalDiv.appendChild(descDiv)
+  descDiv.appendChild(descBtn)
+
+  //set daddy (chckbxDiv) til checkbox og checkboxbutton
   chckbxDiv.appendChild(chckbx)
   chckbxDiv.appendChild(chckbxBtn)
-  descDiv.appendChild(descBtn)
+
+  // set daddy (modalDiv) til alt innhold i pop up
+  modalDiv.appendChild(exitSpan);
+  modalDiv.appendChild(headerDiv);
+  modalDiv.appendChild(descDiv)
+  modalDiv.appendChild(chckbxDiv)
   modalDiv.appendChild(addFile);
 
   headerDiv.innerHTML = document.getElementById("input").value;
 
   exitSpan.onclick = function() {
     modalDiv.style.display = "none";
-
-    window.onclick = function(event) {
-      if (event.target == document.body) {
-        modalDiv.style.display = "none";
-      }
-    }
   }
 }
 
