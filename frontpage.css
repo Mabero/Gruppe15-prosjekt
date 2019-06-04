@@ -73,6 +73,7 @@ body {
       border: 0px;
       padding: 5px;
       margin-bottom: 5px;
+      text-align: center;
   }
 
   .dropdown-content button {

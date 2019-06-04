@@ -28,7 +28,7 @@ boardsBtn.addEventListener("click", function () {
     newInputField.className = "inputField"
     ifrm.className = "iframe"
     boardHeader.className = "boardHeader"
-    
+
 
     /*======= BOARD DIVS =========*/
     newDiv.className = "board";
@@ -41,12 +41,12 @@ boardsBtn.addEventListener("click", function () {
 
     newInputField.placeholder = "Enter board name ..."
     inputFields.push(newInputField);
-    
+
     newA.textContent = "Go to board"
     removeA.textContent = "Remove board";
-    
-    newA.href = "javascript:hideShowFrame()"
-    removeA.href = "javascript:removeBoard()";
+
+    //newA.href = "javascript:hideShowFrame()"
+    //removeA.href = "javascript:removeBoard()";
 
     newA.after(removeA);
     newDiv.after(boardsBtn);
@@ -59,7 +59,7 @@ boardsBtn.addEventListener("click", function () {
     backBtn.href = "javascript:hideShowFrame()";
     backBtn.style.display = "none";
     backBtns.push(backBtn);
-    
+
 
     /*======= BOARD HEADER =========*/
     boardsContainer.appendChild(boardHeader);
@@ -69,9 +69,6 @@ boardsBtn.addEventListener("click", function () {
     document.body.appendChild(ifrm);
     ifrm.setAttribute("src", "../cardsNstuff.html");
     iframes.push(ifrm);
-    
-
-
 
     for (i = 0; i < iframes.length; i++) {
         ifrm.id = "iframe" + i;
@@ -79,23 +76,25 @@ boardsBtn.addEventListener("click", function () {
         boardHeader.id = "boardHeader" + i;
         newInputField.id = "inputField" + i;
     }
-    
+
     for (i = 0; i < boards.length; i++) {
         boards[i].setAttribute("id", "board" + i);
         boards[i].childNodes[2].setAttribute("onclick", "removeBoard(" + i + ")")
+        boards[i].childNodes[1].setAttribute("onclick", "hideShowFrame(" + i + ")")
     };
-
-    for (i = 0; i < boards.length; i++) {
-        document.getElementById("board" + i).addEventListener("keyup", function (event) {
-            const key = event.which || event.keyCode;
-            if (key === 13) {
-                const boardObj = {
-                    name: newInputField.value,
+    /*
+        for (i = 0; i < boards.length; i++) {
+            document.getElementById("board" + i).addEventListener("keyup", function (event) {
+                const key = event.which || event.keyCode;
+                if (key === 13) {
+                    const boardObj = {
+                        name: newInputField.value,
+                    }
+                    boardsObjs.push(boardObj);
                 }
-                boardsObjs.push(boardObj);
-            }
-        });
-    }
+            });
+        }
+        */
 })
 
 function removeBoard(i) {
@@ -112,18 +111,57 @@ function removeBoard(i) {
     boardHeader.remove();
 }
 
-function hideShowFrame(i) {
-    for (i = 0; i < iframes.length; i++) {
-        if (iframes[i].style.display == "block") {
+function hideShowFrame(nr) {
+    if (nr === undefined) {
+        for (i = 0; i < iframes.length; i++) {
             iframes[i].style.display = "none";
             backBtns[i].style.display = "none";
             boardHeaders[i].style.display = "none";
         }
-        else {
-            iframes[i].style.display = "block";
-            backBtns[i].style.display = "block";
-            boardHeaders[i].style.display = "block";
-            boardHeaders[i].textContent = inputFields[i].value;
-        }
+        return;
     }
+    iframes[nr].style.display = "block";
+    backBtns[nr].style.display = "block";
+    boardHeaders[nr].style.display = "block";
+    boardHeaders[nr].textContent = inputFields[nr].value;
 }
+
+/*======= TOP MENU IFRAMES =========*/
+
+const profileFrame = document.getElementById("profileIfrm");
+const profileBtn = document.getElementById("profileBtn");
+const boardsMain = document.getElementById("boardsMain");
+
+const calendarFrame = document.getElementById("calendarIfrm");
+const calendarBtn = document.getElementById("calendarBtn");
+
+profileBtn.addEventListener("click", function() {
+    profileFrame.style.zIndex = 10;
+    profileFrame.style.display = "block";
+    document.body.style.overflow = "hidden";
+
+    profileBtn.classList.add("currentLink")
+    boardsMain.classList.remove("currentLink")
+
+    hideShowFrame();
+})
+
+boardsMain.addEventListener("click", function() {
+    profileFrame.style.display = "none";
+    calendarFrame.style.display = "none"
+    boardsMain.classList.add("currentLink");
+    profileBtn.classList.remove("currentLink");
+    calendarBtn.classList.remove("currentLink");
+
+})
+
+calendarBtn.addEventListener("click", function() {
+    calendarFrame.style.zIndex = 10;
+    calendarFrame.style.display = "block";
+    document.body.style.overflow = "hidden";
+
+    calendarBtn.classList.add("currentLink")
+    boardsMain.classList.remove("currentLink")
+
+    hideShowFrame();
+})

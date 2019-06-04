@@ -13,14 +13,20 @@
     <div class="topnav">
         <a id="logo" class="navLeft" href="#home"><img src="/git/bilder/LogoStor.png" height="90px"></a>
 
-        <a class="navLeft currentLink" href="/git/boards/boards.html">Your Boards</a>
-        <a class="navLeft" href="/git/mindBranch.html">Mind Branching</a>
-        <a class="navLeft" href="/git/calendar.html">Calendar</a>
+        <a id="boardsMain" class="navLeft currentLink" >Your Boards</a>
+        <a id="mindBbtn" class="navLeft" href="/git/mindBranch.html">Mind Branching</a>
+        <a id="calendarBtn" class="navLeft" >Calendar</a>
 
         <a class="navRight" href="/git/frontpage.html">Log out</a>
-        <a class="navRight" href="/git/boards/boards.html">Profile</a>
+        <a id="profileBtn" class="navRight">Profile</a>
     </div>
+
+    <iframe id="profileIfrm"src="../profile/profile.html" frameborder="0"></iframe>
+    <iframe id="calendarIfrm"src="../calendar.html" frameborder="0"></iframe>
+
+
     <div id="boardsContainer">
+
 
         <button id="boardsBtn">+ Add new board</button>
     </div>
