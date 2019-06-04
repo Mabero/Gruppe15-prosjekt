@@ -139,11 +139,17 @@ display: table;
 .tavle div{
   display: table;
 }
+.textInput {
+  border-radius: 7px;
+  border:none;
+  width: 140px;
+}
 
 /* ============== MODAL BOX ============== */
 
 .modal {
   position: fixed;
+  border-radius: 10px;
   z-index: 1;
   left: 20vw;
   top: 5vw;
@@ -162,6 +168,10 @@ display: table;
   width: 80%;
 }
 
+.description {
+  margin: 10px;
+}
+
 .close {
   color: rgba(79,150,150);
   float: right;
@@ -178,26 +188,50 @@ display: table;
   cursor: pointer;
 }
 
-.textArea {
-	width: 400px;
-	height: 120px;
-	border: 3px solid #cccccc;
-	padding: 5px;
-  margin-top: 50px;
-  margin-left: 110px;
-}
-
 #prod {
    border-radius: 4px;
    border: none;
    display: block;
 }
+
 .chckbxBtn {
-  height:auto;
-  width: auto;
+   height:auto;
+   width: auto;
    border-radius: 4px;
    background-color:#50D160;
    color:#fff;
    border: none;
    cursor: pointer;
+}
+
+.descBtn {
+   height:auto;
+   width: auto;
+   border-radius: 4px;
+   background-color:#50D160;
+   color:#fff;
+   border: none;
+   cursor: pointer;
+}
+
+
+ textarea {
+    display: block;
+    font-size: 14px;
+    width:200px;
+    margin: 10px auto;
+    margin-top: 30px;
+    padding: none;
+    border-radius: 14px;
+    background-color: #f2f2f2;
+    border: none;
+    width: 400px;
+    height: 70px;
+    border: 3px solid #cccccc;
+    }
+}
+
+p {
+    margin: 10px auto;
+    margin-top: 30px;
 }
