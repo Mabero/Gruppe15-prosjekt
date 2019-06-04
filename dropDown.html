@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel=stylesheet type="text/css" href="dropDown.css">
+    <title>Dropdown</title>
+</head>
+
+<body>
+
+
+    <div id="container">
+        <div class="dropdown">
+            <button onclick="dropFunction()" class="dropbtn">Medlemmer</button>
+            <div id="myDropdown" class="dropdown-content">
+                <button id="member1" class="memberButton" onclick="addMember('B')">Bjarne</button>
+                <button id=" member2 " class="memberButton " onclick="addMember('M') ">Mats</button>
+                <button id="member3 " class="memberButton " onclick="addMember('F') ">Fazal</button>
+                <button id="member4 " class="memberButton " onclick="addMember('M') ">Martin</button>
+                <button id="member5 " class="memberButton " onclick="addMember('S') ">Stian</button>
+                <button id="member6 " class="memberButton " onclick="addMember('E') ">Even</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="dropDown.js "></script>
+
+</body>
