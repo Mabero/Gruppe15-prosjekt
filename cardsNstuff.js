@@ -19,6 +19,18 @@ boardsBtn.addEventListener("click", function(){
   tavleContainer.appendChild(newDiv);
   newDiv.after(boardsBtn);
   newCardBtn.after(newCard);
+/*
+  const starContainer = document.createElement("div");
+  starContainer.id = "test";
+  const star1 = document.createElement("p")
+  const star2 = document.createElement("p")
+  const star3 = document.createElement("p")
+  const star4 = document.createElement("p")
+  const star5 = document.createElement("p")
+  starContainer.appendChild(star1); 
+  newDiv.appendChild(starContainer);
+*/
+
   return newDiv;
 });
 
@@ -34,7 +46,23 @@ function createCard(nr) {
   var prioDiv = document.createElement("div");
   var flagged = 0;
   const stars = [document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p")]
-
+  
+ 
+  
+/*
+ stars.onclick = function changeColor1(nr) {
+    console.log(nr)
+    for(var i = 1; i <= 5; i++) {
+        if(i <= nr) {
+            document.getElementById('star' + i).style.color = "gold"
+            document.getElementById('star'+i).innerHTML = "★"
+        } else {
+            document.getElementById('star' + i).style.color = "gold"
+            document.getElementById('star'+i).innerHTML = "☆"
+        }
+    }
+}
+*/
   //Flagg og onclick funskjon som endrer fargen på flagget.
   flagSpan.innerHTML = "⚑";
   flagSpan.onclick = function changeColor() {
@@ -53,11 +81,11 @@ function createCard(nr) {
   console.log(flagCounter);
 
   //plasserer <span> som flagget er plassert i riktig div.
-  flagDiv.setAttribute("id", "flag" + flagCounter);
+  flagDiv.setAttribute("class", "flag" + flagCounter);
   flagDiv.appendChild(flagSpan);
 
 
-  popUpBtn.setAttribute("class", "popUpBtn");
+  popUpBtn.setAttribute("id", "popUpBtn");
   //Det her gidder jeg ikke å kommentere.
   text.setAttribute("id","input");
   text.setAttribute("type", "text");
@@ -79,14 +107,7 @@ function createCard(nr) {
   newCard.appendChild(flagDiv);
   newCard.id = 'card';
   newCard.className = 'card';
-  newCard.style.height = "100px";
-  newCard.style.width = "200px";
-  newCard.style.color = '#f2f2f2';
-  newCard.style.backgroundColor = "#4F6096";
-  newCard.style.borderRadius = "20px";
-  newCard.style.border = "solid black";
-  newCard.style.opacity = "0.9";
-  newCard.style.margin = "10px";
+  
 
   // f l a g c o u n t e r
   flagCounter = flagCounter + 1;
@@ -129,7 +150,7 @@ function createPopUp(nr) {
   chckbx.setAttribute("type", "text");
 
   addFile.setAttribute("type", "file");
-  addFile.setAttribute("class","chckbxBtn")
+  addFile.setAttribute("class","addFileButton")
 
   descDiv.setAttribute("class", "description")
 
@@ -138,7 +159,7 @@ function createPopUp(nr) {
   textArea.setAttribute("class", "descArea");
 
   descBtn.setAttribute("class", "descBtn");
-  descBtn.innerHTML = "Add";
+  descBtn.innerHTML = "Add Description";
   descBtn.onclick = function text2 (){
     var inputText = document.getElementsByName("tekst")[0].value;
     var newText = document.createElement("p");
