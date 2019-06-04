@@ -57,6 +57,8 @@ function createCard(nr) {
   flagDiv.setAttribute("id", "flag" + flagCounter);
   flagDiv.appendChild(flagSpan);
 
+
+  popUpBtn.setAttribute("class", "popUpBtn");
   //Det her gidder jeg ikke å kommentere.
   text.setAttribute("id","input");
   text.setAttribute("type", "text");
@@ -92,7 +94,7 @@ function createCard(nr) {
 }
 
 // Lager pop up modal window med div funksjoner.
-function createPopUp() {
+function createPopUp(nr) {
   var modalDiv = document.createElement("div");
   var headerDiv = document.createElement("div");
   var exitSpan = document.createElement("span");
@@ -214,6 +216,8 @@ function createPopUp() {
   exitSpan.onclick = function() {
     modalDiv.style.display = "none";
   }
+
+  document.getElementById("card" + nr).appendChild(modalDiv);
 }
 
 
