@@ -1,41 +1,42 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 * {
-  font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  margin: 0px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-color: #f2f2f2;
+margin: 0px;
+overflow-y: scroll;
+overflow-x: hidden;
+background-color: #f2f2f2;
 }
 
 .topnav {
-  background-image: url("/git/bilder/headerImage.png");
-  padding-top: 20px;
-  background-size: 100vw 100vh;
-  z-index: 10;
-  height: 150px;
-  padding-left: 5vw;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 30vw 30vw 30vw;
+background-image: url("/git/bilder/headerImage.png");
+padding-top: 20px;
+background-size: 100vw 100vh;
+z-index: 10;
+height: 150px;
+padding-left: 5vw;
+width: 100vw;
+display: grid;
+grid-template-columns: 30vw 30vw 30vw;
+
 }
 
 #logo {
-  margin-top: -40px;
-  transform: scale(1) !important;
+margin-top: -40px;
+transform: scale(1) !important;
 }
 
 .navRight {
-  text-decoration: none;
-  float: right;
+text-decoration: none;
+float: right;
 }
 
 .topCenter {
-  height: 45px;
-  border-bottom: 2px solid #ffd460;
+height: 45px;
+border-bottom: 2px solid #ffd460;
 }
 
 .topLeft {
@@ -47,177 +48,156 @@ body {
 }
 
 .currentLink {
-  color: #ffd460 !important;
+color: #ffd460 !important;
 }
 
 .topnav a {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 500;
-  cursor: pointer;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+font-weight: 500;
+cursor: pointer;
 }
 
 .topnav a:active {
-  color: #ffd460;
+color: #ffd460;
 }
 
 #logo {
-  margin-top: -40px;
-  transform: scale(1) !important;
+margin-top: -40px;
+transform: scale(1) !important;
 }
 
 .navLeft {
-  float: left;
+float: left;
 }
 
 .navRight {
-  float: Right;
+float: Right;
 }
 
 .topnav a:hover {
-  color: #ffd460;
-  text-decoration: none;
-  transition: 0.5s;
-  transform: scale(1.2);
+color: #ffd460;
+text-decoration: none;
+transition: 0.5s;
+transform: scale(1.2);
 }
 
 /* ============= Tavler ==============*/
 
 #tavleContainer {
-  display: flex;
-  height: 70vh;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
+display: flex;
+height: 70vh;
+width: auto;
+margin-left: auto;
+margin-right: auto;
 }
 
 #tavleContainer * {
-  margin-left: 50px;
+margin-left: 50px;
 }
 
 #tavleContainer button {
-  padding: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
-  color: #f2f2f2;
-  background-color: #50D160;
-  font-weight: 600;
-  font-size: 14px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  height: 40px;
+padding: 10px;
+padding-left: 50px;
+padding-right: 50px;
+color: #f2f2f2;
+background-color: #50D160;
+font-weight: 600;
+font-size: 14px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+height: 40px;
 }
 
 #cardBtn button {
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #f2f2f2;
-  background-color: #50D160;
-  font-size: 10px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  height: 40px;
+padding: 5px;
+padding-left: 10px;
+padding-right: 10px;
+color: #f2f2f2;
+background-color: #50D160;
+font-size: 10px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+height: 40px;
 }
 
 .tavle {
-  background-color: #4F6076;
-  height: auto;
-  width: 200;
-  text-align: center;
-  color: #f2f2f2;
-  border-radius: 15px;
-  display: table;
+background-color: #4F6076;
+height: auto;
+width: 200;
+text-align: center;
+color: #f2f2f2;
+border-radius: 15px;
+display: table;
 }
 
 .tavle div{
   display: table;
 }
 
+/* ============== MODAL BOX ============== */
 
-/* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* Dette er selve pop up */
-.popup .popuptext {
-  visibility: hidden;
-  width: 350px;
-  height: 350px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* toggle hide/show på popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-/* Animasjoner fade in pop up */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-
-.modalDiv {
-  display: none;
+.modal {
   position: fixed;
-  z-index: 1;/
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 1;
+  left: 20vw;
+  top: 5vw;
+  width: 60%;
+  height: 60%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgb(79,96,118);
 }
 
-.modalContent {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
+.headerDiv {
+  background-color: rgba(79,96,150,0.95);
+  height: auto;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #666;
   width: 80%;
 }
 
 .close {
-  color: #aaa;
+  color: rgba(79,150,150);
   float: right;
   font-size: 28px;
   font-weight: bold;
+  height: 15px;
+  width: 15px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.textArea {
+	width: 400px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+  margin-top: 50px;
+  margin-left: 110px;
+}
+
+#prod {
+   border-radius: 4px;
+   border: none;
+   display: block;
+}
+.chckbxBtn {
+  height:auto;
+  width: auto;
+   border-radius: 4px;
+   background-color:#50D160;
+   color:#fff;
+   border: none;
+   cursor: pointer;
 }
