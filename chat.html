@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="chat.css">
+    </head>
+<body>
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+    
+    <form class="form-container">
+    <h2 style="color:#ff6000;">Tabula chat</h2>
+        
+    <div  id="output">Hi, welcome to tabula chat</div>
+    <input id="input" placeholder="type your messeage."/>
+        
+    <button id="btn-1" class="btn">Send</button>
+    <button id="btn-2" class="btn cancel" onclick="closeForm()">Close</button>
+
+    
+    </form>
+</div>
+    <script src="chat.js"></script>
+</body>
+</html>
+
+
