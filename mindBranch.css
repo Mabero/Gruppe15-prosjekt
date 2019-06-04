@@ -2,37 +2,36 @@ body {
   background-color: #f2f2f2;
 }
 
-#nodeContainer {
-  width: 100%;
-  height: 70%;
-  background-color: rgb(240, 179, 179);
-  bottom: 0%;
+body * {
   position: absolute;
 }
 
-#drag_drop{
-  position: relative;
+#nodeContainer {
+  width: 100%;
+  height: 80%;
+  background-color: #f0b3b3;
+  bottom: 0%;
+  left: 0%;
+}
+
+#fixBox {
+  height: 200px;
+  width: 200px;
+  top: 35%;
+  left: 45%;
+  z-index: 0;
 }
 
 #div0 {
   height: 200px;
   width: 200px;
   background: #f06969;
-  right: 50%;
-  top: 30%;
-  position: absolute;
+  top: 35%;
+  left: 45%;
   z-index: 50;
 }
 
-#div00 {
-  height: 200px;
-  width: 200px;
-  background: #f06969;
-  right: 80%;
-  top: 30%;
-  position: absolute;
-  z-index: 50;
-}
+
 
 /* #mainNode:hover{
     z-index: 0;
@@ -41,14 +40,6 @@ body {
     transition: all 0.2s ease-out;
   } */
 
-#node1 {
-  height: 150px;
-  width: 150px;
-  background: #fff01b;
-  position: absolute;
-  bottom: 200px;
-  right: 20%;
-}
 
 .node {
   border-radius: 50%;
@@ -61,7 +52,6 @@ input {
   margin: 10px auto;
   margin-top: 50px;
   padding: 10px 8px 10px 8px;
-  border-radius: 5px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .55), 0px 1px 1px rgba(250, 78, 78, 0.5);
   border: 1px solid rgb(248, 78, 78);
 }
@@ -72,36 +62,35 @@ input {
 
 input:hover, input:focus {
   opacity: .7;
-  color: rgb(204, 24, 0);
+  color: #cc1800;
   border: 1px solid rgb(204, 0, 0);
-  box-shadow: 0px 1px 0px rgba(253, 87, 87, 0.25), inset 0px 3px 6px rgba(0, 0, 0, .25);
+  box-shadow: 0px 1px 0px #fd575740, inset 0px 3px 6px rgba(0, 0, 0, .25);
 }
 
 
-input[type="button"] {
+#mnBt{
   appearance: none;
   opacity: .90;
   width: 50px;
   height: 50px;
-  background: rgb(250, 119, 119);
+  background: #fa7777;
   box-shadow: inset 0 1px 2px rgba(241, 130, 130, 0.918), 0px 1px 6px rgba(252, 72, 213, 0.438);
   border: 1px solid #ff6f6f;
   border-radius: 50%;
   color: rgb(255, 254, 254);
   cursor: pointer;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);
-  top: -150px;
-  right: -85px;
-  position: relative;
+  top: -20%;
+  right: 0%;
 }
 
-#div0.input[type="button"]:hover {
+/* #div0.input[type="button"]:hover {
   opacity: 0.99;
   background: #FFF;
 }
 
 input[type="button"]:hover {
-  background: rgb(247, 145, 138);
+  background: #f7918a;
   border: 1px solid #ff00bf46;
   border-radius: 50%;
   box-shadow: inset 0px 3px 16px rgba(255, 0, 0, 0.664), 0px 1px 10px rgba(250, 117, 117, 0.836), inset 0px -1px 2px rgb(250, 129, 129);
@@ -109,4 +98,4 @@ input[type="button"]:hover {
   -webkit-transition: all 0.40s ease-out;
   transition: all 0.40s ease-out;
   opacity: .90;
-}
+}*/
