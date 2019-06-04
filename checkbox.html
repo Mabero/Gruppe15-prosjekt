@@ -5,13 +5,31 @@
 
     </head> 
     <body>
+        <div>
                 <input type="text" id="prod" placeholder="Add task " autofocus />
             <p>
-                <input type="button" id="taskButton" value="Create Checkbox" onclick="createCheckBox(prod)" />
+                <input type="button" id="taskBtn" value="Create task" checked="checked" onclick="createCheckBox(prod)" />
             </p>
-        
+        </div>
             <p id="boxContainer"></p>
         </body>
+
+        <style>
+             #prod {
+                border-radius: 4px;
+                border: none;
+                display: flex;
+                flex-direction: column;
+             }
+             #taskBtn {
+                border-radius: 4px;
+                background-color:#50D160;
+                color:#fff;
+                border: none;
+                cursor: pointer;
+             }
+            
+        </style>
       
     </body>
 
@@ -26,6 +44,7 @@
             checkbox.setAttribute("id", "prodName" + i);    
             checkbox.setAttribute("value", obj.value);
             checkbox.setAttribute("name", "products");
+            checkbox.setAttribute("style", "display: block");
 
             var label = document.createElement("label");  
             label.setAttribute("for", "prodName" + i);
@@ -39,8 +58,10 @@
             document.getElementById(obj.id).focus();
 
             i = i + 1;
+
+            }
         }
-    }
+    
         </script>   
 
 </html>
