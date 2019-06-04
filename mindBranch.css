@@ -2,8 +2,6 @@ body {
   background-color: #f2f2f2;
 }
 
-
-
 #nodeContainer {
   width: 100%;
   height: 70%;
@@ -12,11 +10,25 @@ body {
   position: absolute;
 }
 
+#drag_drop{
+  position: relative;
+}
+
 #div0 {
   height: 200px;
   width: 200px;
   background: #f06969;
   right: 50%;
+  top: 30%;
+  position: absolute;
+  z-index: 50;
+}
+
+#div00 {
+  height: 200px;
+  width: 200px;
+  background: #f06969;
+  right: 80%;
   top: 30%;
   position: absolute;
   z-index: 50;
@@ -65,12 +77,6 @@ input:hover, input:focus {
   box-shadow: 0px 1px 0px rgba(253, 87, 87, 0.25), inset 0px 3px 6px rgba(0, 0, 0, .25);
 }
 
-/* input[type="text"]:focus,
-  input[type="password"]:focus {
-    box-shadow: inset 0 1px 2px rgba(255,255,255, .35), 0px 1px 15px rgba(255, 102, 0, 0.5);
-    border: 1px solid rgb(204, 0, 0);
-    outline: none;
-  } */
 
 input[type="button"] {
   appearance: none;
