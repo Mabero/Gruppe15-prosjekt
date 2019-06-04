@@ -3,6 +3,8 @@ function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
 
+
+
 // Hente verdier
 var inputElement = document.getElementById("input");
 var outputElement = document.getElementById("output");
