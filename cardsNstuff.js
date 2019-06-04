@@ -1,17 +1,13 @@
 const boardsBtn = document.getElementById("boardsBtn");
 const boardsContainer = document.getElementById("boardsContainer");
 
-var newDiv;
-var newContent;
-var newCardBtn;
-
 var flagCounter = 0;
 var cardCounter = 0;
 
 boardsBtn.addEventListener("click", function(){
-  newDiv = document.createElement("div")
-  newContent = document.createTextNode("test")
-  newCardBtn = document.getElementById("newCardBtn")
+  var newDiv = document.createElement("div")
+  var newContent = document.createTextNode("test")
+  var newCardBtn = document.getElementById("newCardBtn")
   newDiv.className = "tavle";
   newDiv.appendChild(newContent);
   tavleContainer.appendChild(newDiv);
@@ -28,20 +24,10 @@ function createCard(nr) {
   var span = document.createElement("span");
   var flagSpan = document.createElement("span");
   var prioDiv = document.createElement("div");
+  var flagged = 0;
   const stars = [document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p")]
 
-  stars.forEach((star, i) => {
-    star.setAttribute("id", nr + "s" + i);
-    star.setAttribute("onclick", "changeColor1(i)");
-    star.setAttribute("style","display: inline");
-    star.innerHTML = "☆"
-    console.log(star);
-    prioDiv.appendChild(star);
-  })
-
-
   flagSpan.innerHTML = "⚑";
-  var flagged = 0;
   flagSpan.onclick = function changeColor() {
     if (flagged == 0) {
       flagSpan.style.color = "#f06969"
@@ -57,6 +43,15 @@ function createCard(nr) {
     }
   }
   console.log(flagCounter);
+
+  stars.forEach((star, i) => {
+    star.setAttribute("id", nr + "s" + i);
+    star.setAttribute("onclick", "changeColor1(i)");
+    star.setAttribute("style","display: inline");
+    star.innerHTML = "☆"
+    console.log(star);
+    prioDiv.appendChild(star);
+  })
 
   function changeColor1(nr) {
     console.log(nr)
@@ -75,19 +70,18 @@ function createCard(nr) {
   flagDiv.setAttribute("id", "flag" + flagCounter);
   text.setAttribute("type", "text");
   text.setAttribute("class", "textInput");
-  newCard.id = 'card';
-  newCard.className = 'card';
-  newCard.appendChild(flagDiv);
   flagDiv.appendChild(flagSpan);
+  document.getElementById("tavle" + nr).appendChild(newCard);
+  popUpBtn.setAttribute("onclick", "createPopUp()");
+
   newCard.appendChild(text);
   newCard.appendChild(prioDiv);
-  document.getElementById("tavle" + nr).appendChild(newCard);
   newCard.setAttribute("draggable","true");
   newCard.setAttribute("ondragstart","drag(event)");
   newCard.appendChild(popUpBtn);
-  popUpBtn.setAttribute("onclick", "createPopUp()");
-
-
+  newCard.appendChild(flagDiv);
+  newCard.id = 'card';
+  newCard.className = 'card';
   newCard.style.height = "100px";
   newCard.style.width = "200px";
   newCard.style.color = '#f2f2f2';
@@ -100,6 +94,7 @@ function createCard(nr) {
   flagCounter = flagCounter + 1;
 }
 
+// Lager pop up modal window med div funksjoner.
 function createPopUp() {
   var modalDiv = document.createElement("div");
   var headerDiv = document.createElement("div");
@@ -114,25 +109,30 @@ function createPopUp() {
   var descDiv = document.createElement("div");
   var textArea = document.createElement("TEXTAREA");
   var descBtn = document.createElement("button");
+  var addFile = document.createElement("INPUT");
+
   fileInput.setAttribute("type","file");
   fileTextSpan.setAttribute("id","fileBtn");
+
   chckbx.setAttribute("id","prod");
   chckbx.setAttribute("type", "text");
-  var addFile = document.createElement("INPUT");
+
   addFile.setAttribute("type", "file");
   addFile.setAttribute("class","chckbxBtn")
+
   descDiv.setAttribute("class", "description")
+
   textArea.setAttribute("name","tekst");
   textArea.placeholder = "Type description here";
   textArea.setAttribute("class", "descArea");
+
   descBtn.setAttribute("class", "descBtn");
   descBtn.innerHTML = "Add";
-
   descBtn.onclick = function text2 (){
-      var inputText = document.getElementsByName("tekst")[0].value;
-      var newText = document.createElement("p");
-      descDiv.appendChild(newText);
-      newText.textContent = inputText;
+    var inputText = document.getElementsByName("tekst")[0].value;
+    var newText = document.createElement("p");
+    descDiv.appendChild(newText);
+    newText.textContent = inputText;
   }
 
 
@@ -141,25 +141,25 @@ function createPopUp() {
   chckbxBtn.onclick = function createCheckBox(obj) {
     if (obj.value !== "") {
 
-        var checkbox = document.createElement("input");
-        checkbox.setAttribute("type", "checkbox");
-        checkbox.setAttribute("id", "prodName" + i);
-        checkbox.setAttribute("value", obj.value);
-        checkbox.setAttribute("name", "products");
-        checkbox.setAttribute("style", "display: block");
+      var checkbox = document.createElement("input");
+      checkbox.setAttribute("type", "checkbox");
+      checkbox.setAttribute("id", "prodName" + i);
+      checkbox.setAttribute("value", obj.value);
+      checkbox.setAttribute("name", "products");
+      checkbox.setAttribute("style", "display: block");
 
-        var label = document.createElement("label");
-        label.setAttribute("for", "prodName" + i);
+      var label = document.createElement("label");
+      label.setAttribute("for", "prodName" + i);
 
-        label.appendChild(document.createTextNode(obj.value));
+      label.appendChild(document.createTextNode(obj.value));
 
-        chckbxDiv.appendChild(checkbox);
-        chckbxDiv.appendChild(label);
+      chckbxDiv.appendChild(checkbox);
+      chckbxDiv.appendChild(label);
 
-        obj.value = "";
-        document.getElementById(obj.id).focus();
+      obj.value = "";
+      document.getElementById(obj.id).focus();
 
-        i = i + 1;
+      i = i + 1;
     }
   }
   chckbxBtn.setAttribute("class", "chckbxBtn");
@@ -185,17 +185,19 @@ function createPopUp() {
   headerDiv.innerHTML = document.getElementById("input").value;
 
   exitSpan.onclick = function() {
-  modalDiv.style.display = "none";
-
-  window.onclick = function(event) {
-  if (event.target == document.body) {
     modalDiv.style.display = "none";
+
+    window.onclick = function(event) {
+      if (event.target == document.body) {
+        modalDiv.style.display = "none";
+      }
+    }
   }
 }
-}
-}
 
 
+
+// Drag and drop funksjoner
 var dragget;
 var source;
 var dragged;
@@ -203,14 +205,12 @@ var dragged;
 function allowDrop(ev) {
   ev.preventDefault();
 }
-
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id)
   dragget = event.target.className;
   dragged = event.target;
   source = ev.target.parentElement;
 }
-
 function drop(ev) {
   ev.preventDefault();
   if ( ev.target.className == "tavle" && dragget == "card" )  {
@@ -219,7 +219,6 @@ function drop(ev) {
     console.log("yes");
   }
 }
-
 function drop1(ev) {
   ev.preventDefault();
   if ( ev.target.className == "listWrap" && dragget == "tavle" ) {
