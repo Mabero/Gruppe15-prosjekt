@@ -198,15 +198,9 @@ min-width: 250px;
 p {
   margin: 5px;
   color: #f2f2f2;
-<<<<<<< HEAD
   display: block
 
 
-=======
-  display: block;
-  word-break: keep-all;
- 
->>>>>>> c936c596885fb91a1de88658dc1dc68b0b554d94
 }
 .headerDiv {
   background-color: #4F6976;
@@ -216,11 +210,6 @@ p {
   border: none;
   width: 80%;
   color: #f2f2f2;
-<<<<<<< HEAD
-=======
-  font-size: 20px;
- 
->>>>>>> c936c596885fb91a1de88658dc1dc68b0b554d94
 }
 
 .description {
@@ -239,32 +228,27 @@ p {
 }
 
 .closeCard {
-  position: relative;
+  position: absolute;
   margin-bottom: 5px;
   color: #f2f2f2;
-  float: right;
   font-size: 28px;
   font-weight: bold;
   height: 20px;
   width: 20px;
 }
 
+.closeCard:hover {
+  color: #f06969;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
 .close:hover,
 .close:focus {
-  color: black;
+  color: #f06969;
+  transition: 0.5s;
   text-decoration: none;
   cursor: pointer;
-}
-
-.closeCard:hover,
-.closeCard:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.closeCard:click {
-
 }
 
 #prod {
@@ -355,28 +339,8 @@ p {
   border-radius: 2px;
 }
 
-<<<<<<< HEAD
 .dueDateP {
   margin: 3px;
   padding: 3px;
   font-size: 15px;
-=======
-
-.stars {
-  color: gold;
-}
-
-#starContainer {
-  height: 100px;
-  margin-top: 34px;
-  padding-left: 10px;
-  width: 100px;
-  display: flex;
-  position: absolute;
-}
-
-#starContainer * {
-  padding-right: 10px;
-  font-size: 16px;
->>>>>>> c936c596885fb91a1de88658dc1dc68b0b554d94
 }

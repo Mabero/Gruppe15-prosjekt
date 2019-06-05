@@ -23,7 +23,7 @@ boardsBtn.addEventListener("click", function () {
   //append child for ny tavle:
   tavleContainer.appendChild(newDiv);
   newDiv.after(boardsBtn);
-  newCard.after(newCardBtn);
+
 /*
   const starContainer = document.createElement("div");
   starContainer.id = "test";
@@ -100,7 +100,7 @@ function createCard(nr) {
 
 
 
-  /*for (i = 0; i < 5; i++) {
+  for (i = 0; i < 5; i++) {
     const star = document.createElement("p");
     starContainer.appendChild(star);
     star.id = "star" + i;
