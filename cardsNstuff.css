@@ -185,12 +185,12 @@ min-width: 250px;
   background-color: #4F6976;
 }
 p {
+  margin: 5px;
   color: #f2f2f2;
-  display: block
-  
-  
+  display: block;
+  word-break: keep-all;
+ 
 }
-
 .headerDiv {
   background-color: #4F6976;
   height: auto;
@@ -199,9 +199,9 @@ p {
   border: none;
   width: 80%;
   color: #f2f2f2;
-  
+  font-size: 20px;
+ 
 }
-
 
 .description {
   margin: 10px;
