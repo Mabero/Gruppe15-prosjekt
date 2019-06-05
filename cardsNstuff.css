@@ -186,6 +186,9 @@ min-width: 250px;
 }
 p {
   color: #f2f2f2;
+  display: block
+  
+  
 }
 
 .headerDiv {
@@ -195,6 +198,7 @@ p {
   padding: 10px;
   border: none;
   width: 80%;
+  color: #f2f2f2;
   
 }
 
