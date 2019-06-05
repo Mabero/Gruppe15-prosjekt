@@ -29,6 +29,7 @@ var y9 = 0;
 var y10 = 0;
 var y11 = 0;
 
+// Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
 
 function createDiv() {
   if (z < 4) {
@@ -70,7 +71,7 @@ function createDiv() {
     newDiv.style.height = "150px";
     newDiv.style.width = "150px";
     newDiv.style.color = 'white';
-    newDiv.style.backgroundColor = "#420420";
+    newDiv.style.backgroundColor = "#f06969";
     newDiv.style.margin = "1em";
     newDiv.style.zIndex = "5";
     newDiv.style.opacity = "1";
@@ -87,16 +88,15 @@ function createDiv() {
     button.style.top = "-5%";
     button.style.right = "0%";
     button.style.borderRadius = "50%";
-    button.style.opacity = "0.90";
     button.style.borderColor = "#f370d246"
     button.textContent = "+";
     button.textContent.fontsize = "100px";
-    button.style.background = "#ff00bf46";
+    button.style.background = "#d35a5a";
 
     // Line styling
     newLine.style.height = "7px"
     newLine.style.width = "30%"
-    newLine.style.backgroundColor = "#000000"
+    newLine.style.backgroundColor = "#4f6976"
     newLine.style.zIndex = "1";
 
 
@@ -213,7 +213,7 @@ function createDiv2(nr) {
     newDiv2.style.height = "110px";
     newDiv2.style.width = "110px";
     newDiv2.style.color = 'white';
-    newDiv2.style.backgroundColor = "#3246fa";
+    newDiv2.style.backgroundColor = "#f29696";
     newDiv2.style.borderRadius = "20px";
     newDiv2.style.border = "#ff00bf46";
     newDiv2.style.opacity = "1";
@@ -226,7 +226,6 @@ function createDiv2(nr) {
     textTitle2.style.left = "23%";
     textTitle2.style.top = "0%";
     textTitle2.style.width = "40px";
-    textTitle2.style.position = "absolute";
 
 
     // button2 styling
@@ -234,19 +233,19 @@ function createDiv2(nr) {
     button2.style.width = "40px";
     button2.style.top = "-10%";
     button2.style.right = "-10%";
-    button2.style.position = "absolute";
+    
     button2.style.borderRadius = "50%";
-    button2.style.opacity = "0.90";
     button2.textContent = "+";
     button2.textContent.fontsize = "100px";
-    button2.style.background = "#ff00bf46";
+    button2.style.background = "#f06969";
     button2.style.border = "1px";
-    button2.style.borderColor = "#ff00bf46";
+    button2.style.borderStyle = "solid";
+    button2.style.borderColor = "#f5c339";
 
     // Line styling
     newLine2.style.height = "7px"
     newLine2.style.width = "30%"
-    newLine2.style.backgroundColor = "#000000"
+    newLine2.style.backgroundColor = "#4f6976"
     newLine2.style.zIndex = "-1";
 
     if (nr == 0) {
@@ -367,7 +366,7 @@ function createDiv3(nr) {
     (nr == 6 && y6 < 2) || (nr == 7 && y7 < 2) || (nr == 8 && y8 < 2) || (nr == 9 && y9 < 2) || (nr == 10 && y10 < 2) || (nr == 11 && y11 < 2)) {
     var newDiv3 = document.createElement('div');
     var textTitle3 = document.createElement("input");
-    var button3 = document.createElement('button');
+    // var button3 = document.createElement('button');
     var newLine3 = document.createElement("div");
 
 
@@ -376,8 +375,8 @@ function createDiv3(nr) {
 
     textTitle3.setAttribute("class", "inputTitle");
     textTitle3.setAttribute("placeholder", "Idea");
-    button3.setAttribute("id", "progressButton");
-
+    // button3.setAttribute("id", "progressButton");
+/*
     if (nr == 0) {
       if (y0 == 0) {
         button3.setAttribute("onclick", "createDiv4(0)");
@@ -462,12 +461,12 @@ function createDiv3(nr) {
         button3.setAttribute("onclick", "createDiv4(23)");
       }
     }
-
+*/
 
 
     fixBox.appendChild(newDiv3);
     newDiv3.appendChild(textTitle3);
-    newDiv3.appendChild(button3);
+    // newDiv3.appendChild(button3);
     fixBox.appendChild(newLine3)
 
 
@@ -478,7 +477,7 @@ function createDiv3(nr) {
     newDiv3.style.height = "90px";
     newDiv3.style.width = "90px";
     newDiv3.style.color = 'white';
-    newDiv3.style.backgroundColor = "#32fa5a";
+    newDiv3.style.backgroundColor = "#50d160";
     newDiv3.style.borderRadius = "20px";
     newDiv3.style.border = "#ff00bf46";
     newDiv3.style.opacity = "1";
@@ -492,7 +491,7 @@ function createDiv3(nr) {
     textTitle3.style.top = "-20%";
     textTitle3.style.width = "40px";
 
-
+/*
     // button3 styling
     button3.style.height = "40px";
     button3.style.width = "40px";
@@ -505,11 +504,12 @@ function createDiv3(nr) {
     button3.textContent = "+";
     button3.textContent.fontsize = "100px";
     button3.style.background = "#ff00bf46";
+*/
 
     // Line styling
     newLine3.style.height = "7px"
     newLine3.style.width = "30%"
-    newLine3.style.backgroundColor = "#000000"
+    newLine3.style.backgroundColor = "#4f6976"
     newLine3.style.zIndex = "-1";
 
     if (nr == 0) {
@@ -735,7 +735,7 @@ function createDiv3(nr) {
 };
 // Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
 
-
+/*
 function createDiv4() {
   var newDiv4 = document.createElement('div');
   var textTitle4 = document.createElement("input");
@@ -794,3 +794,5 @@ function createDiv4() {
 
   counter = counter + 1;
 };
+
+*/
