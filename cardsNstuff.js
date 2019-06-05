@@ -88,7 +88,7 @@ function createCard(nr) {
 
   popUpBtn.setAttribute("id", "popUpBtn");
   popUpBtn.setAttribute("class", "popUpBtns");
-  popUpBtn.textContent = "Details";
+  popUpBtn.textContent = "✎ Edit";
   //Det her gidder jeg ikke å kommentere.
   text.setAttribute("id","input");
   text.setAttribute("type", "text");
