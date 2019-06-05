@@ -224,8 +224,8 @@ function createPopUp(nr) {
   chckbxDiv.appendChild(chckbxBtn)
 
   // set daddy (modalDiv) til alt innhold i pop up
-  modalDiv.appendChild(dueDateDiv);
   modalDiv.appendChild(exitSpan);
+  modalDiv.appendChild(dueDateDiv);
   modalDiv.appendChild(headerDiv);
   modalDiv.appendChild(descDiv)
   modalDiv.appendChild(chckbxDiv)
