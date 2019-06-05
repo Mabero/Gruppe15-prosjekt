@@ -22,26 +22,33 @@ const registerFail = document.getElementById("registerFail");
 
 let users = [
 {
+    id: 1,
     username: "mats",
     password: "mats"
 },
 {
+    id: 2,
+    fullname: "Stian Greiner Haaker",
     username: "stian",
     password: "stian"
 },
 {
+    id: 3,
     username: "bjarne",
     password: "bjarne"
 },
 {
+    id: 4,
     username: "martin",
     password: "martin"
 },
 {
+    id: 5,
     username: "fazal",
     password: "fazal"
 },
 {
+    id: 6,
     username: "even",
     password: "even"
 }
@@ -56,7 +63,7 @@ registerBtn.addEventListener("click", function(){
             users.push(
                 {
                     username: registerName.value,
-                    password: registerName.value
+                    password: registerPassword.value
                 }
             )
             console.log(users)
@@ -69,6 +76,7 @@ registerBtn.addEventListener("click", function(){
 loginBtn.addEventListener("click", function(){
     for(i = 0; i < users.length; i++) {
         if (inputUsername.value === users[i].username && inputPassword.value === users[i].password){
+            document.cookie = inputUsername.value + "; expires=0; path=/";
             location.href = "/git/boards/boards.html"
             return false;
         } else {
@@ -76,17 +84,3 @@ loginBtn.addEventListener("click", function(){
         }
     }
 })
-
-
-/*
-const dropDown = document.getElementById("")
-
-registerBtn.addEventListener('click', function() {
-   // alert("funkaa")
-    if(dropDown.style.display === "block") {
-        dropDown.style.display = "none"
-    } else {
-        dropDown.style.display = "block"
-    }
-    
-})*/
