@@ -171,7 +171,6 @@ function createCard(nr) {
   star1.innerHTML = "★";
   star1.onclick = starchange;*/
   function starchange() {
-
     for (var i = 0; i < stars.length; i++) {
 
     const star = document.getElementById('star' + i);
