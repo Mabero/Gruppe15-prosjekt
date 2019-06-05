@@ -141,6 +141,8 @@ border-radius: 15px;
 display: table;
 min-height: 200px;
 margin-left: 30px;
+
+margin-bottom: 30px;
 min-width: 250px;
 }
 
@@ -155,7 +157,7 @@ min-width: 250px;
   background-color: #4F6976;
   border-radius: 20px;
   opacity:0.9;
- 
+  display: block;
 }
 .textInput {
   border-top-left-radius: 10px;
@@ -187,8 +189,8 @@ min-width: 250px;
 p {
   color: #f2f2f2;
   display: block
-  
-  
+
+
 }
 
 .headerDiv {
@@ -199,7 +201,6 @@ p {
   border: none;
   width: 80%;
   color: #f2f2f2;
-  
 }
 
 
@@ -209,7 +210,18 @@ p {
 
 .close {
   position: relative;
-  margin: 3px;
+  margin-bottom: 5px;
+  color: #f2f2f2;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  height: 20px;
+  width: 20px;
+}
+
+.closeCard {
+  position: relative;
+  margin-bottom: 5px;
   color: #f2f2f2;
   float: right;
   font-size: 28px;
@@ -225,13 +237,24 @@ p {
   cursor: pointer;
 }
 
+.closeCard:hover,
+.closeCard:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.closeCard:click {
+
+}
+
 #prod {
    margin:5px;
    border-radius: 4px;
    width: auto;
    border: none;
    display: block;
-   background-color: #f2f2f2; 
+   background-color: #f2f2f2;
 }
 
 .chckbxBtn {
@@ -291,6 +314,7 @@ p {
     margin: 10px auto;
     margin-top: 30px;
 }
+
 .dueDate {
   margin: 5px;
   border: none;
@@ -305,5 +329,8 @@ p {
   left:65px;
 }
 
-
-
+.dueDateP {
+  margin: 3px;
+  padding: 3px;
+  font-size: 15px;
+}

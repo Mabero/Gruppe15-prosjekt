@@ -27,7 +27,7 @@ boardsBtn.addEventListener("click", function(){
   const star3 = document.createElement("p")
   const star4 = document.createElement("p")
   const star5 = document.createElement("p")
-  starContainer.appendChild(star1); 
+  starContainer.appendChild(star1);
   newDiv.appendChild(starContainer);
 */
 
@@ -41,14 +41,19 @@ function createCard(nr) {
   var popUpBtn = document.createElement("button");
   var text = document.createElement("INPUT");
   var flagDiv = document.createElement("div");
-  var span = document.createElement("span");
+  var xspan = document.createElement("span");
   var flagSpan = document.createElement("span");
   var prioDiv = document.createElement("div");
   var flagged = 0;
   const stars = [document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p")]
-  
- 
-  
+
+
+  xspan.onclick = function removeCard(){
+    var elem = document.querySelector('#card');
+    elem.parentNode.removeChild(elem);
+  };
+
+
 /*
  stars.onclick = function changeColor1(nr) {
     console.log(nr)
@@ -84,7 +89,8 @@ function createCard(nr) {
   flagDiv.setAttribute("class", "flag" + flagCounter);
   flagDiv.appendChild(flagSpan);
 
-  
+  xspan.setAttribute("class", "closeCard");
+  xspan.innerHTML = "&times;";
 
   popUpBtn.setAttribute("id", "popUpBtn");
   popUpBtn.setAttribute("class", "popUpBtns");
@@ -102,15 +108,14 @@ function createCard(nr) {
 
   /* Styler og setter daddy (new card) til alle elementene som
    skal være på kortet. */
+  newCard.appendChild(xspan);
   newCard.appendChild(text);
-  newCard.appendChild(prioDiv);
   newCard.setAttribute("draggable","true");
   newCard.setAttribute("ondragstart","drag(event)");
   newCard.appendChild(popUpBtn);
   newCard.appendChild(flagDiv);
   newCard.id = 'card';
   newCard.className = 'card';
-  
 
   // f l a g c o u n t e r
   flagCounter = flagCounter + 1;
@@ -135,6 +140,12 @@ function createPopUp(nr) {
   var dueDateDiv = document.createElement("div");
   var dueDateLabel = document.createElement("label");
   var dueDateInput = document.createElement("input");
+  var dueP = document.createElement("p");
+  var textnode = document.createTextNode("Deadline");
+
+
+  dueP.setAttribute("class", "dueDateP");
+  dueP.appendChild(textnode);
 
   dueDateLabel.setAttribute("class","dueDateLabel");
   dueDateInput.setAttribute("type", "date");
@@ -227,9 +238,10 @@ function createPopUp(nr) {
   chckbxDiv.appendChild(chckbxBtn)
 
   // set daddy (modalDiv) til alt innhold i pop up
-  modalDiv.appendChild(exitSpan);
-  modalDiv.appendChild(dueDateDiv);
   modalDiv.appendChild(headerDiv);
+  modalDiv.appendChild(exitSpan);
+  modalDiv.appendChild(dueP);
+  modalDiv.appendChild(dueDateDiv);
   modalDiv.appendChild(descDiv)
   modalDiv.appendChild(chckbxDiv)
   modalDiv.appendChild(addFile);
@@ -240,10 +252,14 @@ function createPopUp(nr) {
     modalDiv.style.display = "none";
   }
 
-  document.getElementById("card" + nr).appendChild(modalDiv);
+  // unfinished business
+/*  window.onclick = function(event) {
+    if (event.target == modalDiv) {
+      modalDiv.style.display = "none";
+    }
+  } */
+
 }
-
-
 
 // Drag and drop funksjoner
 var dragget;
@@ -278,3 +294,6 @@ function drop1(ev) {
     console.log("wrap");
   }
 }
+
+
+let cardInfo = [];
