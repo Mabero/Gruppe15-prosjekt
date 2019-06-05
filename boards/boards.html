@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="boards.css">
+    <link rel="stylesheet" href="/git/chat.css">
     <title>Document</title>
 </head>
 
@@ -13,24 +14,37 @@
     <div class="topnav">
         <a id="logo" class="navLeft" href="#home"><img src="/git/bilder/LogoStor.png" height="90px"></a>
 
-        <a id="boardsMain" class="navLeft currentLink" >Your Boards</a>
+        <a id="boardsMain" class="navLeft currentLink">Your Boards</a>
         <a id="mindBbtn" class="navLeft" href="/git/mindBranch.html">Mind Branching</a>
-        <a id="calendarBtn" class="navLeft" >Calendar</a>
+        <a id="calendarBtn" class="navLeft">Calendar</a>
 
         <a class="navRight" href="/git/frontpage.html">Log out</a>
         <a id="profileBtn" class="navRight">Profile</a>
     </div>
 
-    <iframe id="profileIfrm"src="../profile/profile.html" frameborder="0"></iframe>
-    <iframe id="calendarIfrm"src="../calendar.html" frameborder="0"></iframe>
+    <iframe id="profileIfrm" src="../profile/profile.html" frameborder="0"></iframe>
+    <iframe id="calendarIfrm" src="../calendar.html" frameborder="0"></iframe>
 
 
     <div id="boardsContainer">
-
-
         <button id="boardsBtn">+ Add new board</button>
     </div>
 
+    <!-- CHAT FUNCTION-->
+
+    <button class="open-button" onclick="openForm()">Open Chat</button>
+
+    <div class="chat-popup" id="myForm">
+
+        <form class="form-container">
+            <div id="output">
+            </div>
+            <input id="input" placeholder="Type your message ..." />
+
+            <button type="submit" id="btn-1" class="btn">Send</button>
+            <button type="button" id="btn-2" class="btn cancel" onclick="closeForm()">Close Chat</button>
+        </form>
+    </div>
     <script src="boards.js"></script>
 </body>
 

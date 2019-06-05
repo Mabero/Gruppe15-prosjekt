@@ -18,7 +18,7 @@ boardsBtn.addEventListener("click", function(){
   newDiv.appendChild(newContent);
   tavleContainer.appendChild(newDiv);
   newDiv.after(boardsBtn);
-  newCardBtn.after(newCard);
+  newCard.after(newCardBtn);
 /*
   const starContainer = document.createElement("div");
   starContainer.id = "test";
@@ -84,8 +84,11 @@ function createCard(nr) {
   flagDiv.setAttribute("class", "flag" + flagCounter);
   flagDiv.appendChild(flagSpan);
 
+  
 
   popUpBtn.setAttribute("id", "popUpBtn");
+  popUpBtn.setAttribute("class", "popUpBtns");
+  popUpBtn.textContent = "✎ Edit";
   //Det her gidder jeg ikke å kommentere.
   text.setAttribute("id","input");
   text.setAttribute("type", "text");
@@ -224,8 +227,8 @@ function createPopUp(nr) {
   chckbxDiv.appendChild(chckbxBtn)
 
   // set daddy (modalDiv) til alt innhold i pop up
-  modalDiv.appendChild(dueDateDiv);
   modalDiv.appendChild(exitSpan);
+  modalDiv.appendChild(dueDateDiv);
   modalDiv.appendChild(headerDiv);
   modalDiv.appendChild(descDiv)
   modalDiv.appendChild(chckbxDiv)
