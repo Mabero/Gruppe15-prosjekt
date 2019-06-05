@@ -9,7 +9,8 @@ body * {
 #nodeContainer {
   width: 100%;
   height: 80%;
-  background-color: #f0b3b3;
+  background-image: radial-gradient(#ff5b5b, #fa8e8e);
+  background-image: radial-gradient(circle at bottom left, #ff6325bd, #fa4242b6);
   bottom: 0%;
   left: 0%;
 }
@@ -25,7 +26,7 @@ body * {
 #div0 {
   height: 180px;
   width: 180px;
-  background: #f06969;
+  background: #ffd460;
   top: 35%;
   left: 45.5%;
   z-index: 50;
@@ -53,7 +54,7 @@ input {
   margin: 10px auto;
   margin-top: 50px;
   padding: 10px 8px 10px 8px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .55), 0px 1px 1px #fa4e4e80;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .55), 0px 1px 1px #f5c339;
   border: 1px solid #f84e4e;
   top: 25%;
   left: 25%;
@@ -73,10 +74,9 @@ input:hover, input:focus {
 
 #mnBt {
   appearance: none;
-  opacity: .80;
   width: 42px;
   height: 42px;
-  background: #fa7777;
+  background: #f5c339;
   box-shadow: inset 0 1px 2px rgba(241, 130, 130, 0.918), 0px 1px 6px #420420;
   border: 1px solid #ff6f6f;
   border-radius: 50%;
