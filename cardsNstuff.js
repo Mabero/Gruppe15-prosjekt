@@ -31,9 +31,13 @@ boardsBtn.addEventListener("click", function () {
 
   newDiv.appendChild(newCardBtns);
 
+  var tavleId = newDiv.id;
 
+  console.log(tavleId);
   return newDiv;
 });
+
+
 
 const stars = []
 let cardCounter = 0;
@@ -71,15 +75,15 @@ function createCard(nr) {
   }
 
   /*
-    var span = document.createElement("span");
-    var flagSpan = document.createElement("span");
-    var prioDiv = document.createElement("div");
-    var flagged = 0;
+  var span = document.createElement("span");
+  var flagSpan = document.createElement("span");
+  var prioDiv = document.createElement("div");
+  var flagged = 0;
 
 
-    const starContainer = document.createElement("div");
-    starContainer.id = "starContainer";
-    newCard.appendChild(starContainer);
+  const starContainer = document.createElement("div");
+  starContainer.id = "starContainer";
+  newCard.appendChild(starContainer);
 
   */
 
@@ -107,6 +111,7 @@ function createCard(nr) {
 
   xspan.setAttribute("class", "closeCard");
   xspan.innerHTML = "&times;";
+  xspan.setAttribute("onclick", "removeCard(i)")
 
 
   popUpBtn.setAttribute("id", "popUpBtn");
@@ -126,7 +131,7 @@ function createCard(nr) {
   popUpBtn.setAttribute("onclick", "createPopUp()");
 
   /* Styler og setter daddy (new card) til alle elementene som
-   skal være på kortet. */
+  skal være på kortet. */
   newCard.appendChild(xspan);
   newCard.appendChild(text);
   newCard.setAttribute("draggable", "true");
@@ -143,10 +148,7 @@ function createCard(nr) {
   newCard.id = 'card' + cardCounter;
   newCard.className = 'card';
 
-  xspan.onclick = function removeCard(id) {
-    var elem = document.getElementById(id)
-    elem.remove()
-  };
+
 
 
   // f l a g c o u n t e r
@@ -190,67 +192,71 @@ function createCard(nr) {
   /*
   stars.onclick = function changeColor1(nr) {
 
-    for (var i = 1; i <= 5; i++) {
-      if (i <= nr) {
-        document.getElementById('star' + i).style.color = "gold"
-        document.getElementById('star' + i).innerHTML = "★"
-      } else {
-        document.getElementById('star' + i).style.color = "gold"
-        document.getElementById('star' + i).innerHTML = "☆"
-      }
+  for (var i = 1; i <= 5; i++) {
+  if (i <= nr) {
+  document.getElementById('star' + i).style.color = "gold"
+  document.getElementById('star' + i).innerHTML = "★"
+} else {
+document.getElementById('star' + i).style.color = "gold"
+document.getElementById('star' + i).innerHTML = "☆"
+}
 
-    }
+}
 
-  }*/
+}*/
 }
 // ======================== /CREATE CARD ======================== //
 
 function dropFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdownContent");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdownContent");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
     }
+  }
 }
 
 // Funksjonen som velger fra dropdown menyen hvilket medlem som er tillagt kortet.
 
 function addMember(check) {
-    var showMember = document.createElement("div");
-    var whichMember = document.createElement("div");
+  var showMember = document.createElement("div");
+  var whichMember = document.createElement("div");
 
-    modalDiv.appendChild(showMember);
-    showMember.appendChild(whichMember);
+  modalDiv.appendChild(showMember);
+  showMember.appendChild(whichMember);
 
-    showMember.setAttribute("id", "showMember");
-    showMember.setAttribute("class", "showMember");
-    showMember.style.height = "50px";
-    showMember.style.width = "50px";
-    showMember.style.backgroundColor = "#f2f2f2";
-    showMember.style.borderRadius = "50%";
+  showMember.setAttribute("id", "showMember");
+  showMember.setAttribute("class", "showMember");
+  showMember.style.height = "50px";
+  showMember.style.width = "50px";
+  showMember.style.backgroundColor = "#f2f2f2";
+  showMember.style.borderRadius = "50%";
 
 
-    whichMember.setAttribute("id", "whichMember");
-    whichMember.textContent = check;
-    whichMember.style.fontSize = "40px";
-    whichMember.align = "center";
+  whichMember.setAttribute("id", "whichMember");
+  whichMember.textContent = check;
+  whichMember.style.fontSize = "40px";
+  whichMember.align = "center";
 
-    console.log(check);
+  console.log(check);
 }
 
 
+function removeCard(nr) {
+  const card = document.getElementById("card" + nr)
+  card.remove()
+};
 
-// ======================== POP UP ======================== //
+// Lager pop up modal window med div funksjoner.
 function createPopUp(nr) {
   var modalDiv = document.createElement("div");
   var headerDiv = document.createElement("div");
@@ -288,7 +294,7 @@ function createPopUp(nr) {
   dropDownDiv.setAttribute("class", "dropdown");
   dropdownbtn0.setAttribute("class", "dropbtn");
   dropdownbtn0.onclick = function dropFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("myDropdown").classList.toggle("show");
   }
   dropdownbtn0.innerHTML = "Medlemmer";
   dropDownMenu.setAttribute("id", "myDropdown");
@@ -309,9 +315,9 @@ function createPopUp(nr) {
   dropdownbtn6.setAttribute("class", "memberButton");
 
 
-/* Her ble det litt rotete. Siden alt er inni en modal måtte vi kalle på funksjoner
-rett etter hver knapp. Denne funksjonen lager en runding og første bokstav på
-hvilket medlem som er lagt til. */
+  /* Her ble det litt rotete. Siden alt er inni en modal måtte vi kalle på funksjoner
+  rett etter hver knapp. Denne funksjonen lager en runding og første bokstav på
+  hvilket medlem som er lagt til. */
   dropdownbtn1.onclick = function addMember() {
     var showMember = document.createElement("div");
     var whichMember = document.createElement("div");
@@ -398,24 +404,24 @@ hvilket medlem som er lagt til. */
   }
   dropdownbtn5.onclick = function addMember() {
     var showMember = document.createElement("div");
-  var whichMember = document.createElement("div");
+    var whichMember = document.createElement("div");
 
-  memberDiv.appendChild(showMember);
-  showMember.appendChild(whichMember);
+    memberDiv.appendChild(showMember);
+    showMember.appendChild(whichMember);
 
-  showMember.setAttribute("id", "showMember");
-  showMember.setAttribute("class", "showMember");
-  showMember.style.height = "50px";
-  showMember.style.width = "50px";
-  showMember.style.backgroundColor = "#f2f2f2";
-  showMember.style.borderRadius = "50%";
-  showMember.style.margin = "5px";
+    showMember.setAttribute("id", "showMember");
+    showMember.setAttribute("class", "showMember");
+    showMember.style.height = "50px";
+    showMember.style.width = "50px";
+    showMember.style.backgroundColor = "#f2f2f2";
+    showMember.style.borderRadius = "50%";
+    showMember.style.margin = "5px";
 
 
-  whichMember.setAttribute("id", "whichMember");
-  whichMember.textContent = "S";
-  whichMember.style.fontSize = "40px";
-  whichMember.align = "center";
+    whichMember.setAttribute("id", "whichMember");
+    whichMember.textContent = "S";
+    whichMember.style.fontSize = "40px";
+    whichMember.align = "center";
   }
   dropdownbtn6.onclick = function addMember() {
     var showMember = document.createElement("div");
@@ -494,10 +500,11 @@ hvilket medlem som er lagt til. */
     newText.textContent = inputText;
   }
 
-  //?????????????
   var i = 1;
 
-  chckbxBtn.onclick = function createCheckBox(obj) {
+  chckbxBtn.addEventListener("click", function(e) { createCheckBox(prod)});
+
+  function createCheckBox(obj){
     if (obj.value !== "") {
 
       var checkbox = document.createElement("input");
@@ -511,6 +518,7 @@ hvilket medlem som er lagt til. */
       label.setAttribute("for", "prodName" + i);
 
       label.appendChild(document.createTextNode(obj.value));
+      label.style.color = "#f2f2f2";
 
       chckbxDiv.appendChild(checkbox);
       chckbxDiv.appendChild(label);
@@ -520,7 +528,9 @@ hvilket medlem som er lagt til. */
 
       i = i + 1;
     }
-  }
+  };
+
+
   chckbxBtn.setAttribute("class", "chckbxBtn");
   chckbxBtn.innerHTML = "Create task";
   chckbxDiv.setAttribute("class", "chckbxDiv");
@@ -569,49 +579,29 @@ hvilket medlem som er lagt til. */
 
   // unfinished business
   /*  window.onclick = function(event) {
-      if (event.target == modalDiv) {
-        modalDiv.style.display = "none";
-      }
-    } */
+  if (event.target == modalDiv) {
+  modalDiv.style.display = "none";
+}
+} */
 }
 // ======================== /POP UP ======================== //
 
 
 
 
+
 // Drag and drop funksjoner
-var dragget;
-var source;
-var dragged;
 
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id)
-  dragget = event.target.className;
-  dragged = event.target;
-  source = ev.target.parentElement;
-}
-function drop(ev) {
-  ev.preventDefault();
-  if (ev.target.className == "tavle" && dragget == "card") {
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(dragged);
-    console.log("yes");
-  }
-}
-function drop1(ev) {
-  ev.preventDefault();
-  if (ev.target.className == "listWrap" && dragget == "tavle") {
+Sortable.create(tavle1, {
+  group: 'shared'
+});
 
-    var data = ev.dataTransfer.getData("text");
-    source.innerHTML = ev.target.innerHTML;
-    ev.target.innerHTML = "";
-    ev.target.appendChild(dragged);
-    console.log("wrap");
-  }
-}
+Sortable.create(tavle2, {
+  animation: 150,
+  group: 'shared'
+});
 
-
-let cardInfo = [];
+Sortable.create(tavle3, {
+  animation: 150,
+  group: 'shared'
+});
