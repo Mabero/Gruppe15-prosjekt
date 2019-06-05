@@ -133,7 +133,7 @@ function createDiv() {
     z = z + 1;
     counter = counter + 1;
   } else {
-    alert("fire er Maks");
+    console.log("4");
   }
 };
 
@@ -353,7 +353,7 @@ function createDiv2(nr) {
     counter = counter + 1;
   }
   else {
-    alert("max 3 here")
+    console.log("3");
     return;
   }
 };
@@ -363,8 +363,8 @@ function createDiv2(nr) {
 
 
 function createDiv3(nr) {
-  if ((nr == 0 && y0 < 2) || (nr == 1 && y1 < 2) || (nr == 2 && y2 < 2) || (nr == 3 && y3 < 2) || (nr == 4 && y4 < 2) || (nr == 4 && y4 < 2) || (nr == 5 && y5 < 2) ||
-   (nr == 6 && y6 < 2) || (nr == 6 && y6 < 2) || (nr == 7 && y7 < 2) || (nr == 8 && y8 < 2) || (nr == 9 && y9 < 2) || (nr == 10 && y10 < 2)  || (nr == 11 && y11 < 2)) {
+  if ((nr == 0 && y0 < 2) || (nr == 1 && y1 < 2) || (nr == 2 && y2 < 2) || (nr == 3 && y3 < 2) || (nr == 4 && y4 < 2) || (nr == 5 && y5 < 2) ||
+    (nr == 6 && y6 < 2) || (nr == 7 && y7 < 2) || (nr == 8 && y8 < 2) || (nr == 9 && y9 < 2) || (nr == 10 && y10 < 2) || (nr == 11 && y11 < 2)) {
     var newDiv3 = document.createElement('div');
     var textTitle3 = document.createElement("input");
     var button3 = document.createElement('button');
@@ -538,7 +538,7 @@ function createDiv3(nr) {
       }
       if (y1 == 1) {
         newDiv3.style.left = "-200%"
-        newDiv3.style.top = "-0%";
+        newDiv3.style.top = "-5%";
         newLine3.style.left = "-160%";
         newLine3.style.top = "25%";
         newLine3.style.transform = "rotate(340deg)";
@@ -548,7 +548,7 @@ function createDiv3(nr) {
 
     if (nr == 2) {
       if (y2 == 0) {
-        newDiv3.style.left = "-0%"
+        newDiv3.style.left = "-10%"
         newDiv3.style.top = "-180%"
         newLine3.style.left = "-5%";
         newLine3.style.top = "-120%";
@@ -592,7 +592,7 @@ function createDiv3(nr) {
       }
       if (y4 == 1) {
         newDiv3.style.left = "-200%"
-        newDiv3.style.bottom = "-0%"
+        newDiv3.style.bottom = "-5%"
         newLine3.style.left = "-160%";
         newLine3.style.bottom = "15%";
         newLine3.style.transform = "rotate(35deg)";
@@ -602,7 +602,7 @@ function createDiv3(nr) {
 
     if (nr == 5) {
       if (y5 == 0) {
-        newDiv3.style.left = "-0%";
+        newDiv3.style.left = "-5%";
         newDiv3.style.bottom = "-180%";
         newLine3.style.left = "-5%";
         newLine3.style.bottom = "-120%";
@@ -646,7 +646,7 @@ function createDiv3(nr) {
       }
       if (y7 == 1) {
         newDiv3.style.right = "-200%";
-        newDiv3.style.top = "-0%";
+        newDiv3.style.top = "-5%";
         newLine3.style.right = "-160%";
         newLine3.style.top = "25%";
         newLine3.style.transform = "rotate(35deg)";
@@ -656,7 +656,7 @@ function createDiv3(nr) {
 
     if (nr == 8) {
       if (y8 == 0) {
-        newDiv3.style.right = "-0%";
+        newDiv3.style.right = "-10%";
         newDiv3.style.top = "-180%";
         newLine3.style.right = "-5%";
         newLine3.style.top = "-120%";
@@ -700,7 +700,7 @@ function createDiv3(nr) {
       }
       if (y10 == 1) {
         newDiv3.style.right = "-200%";
-        newDiv3.style.bottom = "-0%";
+        newDiv3.style.bottom = "-5%";
         newLine3.style.right = "-160%";
         newLine3.style.bottom = "15%";
         newLine3.style.transform = "rotate(340deg)";
@@ -710,7 +710,7 @@ function createDiv3(nr) {
 
     if (nr == 11) {
       if (y11 == 0) {
-        newDiv3.style.right = "-0%"
+        newDiv3.style.right = "-10%"
         newDiv3.style.bottom = "-180%"
         newLine3.style.right = "-5%";
         newLine3.style.bottom = "-120%";
@@ -729,7 +729,7 @@ function createDiv3(nr) {
     counter = counter + 1;
   }
   else {
-    alert("ikke flere");
+    console.log("2");
     return;
   }
 };
