@@ -10,14 +10,12 @@ boardsBtn.addEventListener("click", function () {
   //DOM elementer
   var newDiv = document.createElement("div")
   var newContent = document.createTextNode("test")
-  var 
   newDiv.className = "tavle";
 
   //append child for ny tavle:
   newDiv.appendChild(newContent);
   tavleContainer.appendChild(newDiv);
   newDiv.after(boardsBtn);
-<<<<<<< HEAD
   newCard.after(newCardBtn);
 /*
   const starContainer = document.createElement("div");
@@ -30,10 +28,8 @@ boardsBtn.addEventListener("click", function () {
   starContainer.appendChild(star1);
   newDiv.appendChild(starContainer);
 */
-=======
 
   newDiv.appendChild(cardsBtns)
->>>>>>> c936c596885fb91a1de88658dc1dc68b0b554d94
 
   return newDiv;
 });
@@ -47,7 +43,6 @@ function createCard(nr) {
   var flagDiv = document.createElement("div");
   var popUpBtn = document.createElement("button");
   var text = document.createElement("INPUT");
-<<<<<<< HEAD
   var flagDiv = document.createElement("div");
   var xspan = document.createElement("span");
   var flagSpan = document.createElement("span");
@@ -75,7 +70,7 @@ function createCard(nr) {
         }
     }
 }
-=======
+
   var span = document.createElement("span");
   var flagSpan = document.createElement("span");
   var prioDiv = document.createElement("div");
@@ -86,7 +81,7 @@ function createCard(nr) {
   starContainer.id = "starContainer";
   newCard.appendChild(starContainer);
 
-  
+
 
   /*for (i = 0; i < 5; i++) {
     const star = document.createElement("p");
@@ -98,7 +93,7 @@ function createCard(nr) {
     //star[i].style.color = "gold"
     //star[i].innerHTML = "★"
   }
->>>>>>> c936c596885fb91a1de88658dc1dc68b0b554d94
+
 */
 
   //Flagg og onclick funskjon som endrer fargen på flagget.
@@ -122,12 +117,11 @@ function createCard(nr) {
   flagDiv.setAttribute("class", "flagDiv");
   flagDiv.appendChild(flagSpan);
 
-<<<<<<< HEAD
+
   xspan.setAttribute("class", "closeCard");
   xspan.innerHTML = "&times;";
 
-=======
->>>>>>> c936c596885fb91a1de88658dc1dc68b0b554d94
+
   popUpBtn.setAttribute("id", "popUpBtn");
   popUpBtn.setAttribute("class", "popUpBtns");
   popUpBtn.textContent = "✎ Edit";
@@ -148,24 +142,16 @@ function createCard(nr) {
    skal være på kortet. */
   newCard.appendChild(xspan);
   newCard.appendChild(text);
-<<<<<<< HEAD
   newCard.setAttribute("draggable","true");
   newCard.setAttribute("ondragstart","drag(event)");
   newCard.appendChild(popUpBtn);
-=======
   newCard.appendChild(prioDiv);
   newCard.setAttribute("draggable", "true");
   newCard.setAttribute("ondragstart", "drag(event)");
->>>>>>> c936c596885fb91a1de88658dc1dc68b0b554d94
   newCard.appendChild(flagDiv);
   newCard.appendChild(popUpBtn);
   newCard.id = 'card';
   newCard.className = 'card';
-<<<<<<< HEAD
-=======
-
-  
->>>>>>> c936c596885fb91a1de88658dc1dc68b0b554d94
 
   // f l a g c o u n t e r
   flagCounter = flagCounter + 1;
@@ -202,7 +188,7 @@ function createCard(nr) {
       } else if(star.className = "nofav") {
         star.innerHTML = "☆"
       }
-      
+
     }
   }
 
@@ -217,9 +203,9 @@ function createCard(nr) {
         document.getElementById('star' + i).style.color = "gold"
         document.getElementById('star' + i).innerHTML = "☆"
       }
-      
+
     }
-    
+
   }*/
 }
 
