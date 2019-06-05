@@ -31,9 +31,8 @@ boardsBtn.addEventListener("click", function () {
 
   newDiv.appendChild(newCardBtns);
 
-  var tavleId = newDiv.id;
+  
 
-  console.log(tavleId);
   return newDiv;
 });
 
@@ -54,11 +53,6 @@ function createCard(nr) {
   var flagSpan = document.createElement("span");
   var prioDiv = document.createElement("div");
   var flagged = 0;
-  //const stars = [document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p")]
-
-
-  
-
 
   const starContainer = document.createElement("div");
   starContainer.id = "starContainer";
@@ -66,7 +60,7 @@ function createCard(nr) {
 
 
   stars.onclick = function changeColor1(nr) {
-    console.log(nr)
+    
     for (var i = 1; i <= 5; i++) {
       if (i <= nr) {
         document.getElementById('star' + i).style.color = "gold"
@@ -97,12 +91,10 @@ function createCard(nr) {
     if (flagged == 0) {
       flagSpan.style.color = "#f06969"
       flagged = 1
-      console.log(1)
       return false;
     } else {
       flagSpan.style.color = "#d3d3d3"
       flagged = 0
-      console.log(0)
       return false;
     }
   }
@@ -180,8 +172,6 @@ function createCard(nr) {
 
       const star = document.getElementById('star' + i);
       star.classList.add = "fav";
-
-      console.log("klikka på" + stars[i]);
 
       if (star.className = "fav") {
         star.innerHTML = "★";
@@ -368,6 +358,41 @@ Sortable.create(tavle2, {
 });
 
 Sortable.create(tavle3, {
+  animation: 150,
+  group: 'shared'
+});
+
+Sortable.create(tavle4, {
+  animation: 150,
+  group: 'shared'
+});
+
+Sortable.create(tavle5, {
+  animation: 150,
+  group: 'shared'
+});
+
+Sortable.create(tavle6, {
+  animation: 150,
+  group: 'shared'
+});
+
+Sortable.create(tavle7, {
+  animation: 150,
+  group: 'shared'
+});
+
+Sortable.create(tavle8, {
+  animation: 150,
+  group: 'shared'
+});
+
+Sortable.create(tavle9, {
+  animation: 150,
+  group: 'shared'
+});
+
+Sortable.create(tavle10, {
   animation: 150,
   group: 'shared'
 });
