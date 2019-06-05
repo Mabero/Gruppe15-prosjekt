@@ -2,36 +2,28 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <link rel=stylesheet type="text/css" href="mindBranch.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mind Branch</title>
+    <meta charset="UTF-8">
+    <link rel=stylesheet type="text/css" href="mindBranch.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mind Branch</title>
 </head>
 
 <body>
 
 
-  <div id="nodeContainer">
-    <div id="drag_drop">
-      <div class="node test-div" id="div0">
-        <!--<input id="addNodeText" class="nodeText" type="text" placeholder="Idea" autofocus><br>
-        <input type="button" onclick="createDiv()"> -->
-      </div>
-
-      <div class="node test-div" id="div00">
-
+    <div id="nodeContainer">
+        <div id="fixBox"></div>
+        <div id="div0" class="node test-div">
+            <input id="addNodeText" class="nodeText" type="text" placeholder="Idea" autofocus></input>
+            <br>
+            <button type="button" id="mnBt" onclick="createDiv()">+</button>
+        </div>
 
     </div>
-  </div>
 
-  
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-  crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/1.7.6/jquery.jsPlumb.js"></script>
-<script src="mindBranch.js"></script>
+    <script src="mindBranch.js"></script>
+
 </body>
 
 </html>
