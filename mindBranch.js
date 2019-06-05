@@ -43,7 +43,7 @@ function createDiv() {
 
 
     textTitle.setAttribute("class", "inputTitle");
-    textTitle.setAttribute("placeholder", "Idea");
+    textTitle.setAttribute("placeholder", "Idea ...");
     button.setAttribute("id", "progressButton");
 
     if (z == 0) {
@@ -150,7 +150,7 @@ function createDiv2(nr) {
     array2.push(newDiv2);
 
     textTitle2.setAttribute("class", "inputTitle");
-    textTitle2.setAttribute("placeholder", "Idea");
+    textTitle2.setAttribute("placeholder", "Idea ...");
     button2.setAttribute("id", "progressButton");
 
     if (nr == 0) {
@@ -371,7 +371,7 @@ function createDiv3(nr) {
 
 
     textTitle3.setAttribute("class", "inputTitle");
-    textTitle3.setAttribute("placeholder", "Idea");
+    textTitle3.setAttribute("placeholder", "Idea ...");
     // button3.setAttribute("id", "progressButton");
 /*
     if (nr == 0) {
