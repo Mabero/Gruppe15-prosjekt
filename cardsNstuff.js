@@ -24,18 +24,6 @@ boardsBtn.addEventListener("click", function () {
   tavleContainer.appendChild(newDiv);
   newDiv.after(boardsBtn);
 
-/*
-  const starContainer = document.createElement("div");
-  starContainer.id = "test";
-  const star1 = document.createElement("p")
-  const star2 = document.createElement("p")
-  const star3 = document.createElement("p")
-  const star4 = document.createElement("p")
-  const star5 = document.createElement("p")
-  starContainer.appendChild(star1);
-  newDiv.appendChild(starContainer);
-*/
-
   newCardBtns.textContent = "+ Add new card";
   newCardBtns.className = "cardBtns";
   
@@ -74,6 +62,11 @@ function createCard(nr) {
   };
 
 
+
+  const starContainer = document.createElement("div");
+  starContainer.id = "starContainer";
+  newCard.appendChild(starContainer);
+
 /*
  stars.onclick = function changeColor1(nr) {
     console.log(nr)
@@ -97,19 +90,6 @@ function createCard(nr) {
   const starContainer = document.createElement("div");
   starContainer.id = "starContainer";
   newCard.appendChild(starContainer);
-
-
-
-  for (i = 0; i < 5; i++) {
-    const star = document.createElement("p");
-    starContainer.appendChild(star);
-    star.id = "star" + i;
-    stars.push(star[i]);
-    document.getElementById("star0").innerHTML = "h";
-    //document.getElementById('star' + 1).style.color = "gold"
-    //star[i].style.color = "gold"
-    //star[i].innerHTML = "★"
-  }
 
 */
 

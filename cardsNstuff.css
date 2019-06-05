@@ -87,7 +87,6 @@ flex-direction: row;
 }
 
 .popUpBtns {
-  float: right;
   font-size: 16px;
   position: relative;
   padding-left: 10px;
@@ -134,6 +133,14 @@ flex-direction: row;
   border: none;
   border-radius: 10px;
 }
+
+.cardBtns:hover, .popUpBtns:hover, #boardsBtn:hover  {
+  background-color: #3ca048;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
 
 .tavle {
 background-color: #fff;
@@ -229,6 +236,7 @@ p {
 
 .closeCard {
   position: absolute;
+  margin-left: 5px;
   margin-bottom: 5px;
   color: #f2f2f2;
   font-size: 28px;
@@ -343,4 +351,18 @@ p {
   margin: 3px;
   padding: 3px;
   font-size: 15px;
+}
+
+#starContainer {
+  height: 100px;
+  margin-top: 34px;
+  padding-left: 10px;
+  width: 100px;
+  display: flex;
+  position: absolute;
+}
+
+#starContainer * {
+  padding-right: 10px;
+  font-size: 16px;
 }
