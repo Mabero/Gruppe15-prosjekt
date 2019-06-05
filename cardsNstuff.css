@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
 * {
 font-family: 'Montserrat', sans-serif;
 }
@@ -7,7 +7,7 @@ font-family: 'Montserrat', sans-serif;
 body {
 margin: 0px;
 overflow-y: scroll;
-overflow-x: hidden;
+overflow-x: scroll;
 background-color: #f2f2f2;
 }
 
@@ -21,7 +21,6 @@ padding-left: 5vw;
 width: 100vw;
 display: grid;
 grid-template-columns: 30vw 30vw 30vw;
-
 }
 
 #logo {
@@ -80,34 +79,36 @@ transform: scale(1.2);
 /* ============= Tavler ==============*/
 
 #tavleContainer {
-margin-top: 200px;
 display: flex;
-height: 70vh;
 width: auto;
-margin-left: auto;
+margin-left: 70px;
 margin-right: auto;
-flex-flow: wrap;
+flex-direction: row;
 }
 
 .popUpBtns {
-  float: right;
   font-size: 16px;
   position: relative;
   padding-left: 10px;
-  margin-top: 40px;
+  margin-top: 9px;
+  margin-left: auto;
+  margin-right: auto;
   padding-right: 10px;
-  border-radius: 4px;
   background-color:#50D160;
-  color:#fff;
+  color:#f2f2f2;
+  font-weight: 500;
   border: none;
   cursor: pointer;
+  width: 100%;
   text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #boardsBtn {
-  padding: 10px;
   padding-left: 50px;
   padding-right: 50px;
+  margin-top: 15px;
   color: #f2f2f2;
   background-color: #50D160;
   font-weight: 600;
@@ -117,9 +118,11 @@ flex-flow: wrap;
   cursor: pointer;
   height: 40px;
   margin-left: 30px;
+  min-width: 220px;
 }
 
 .cardBtns {
+  margin-top: 15px;
   padding: 10px;
   padding-left: 50px;
   padding-right: 50px;
@@ -131,16 +134,25 @@ flex-flow: wrap;
   border-radius: 10px;
 }
 
+.cardBtns:hover, .popUpBtns:hover, #boardsBtn:hover  {
+  background-color: #3ca048;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+
 .tavle {
-background-color: #c48282;
+background-color: #fff;
 height: auto;
-width: 200;
 text-align: center;
 color: #f2f2f2;
 border-radius: 15px;
 display: table;
-min-height: 200px;
+min-height: 69px;
 margin-left: 30px;
+
+margin-bottom: 30px;
 min-width: 250px;
 }
 
@@ -148,14 +160,14 @@ min-width: 250px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   height: 100px;
   width: 220px;
   color: #f2f2f2;
   background-color: #4F6976;
-  border-radius: 20px;
+  border-radius: 10px;
   opacity:0.9;
- 
+  display: block;
 }
 .textInput {
   border-top-left-radius: 10px;
@@ -164,11 +176,17 @@ min-width: 250px;
   text-align: center;
   color: #f2f2f2;
   font-size: 22px;
+  font-weight: 500;
   border:none;
   width: 99%;
-  height: 25px;
+  height: 35px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.textInput::placeholder {
+  color: #d8d7d7;
+  font-size: 14px;
 }
 
 /* ============== MODAL BOX ============== */
@@ -185,12 +203,12 @@ min-width: 250px;
   background-color: #4F6976;
 }
 p {
+  margin: 5px;
   color: #f2f2f2;
   display: block
-  
-  
-}
 
+
+}
 .headerDiv {
   background-color: #4F6976;
   height: auto;
@@ -199,9 +217,7 @@ p {
   border: none;
   width: 80%;
   color: #f2f2f2;
-  
 }
-
 
 .description {
   margin: 10px;
@@ -209,7 +225,7 @@ p {
 
 .close {
   position: relative;
-  margin: 3px;
+  margin-bottom: 5px;
   color: #f2f2f2;
   float: right;
   font-size: 28px;
@@ -218,9 +234,27 @@ p {
   width: 20px;
 }
 
+.closeCard {
+  position: absolute;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  color: #f2f2f2;
+  font-size: 28px;
+  font-weight: bold;
+  height: 20px;
+  width: 20px;
+}
+
+.closeCard:hover {
+  color: #f06969;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
 .close:hover,
 .close:focus {
-  color: black;
+  color: #f06969;
+  transition: 0.5s;
   text-decoration: none;
   cursor: pointer;
 }
@@ -231,7 +265,7 @@ p {
    width: auto;
    border: none;
    display: block;
-   background-color: #f2f2f2; 
+   background-color: #f2f2f2;
 }
 
 .chckbxBtn {
@@ -291,6 +325,7 @@ p {
     margin: 10px auto;
     margin-top: 30px;
 }
+
 .dueDate {
   margin: 5px;
   border: none;
@@ -299,11 +334,35 @@ p {
   padding: 3px 5px;
   width: 140px;
 }
-.flag {
-  margin: 2px;
+.flagDiv {
   position:relative;
-  left:65px;
+  float: right;
+  margin-right: 10px;
+  font-size: 20px;
+  margin-top: 26px;
+  background-color: #f2f2f2;
+  height: 20px;
+  color: #d3d3d3;
+  width: 20px;
+  border-radius: 2px;
 }
 
+.dueDateP {
+  margin: 3px;
+  padding: 3px;
+  font-size: 15px;
+}
 
+#starContainer {
+  height: 100px;
+  margin-top: 34px;
+  padding-left: 10px;
+  width: 100px;
+  display: flex;
+  position: absolute;
+}
 
+#starContainer * {
+  padding-right: 10px;
+  font-size: 16px;
+}
