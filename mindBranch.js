@@ -78,9 +78,8 @@ function createDiv() {
 
 
     //Text box styling
-    textTitle.style.left = "30%";
-    textTitle.style.top = "10%";
-    textTitle.style.width = "40px";
+    textTitle.style.backgroundColor = "#f06969"
+    
 
     // Button styling
     button.style.height = "40px";
@@ -223,9 +222,7 @@ function createDiv2(nr) {
 
 
     //Text box styling
-    textTitle2.style.left = "23%";
-    textTitle2.style.top = "0%";
-    textTitle2.style.width = "40px";
+    textTitle2.style.backgroundColor = "#f29696";
 
 
     // button2 styling
@@ -487,9 +484,7 @@ function createDiv3(nr) {
 
 
     //Text box styling
-    textTitle3.style.left = "15%";
-    textTitle3.style.top = "-20%";
-    textTitle3.style.width = "40px";
+    textTitle3.style.backgroundColor = "#50d160"
 
 /*
     // button3 styling
