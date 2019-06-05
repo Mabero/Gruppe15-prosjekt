@@ -5,20 +5,36 @@ const boardsContainer = document.getElementById("boardsContainer");
 var flagCounter = 0;
 var cardCounter = 0;
 
+var cardBtnsArray = [];
+let counter = 3;
+
 //funskjon som lager ny tavle
 boardsBtn.addEventListener("click", function () {
   //DOM elementer
   var newDiv = document.createElement("div")
-  var newContent = document.createTextNode("test")
-  var 
+  const newCardBtns = document.createElement("button");
   newDiv.className = "tavle";
 
+  
+  counter++;
+
+  newDiv.id = "tavle" + counter;
+
   //append child for ny tavle:
-  newDiv.appendChild(newContent);
   tavleContainer.appendChild(newDiv);
   newDiv.after(boardsBtn);
 
-  newDiv.appendChild(cardsBtns)
+  newCardBtns.textContent = "+ Add new card";
+  newCardBtns.className = "cardBtns";
+  
+  cardBtnsArray.push(newCardBtns);
+
+  newDiv.appendChild(newCardBtns);
+
+  for (i = 0; i < cardBtnsArray.length; i++) {
+    
+      cardBtnsArray[i].setAttribute("onclick", "createCard("+ counter +")")
+  }
 
   return newDiv;
 });
