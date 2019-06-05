@@ -135,25 +135,52 @@ const boardsMain = document.getElementById("boardsMain");
 const calendarFrame = document.getElementById("calendarIfrm");
 const calendarBtn = document.getElementById("calendarBtn");
 
+const mindBranchFrame = document.getElementById("mindBranchIfrm");
+const mindBranchBtn = document.getElementById("mindBbtn");
+
+mindBranchBtn.addEventListener("click", function() {
+    mindBranchFrame.style.zIndex = 10;
+    mindBranchFrame.style.display = "block";
+    document.body.style.overflow = "scroll";
+
+    mindBranchBtn.classList.add("currentLink");
+
+    profileBtn.classList.remove("currentLink");
+    boardsMain.classList.remove("currentLink");
+    calendarBtn.classList.remove("currentLink");
+
+    profileFrame.style.display = "none";
+    calendarFrame.style.display = "none"
+
+    hideShowFrame();
+})
+
+
 profileBtn.addEventListener("click", function () {
     profileFrame.style.zIndex = 10;
     profileFrame.style.display = "block";
     document.body.style.overflow = "hidden";
 
-    profileBtn.classList.add("currentLink")
-    boardsMain.classList.remove("currentLink")
-    calendarBtn.classList.remove("currentLink")
+    profileBtn.classList.add("currentLink");
+    boardsMain.classList.remove("currentLink");
+    calendarBtn.classList.remove("currentLink");
+    mindBranchBtn.classList.remove("currentLink");
 
-    calendarFrame.style.display = "none"
+    calendarFrame.style.display = "none";
+    mindBranchFrame.style.display = "none";
     hideShowFrame();
 })
 
 boardsMain.addEventListener("click", function () {
     profileFrame.style.display = "none";
     calendarFrame.style.display = "none"
+    mindBranchFrame.style.display = "none";
+
     boardsMain.classList.add("currentLink");
     profileBtn.classList.remove("currentLink");
     calendarBtn.classList.remove("currentLink");
+    mindBranchBtn.classList.remove("currentLink");
+
 
 })
 
@@ -161,9 +188,12 @@ calendarBtn.addEventListener("click", function () {
     calendarFrame.style.zIndex = 10;
     calendarFrame.style.display = "block";
     document.body.style.overflow = "hidden";
+    mindBranchFrame.style.display = "none";
 
     calendarBtn.classList.add("currentLink")
     boardsMain.classList.remove("currentLink")
+    mindBranchBtn.classList.remove("currentLink");
+    profileBtn.classList.remove("currentLink");
 
     hideShowFrame();
 })
