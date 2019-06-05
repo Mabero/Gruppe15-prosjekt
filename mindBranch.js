@@ -363,414 +363,375 @@ function createDiv2(nr) {
 
 
 function createDiv3(nr) {
-  var newDiv3 = document.createElement('div');
-  var textTitle3 = document.createElement("input");
-  var button3 = document.createElement('button');
-  var newLine3 = document.createElement("div");
+  if ((nr == 0 && y0 < 2) || (nr == 1 && y1 < 2) || (nr == 2 && y2 < 2) || (nr == 3 && y3 < 2) || (nr == 4 && y4 < 2) || (nr == 4 && y4 < 2) || (nr == 5 && y5 < 2) ||
+   (nr == 6 && y6 < 2) || (nr == 6 && y6 < 2) || (nr == 7 && y7 < 2) || (nr == 8 && y8 < 2) || (nr == 9 && y9 < 2) || (nr == 10 && y10 < 2)  || (nr == 11 && y11 < 2)) {
+    var newDiv3 = document.createElement('div');
+    var textTitle3 = document.createElement("input");
+    var button3 = document.createElement('button');
+    var newLine3 = document.createElement("div");
 
 
-  array3.push(newDiv3);
+    array3.push(newDiv3);
 
 
-  textTitle3.setAttribute("class", "inputTitle");
-  textTitle3.setAttribute("placeholder", "Idea");
-  button3.setAttribute("id", "progressButton");
+    textTitle3.setAttribute("class", "inputTitle");
+    textTitle3.setAttribute("placeholder", "Idea");
+    button3.setAttribute("id", "progressButton");
 
-  if (nr == 0) {
-    if (y0 == 0) {
-      button3.setAttribute("onclick", "createDiv4(0)");
-    } if (y0 == 1) {
-      button3.setAttribute("onclick", "createDiv4(1)");
+    if (nr == 0) {
+      if (y0 == 0) {
+        button3.setAttribute("onclick", "createDiv4(0)");
+      } if (y0 == 1) {
+        button3.setAttribute("onclick", "createDiv4(1)");
+      }
     }
+    if (nr == 1) {
+      if (y1 == 0) {
+        button3.setAttribute("onclick", "createDiv4(2)");
+      } if (y1 == 1) {
+        button3.setAttribute("onclick", "createDiv4(3)");
+      }
+    }
+    if (nr == 2) {
+      if (y2 == 0) {
+        button3.setAttribute("onclick", "createDiv4(4)");
+      } if (y2 == 1) {
+        button3.setAttribute("onclick", "createDiv4(5)");
+      }
+    }
+    if (nr == 3) {
+      if (y3 == 0) {
+        button3.setAttribute("onclick", "createDiv4(6)");
+      } if (y3 == 1) {
+        button3.setAttribute("onclick", "createDiv4(7)");
+      }
+    }
+    if (nr == 4) {
+      if (y4 == 0) {
+        button3.setAttribute("onclick", "createDiv4(8)");
+      } if (y4 == 1) {
+        button3.setAttribute("onclick", "createDiv4(9)");
+      }
+    }
+    if (nr == 5) {
+      if (y5 == 0) {
+        button3.setAttribute("onclick", "createDiv4(11)");
+      } if (y5 == 1) {
+        button3.setAttribute("onclick", "createDiv4(12)");
+      }
+    }
+    if (nr == 6) {
+      if (y6 == 0) {
+        button3.setAttribute("onclick", "createDiv4(13)");
+      } if (y6 == 1) {
+        button3.setAttribute("onclick", "createDiv4(14)");
+      }
+    }
+    if (nr == 7) {
+      if (y7 == 0) {
+        button3.setAttribute("onclick", "createDiv4(15)");
+      } if (y7 == 1) {
+        button3.setAttribute("onclick", "createDiv4(15)");
+      }
+    }
+    if (nr == 8) {
+      if (y8 == 0) {
+        button3.setAttribute("onclick", "createDiv4(16)");
+      } if (y8 == 1) {
+        button3.setAttribute("onclick", "createDiv4(17)");
+      }
+    }
+    if (nr == 9) {
+      if (y9 == 0) {
+        button3.setAttribute("onclick", "createDiv4(18)");
+      } if (y9 == 1) {
+        button3.setAttribute("onclick", "createDiv4(19)");
+      }
+    }
+    if (nr == 10) {
+      if (y10 == 0) {
+        button3.setAttribute("onclick", "createDiv4(20)");
+      } if (y10 == 1) {
+        button3.setAttribute("onclick", "createDiv4(21)");
+      }
+    }
+    if (nr == 11) {
+      if (y11 == 0) {
+        button3.setAttribute("onclick", "createDiv4(22)");
+      } if (y11 == 1) {
+        button3.setAttribute("onclick", "createDiv4(23)");
+      }
+    }
+
+
+
+    fixBox.appendChild(newDiv3);
+    newDiv3.appendChild(textTitle3);
+    newDiv3.appendChild(button3);
+    fixBox.appendChild(newLine3)
+
+
+
+    // Div styling
+    newDiv3.setAttribute("id", "div" + counter)
+    newDiv3.setAttribute("class", "test-div");
+    newDiv3.style.height = "90px";
+    newDiv3.style.width = "90px";
+    newDiv3.style.color = 'white';
+    newDiv3.style.backgroundColor = "#32fa5a";
+    newDiv3.style.borderRadius = "20px";
+    newDiv3.style.border = "#ff00bf46";
+    newDiv3.style.opacity = "1";
+    newDiv3.style.borderRadius = "50%";
+    newDiv3.style.margin = "1em";
+
+
+
+    //Text box styling
+    textTitle3.style.left = "15%";
+    textTitle3.style.top = "-20%";
+    textTitle3.style.width = "40px";
+
+
+    // button3 styling
+    button3.style.height = "40px";
+    button3.style.width = "40px";
+    button3.style.top = "0%";
+    button3.style.left = "70%";
+    button3.style.position = "absolute";
+    button3.style.borderRadius = "50%";
+    button3.style.opacity = "0.90";
+    button3.style.borderColor = "#f370d246"
+    button3.textContent = "+";
+    button3.textContent.fontsize = "100px";
+    button3.style.background = "#ff00bf46";
+
+    // Line styling
+    newLine3.style.height = "7px"
+    newLine3.style.width = "30%"
+    newLine3.style.backgroundColor = "#000000"
+    newLine3.style.zIndex = "-1";
+
+    if (nr == 0) {
+      if (y0 == 0) {
+        newDiv3.style.left = "-140%";
+        newDiv3.style.top = "-160%";
+        newLine3.style.left = "-117%";
+        newLine3.style.top = "-100%";
+        newLine3.style.transform = "rotate(75deg)";
+      } if (y0 == 1) {
+        newDiv3.style.left = "-180%";
+        newDiv3.style.top = "-110%";
+        newLine3.style.left = "-133%";
+        newLine3.style.top = "-73%";
+        newLine3.style.transform = "rotate(15deg)";
+      }
+      y0 = y0 + 1;
+    }
+    if (nr == 1) {
+      if (y1 == 0) {
+        newDiv3.style.left = "-200%";
+        newDiv3.style.top = "-60%";
+        newLine3.style.left = "-160%";
+        newLine3.style.top = "-15%";
+        newLine3.style.transform = "rotate(35deg)";
+      }
+      if (y1 == 1) {
+        newDiv3.style.left = "-200%"
+        newDiv3.style.top = "-0%";
+        newLine3.style.left = "-160%";
+        newLine3.style.top = "25%";
+        newLine3.style.transform = "rotate(340deg)";
+      }
+      y1 = y1 + 1;
+    }
+
+    if (nr == 2) {
+      if (y2 == 0) {
+        newDiv3.style.left = "-0%"
+        newDiv3.style.top = "-180%"
+        newLine3.style.left = "-5%";
+        newLine3.style.top = "-120%";
+        newLine3.style.transform = "rotate(125deg)";
+      }
+      if (y2 == 1) {
+        newDiv3.style.left = "-70%"
+        newDiv3.style.top = "-180%"
+        newLine3.style.left = "-45%";
+        newLine3.style.top = "-120%";
+        newLine3.style.transform = "rotate(70deg)";
+      }
+      y2 = y2 + 1;
+    }
+
+
+    if (nr == 3) {
+      if (y3 == 0) {
+        newDiv3.style.left = "-140%"
+        newDiv3.style.bottom = "-160%"
+        newLine3.style.left = "-117%";
+        newLine3.style.bottom = "-100%";
+        newLine3.style.transform = "rotate(105deg)";
+      } if (y3 == 1) {
+        newDiv3.style.left = "-180%"
+        newDiv3.style.bottom = "-110%"
+        newLine3.style.left = "-133%";
+        newLine3.style.bottom = "-73%";
+        newLine3.style.transform = "rotate(345deg)";
+      }
+      y3 = y3 + 1;
+    }
+
+    if (nr == 4) {
+      if (y4 == 0) {
+        newDiv3.style.left = "-200%"
+        newDiv3.style.bottom = "-60%"
+        newLine3.style.left = "-160%";
+        newLine3.style.bottom = "-15%";
+        newLine3.style.transform = "rotate(330deg)";
+      }
+      if (y4 == 1) {
+        newDiv3.style.left = "-200%"
+        newDiv3.style.bottom = "-0%"
+        newLine3.style.left = "-160%";
+        newLine3.style.bottom = "15%";
+        newLine3.style.transform = "rotate(35deg)";
+      }
+      y4 = y4 + 1;
+    }
+
+    if (nr == 5) {
+      if (y5 == 0) {
+        newDiv3.style.left = "-0%";
+        newDiv3.style.bottom = "-180%";
+        newLine3.style.left = "-5%";
+        newLine3.style.bottom = "-120%";
+        newLine3.style.transform = "rotate(60deg)";
+      }
+      if (y5 == 1) {
+        newDiv3.style.left = "-70%";
+        newDiv3.style.bottom = "-180%";
+        newLine3.style.left = "-45%";
+        newLine3.style.bottom = "-120%";
+        newLine3.style.transform = "rotate(105deg)";
+      }
+      y5 = y5 + 1;
+    }
+
+    if (nr == 6) {
+      if (y6 == 0) {
+        newDiv3.style.right = "-140%";
+        newDiv3.style.top = "-160%";
+        newLine3.style.right = "-117%";
+        newLine3.style.top = "-100%";
+        newLine3.style.transform = "rotate(105deg)";
+      }
+      if (y6 == 1) {
+        newDiv3.style.right = "-180%";
+        newDiv3.style.top = "-110%";
+        newLine3.style.right = "-133%";
+        newLine3.style.top = "-73%";
+        newLine3.style.transform = "rotate(345deg)";
+      }
+      y6 = y6 + 1;
+    }
+
+    if (nr == 7) {
+      if (y7 == 0) {
+        newDiv3.style.right = "-200%";
+        newDiv3.style.top = "-60%";
+        newLine3.style.right = "-160%";
+        newLine3.style.top = "-15%";
+        newLine3.style.transform = "rotate(330deg)";
+      }
+      if (y7 == 1) {
+        newDiv3.style.right = "-200%";
+        newDiv3.style.top = "-0%";
+        newLine3.style.right = "-160%";
+        newLine3.style.top = "25%";
+        newLine3.style.transform = "rotate(35deg)";
+      }
+      y7 = y7 + 1;
+    }
+
+    if (nr == 8) {
+      if (y8 == 0) {
+        newDiv3.style.right = "-0%";
+        newDiv3.style.top = "-180%";
+        newLine3.style.right = "-5%";
+        newLine3.style.top = "-120%";
+        newLine3.style.transform = "rotate(60deg)";
+      }
+      if (y8 == 1) {
+        newDiv3.style.right = "-70%";
+        newDiv3.style.top = "-180%";
+        newLine3.style.right = "-45%";
+        newLine3.style.top = "-120%";
+        newLine3.style.transform = "rotate(105deg)";
+      }
+      y8 = y8 + 1;
+    }
+
+    if (nr == 9) {
+      if (y9 == 0) {
+        newDiv3.style.right = "-140%";
+        newDiv3.style.bottom = "-160%";
+        newLine3.style.right = "-117%";
+        newLine3.style.bottom = "-100%";
+        newLine3.style.transform = "rotate(75deg)";
+      }
+      if (y9 == 1) {
+        newDiv3.style.right = "-180%";
+        newDiv3.style.bottom = "-110%";
+        newLine3.style.right = "-133%";
+        newLine3.style.bottom = "-73%";
+        newLine3.style.transform = "rotate(15deg)";
+      }
+      y9 = y9 + 1;
+    }
+
+    if (nr == 10) {
+      if (y10 == 0) {
+        newDiv3.style.right = "-200%";
+        newDiv3.style.bottom = "-60%";
+        newLine3.style.right = "-160%";
+        newLine3.style.bottom = "-15%";
+        newLine3.style.transform = "rotate(35deg)";
+      }
+      if (y10 == 1) {
+        newDiv3.style.right = "-200%";
+        newDiv3.style.bottom = "-0%";
+        newLine3.style.right = "-160%";
+        newLine3.style.bottom = "15%";
+        newLine3.style.transform = "rotate(340deg)";
+      }
+      y10 = y10 + 1;
+    }
+
+    if (nr == 11) {
+      if (y11 == 0) {
+        newDiv3.style.right = "-0%"
+        newDiv3.style.bottom = "-180%"
+        newLine3.style.right = "-5%";
+        newLine3.style.bottom = "-120%";
+        newLine3.style.transform = "rotate(125deg)";
+      }
+      if (y11 == 1) {
+        newDiv3.style.right = "-70%"
+        newDiv3.style.bottom = "-180%"
+        newLine3.style.right = "-45%";
+        newLine3.style.bottom = "-120%";
+        newLine3.style.transform = "rotate(70deg)";
+      }
+      y11 = y11 + 1;
+    }
+
+    counter = counter + 1;
   }
-  if (nr == 1) {
-    if (y1 == 0) {
-      button3.setAttribute("onclick", "createDiv4(2)");
-    } if (y1 == 1) {
-      button3.setAttribute("onclick", "createDiv4(3)");
-    }
+  else {
+    alert("ikke flere");
+    return;
   }
-  if (nr == 2) {
-    if (y2 == 0) {
-      button3.setAttribute("onclick", "createDiv4(4)");
-    } if (y2 == 1) {
-      button3.setAttribute("onclick", "createDiv4(5)");
-    }
-  }
-  if (nr == 3) {
-    if (y3 == 0) {
-      button3.setAttribute("onclick", "createDiv4(6)");
-    } if (y3 == 1) {
-      button3.setAttribute("onclick", "createDiv4(7)");
-    }
-  }
-  if (nr == 4) {
-    if (y4 == 0) {
-      button3.setAttribute("onclick", "createDiv4(8)");
-    } if (y4 == 1) {
-      button3.setAttribute("onclick", "createDiv4(9)");
-    }
-  }
-  if (nr == 5) {
-    if (y5 == 0) {
-      button3.setAttribute("onclick", "createDiv4(11)");
-    } if (y5 == 1) {
-      button3.setAttribute("onclick", "createDiv4(12)");
-    }
-  }
-  if (nr == 6) {
-    if (y6 == 0) {
-      button3.setAttribute("onclick", "createDiv4(13)");
-    } if (y6 == 1) {
-      button3.setAttribute("onclick", "createDiv4(14)");
-    }
-  }
-  if (nr == 7) {
-    if (y7 == 0) {
-      button3.setAttribute("onclick", "createDiv4(15)");
-    } if (y7 == 1) {
-      button3.setAttribute("onclick", "createDiv4(15)");
-    }
-  }
-  if (nr == 8) {
-    if (y8 == 0) {
-      button3.setAttribute("onclick", "createDiv4(16)");
-    } if (y8 == 1) {
-      button3.setAttribute("onclick", "createDiv4(17)");
-    }
-  }
-  if (nr == 9) {
-    if (y9 == 0) {
-      button3.setAttribute("onclick", "createDiv4(18)");
-    } if (y9 == 1) {
-      button3.setAttribute("onclick", "createDiv4(19)");
-    }
-  }
-  if (nr == 10) {
-    if (y10 == 0) {
-      button3.setAttribute("onclick", "createDiv4(20)");
-    } if (y10 == 1) {
-      button3.setAttribute("onclick", "createDiv4(21)");
-    }
-  }
-  if (nr == 11) {
-    if (y11 == 0) {
-      button3.setAttribute("onclick", "createDiv4(22)");
-    } if (y11 == 1) {
-      button3.setAttribute("onclick", "createDiv4(23)");
-    }
-  }
-
-
-
-  fixBox.appendChild(newDiv3);
-  newDiv3.appendChild(textTitle3);
-  newDiv3.appendChild(button3);
-  fixBox.appendChild(newLine3)
-
-
-
-  // Div styling
-  newDiv3.setAttribute("id", "div" + counter)
-  newDiv3.setAttribute("class", "test-div");
-  newDiv3.style.height = "90px";
-  newDiv3.style.width = "90px";
-  newDiv3.style.color = 'white';
-  newDiv3.style.backgroundColor = "#32fa5a";
-  newDiv3.style.borderRadius = "20px";
-  newDiv3.style.border = "#ff00bf46";
-  newDiv3.style.opacity = "1";
-  newDiv3.style.borderRadius = "50%";
-  newDiv3.style.margin = "1em";
-
-
-
-  //Text box styling
-  textTitle3.style.left = "15%";
-  textTitle3.style.top = "-20%";
-  textTitle3.style.width = "40px";
-
-
-  // button3 styling
-  button3.style.height = "40px";
-  button3.style.width = "40px";
-  button3.style.top = "0%";
-  button3.style.left = "70%";
-  button3.style.position = "absolute";
-  button3.style.borderRadius = "50%";
-  button3.style.opacity = "0.90";
-  button3.style.borderColor = "#f370d246"
-  button3.textContent = "+";
-  button3.textContent.fontsize = "100px";
-  button3.style.background = "#ff00bf46";
-
-  // Line styling
-  newLine3.style.height = "7px"
-  newLine3.style.width = "30%"
-  newLine3.style.backgroundColor = "#000000"
-  newLine3.style.zIndex = "-1";
-
-  if (nr == 0) {
-    if (y0 == 0) {
-      newDiv3.style.left = "-140%";
-      newDiv3.style.top = "-160%";
-      newLine3.style.left = "-117%";
-      newLine3.style.top = "-100%";
-      newLine3.style.transform = "rotate(75deg)";
-    } if (y0 == 1) {
-      newDiv3.style.left = "-180%";
-      newDiv3.style.top = "-110%";
-      newLine3.style.left = "-133%";
-      newLine3.style.top = "-73%";
-      newLine3.style.transform = "rotate(15deg)";
-    } if (y0 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y0 = y0 + 1;
-  }
-  if (nr == 1) {
-    if (y1 == 0) {
-      newDiv3.style.left = "-200%";
-      newDiv3.style.top = "-60%";
-      newLine3.style.left = "-160%";
-      newLine3.style.top = "-15%";
-      newLine3.style.transform = "rotate(35deg)";
-    }
-    if (y1 == 1) {
-      newDiv3.style.left = "-200%"
-      newDiv3.style.top = "-0%";
-      newLine3.style.left = "-160%";
-      newLine3.style.top = "25%";
-      newLine3.style.transform = "rotate(340deg)";
-    }
-    if (y1 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y1 = y1 + 1;
-  }
-
-  if (nr == 2) {
-    if (y2 == 0) {
-      newDiv3.style.left = "-0%"
-      newDiv3.style.top = "-180%"
-      newLine3.style.left = "-5%";
-      newLine3.style.top = "-120%";
-      newLine3.style.transform = "rotate(125deg)";
-    }
-    if (y2 == 1) {
-      newDiv3.style.left = "-70%"
-      newDiv3.style.top = "-180%"
-      newLine3.style.left = "-45%";
-      newLine3.style.top = "-120%";
-      newLine3.style.transform = "rotate(70deg)";
-    }
-    if (y2 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y2 = y2 + 1;
-  }
-
-
-  if (nr == 3) {
-    if (y3 == 0) {
-      newDiv3.style.left = "-140%"
-      newDiv3.style.bottom = "-160%"
-      newLine3.style.left = "-117%";
-      newLine3.style.bottom = "-100%";
-      newLine3.style.transform = "rotate(105deg)";
-    } if (y3 == 1) {
-      newDiv3.style.left = "-180%"
-      newDiv3.style.bottom = "-110%"
-      newLine3.style.left = "-133%";
-      newLine3.style.bottom = "-73%";
-      newLine3.style.transform = "rotate(345deg)";
-    } if (y3 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y3 = y3 + 1;
-  }
-
-  if (nr == 4) {
-    if (y4 == 0) {
-      newDiv3.style.left = "-200%"
-      newDiv3.style.bottom = "-60%"
-      newLine3.style.left = "-160%";
-      newLine3.style.bottom = "-15%";
-      newLine3.style.transform = "rotate(330deg)";
-    }
-    if (y4 == 1) {
-      newDiv3.style.left = "-200%"
-      newDiv3.style.bottom = "-0%"
-      newLine3.style.left = "-160%";
-      newLine3.style.bottom = "15%";
-      newLine3.style.transform = "rotate(35deg)";
-    }
-    if (y4 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y4 = y4 + 1;
-  }
-
-  if (nr == 5) {
-    if (y5 == 0) {
-      newDiv3.style.left = "-0%";
-      newDiv3.style.bottom = "-180%";
-      newLine3.style.left = "-5%";
-      newLine3.style.bottom = "-120%";
-      newLine3.style.transform = "rotate(60deg)";
-    }
-    if (y5 == 1) {
-      newDiv3.style.left = "-70%";
-      newDiv3.style.bottom = "-180%";
-      newLine3.style.left = "-45%";
-      newLine3.style.bottom = "-120%";
-      newLine3.style.transform = "rotate(105deg)";
-    }
-    if (y5 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y5 = y5 + 1;
-  }
-
-  if (nr == 6) {
-    if (y6 == 0) {
-      newDiv3.style.right = "-140%";
-      newDiv3.style.top = "-160%";
-      newLine3.style.right = "-117%";
-      newLine3.style.top = "-100%";
-      newLine3.style.transform = "rotate(105deg)";
-    }
-    if (y6 == 1) {
-      newDiv3.style.right = "-180%";
-      newDiv3.style.top = "-110%";
-      newLine3.style.right = "-133%";
-      newLine3.style.top = "-73%";
-      newLine3.style.transform = "rotate(345deg)";
-    }
-    if (y6 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y6 = y6 + 1;
-  }
-
-  if (nr == 7) {
-    if (y7 == 0) {
-      newDiv3.style.right = "-200%";
-      newDiv3.style.top = "-60%";
-      newLine3.style.right = "-160%";
-      newLine3.style.top = "-15%";
-      newLine3.style.transform = "rotate(330deg)";
-    }
-    if (y7 == 1) {
-      newDiv3.style.right = "-200%";
-      newDiv3.style.top = "-0%";
-      newLine3.style.right = "-160%";
-      newLine3.style.top = "25%";
-      newLine3.style.transform = "rotate(35deg)";
-    }
-    if (y7 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y7 = y7 + 1;
-  }
-
-  if (nr == 8) {
-    if (y8 == 0) {
-      newDiv3.style.right = "-0%";
-      newDiv3.style.top = "-180%";
-      newLine3.style.right = "-5%";
-      newLine3.style.top = "-120%";
-      newLine3.style.transform = "rotate(60deg)";
-    }
-    if (y8 == 1) {
-      newDiv3.style.right = "-70%";
-      newDiv3.style.top = "-180%";
-      newLine3.style.right = "-45%";
-      newLine3.style.top = "-120%";
-      newLine3.style.transform = "rotate(105deg)";
-    }
-    if (y8 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y8 = y8 + 1;
-  }
-
-  if (nr == 9) {
-    if (y9 == 0) {
-      newDiv3.style.right = "-140%";
-      newDiv3.style.bottom = "-160%";
-      newLine3.style.right = "-117%";
-      newLine3.style.bottom = "-100%";
-      newLine3.style.transform = "rotate(75deg)";
-    }
-    if (y9 == 1) {
-      newDiv3.style.right = "-180%";
-      newDiv3.style.bottom = "-110%";
-      newLine3.style.right = "-133%";
-      newLine3.style.bottom = "-73%";
-      newLine3.style.transform = "rotate(15deg)";
-    }
-    if (y9 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y9 = y9 + 1;
-  }
-
-  if (nr == 10) {
-    if (y10 == 0) {
-      newDiv3.style.right = "-200%";
-      newDiv3.style.bottom = "-60%";
-      newLine3.style.right = "-160%";
-      newLine3.style.bottom = "-15%";
-      newLine3.style.transform = "rotate(35deg)";
-    }
-    if (y10 == 1) {
-      newDiv3.style.right = "-200%";
-      newDiv3.style.bottom = "-0%";
-      newLine3.style.right = "-160%";
-      newLine3.style.bottom = "15%";
-      newLine3.style.transform = "rotate(340deg)";
-    }
-    if (y10 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y10 = y10 + 1;
-  }
-
-  if (nr == 11) {
-    if (y11 == 0) {
-      newDiv3.style.right = "-0%"
-      newDiv3.style.bottom = "-180%"
-      newLine3.style.right = "-5%";
-      newLine3.style.bottom = "-120%";
-      newLine3.style.transform = "rotate(125deg)";
-    }
-    if (y11 == 1) {
-      newDiv3.style.right = "-70%"
-      newDiv3.style.bottom = "-180%"
-      newLine3.style.right = "-45%";
-      newLine3.style.bottom = "-120%";
-      newLine3.style.transform = "rotate(70deg)";
-    }
-    if (y11 > 1) {
-      alert("max 2 here")
-      return
-    }
-    y11 = y11 + 1;
-  }
-
-  counter = counter + 1;
 };
 // Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
 
