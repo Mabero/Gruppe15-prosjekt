@@ -31,9 +31,13 @@ boardsBtn.addEventListener("click", function () {
 
   newDiv.appendChild(newCardBtns);
 
+  var tavleId = newDiv.id;
 
+  console.log(tavleId);
   return newDiv;
 });
+
+
 
 const stars = []
 let cardCounter = 0;
@@ -73,6 +77,7 @@ function createCard(nr) {
       }
     }
   }
+  
   /*
     var span = document.createElement("span");
     var flagSpan = document.createElement("span");
@@ -350,39 +355,19 @@ function createPopUp(nr) {
 
 }
 
+
 // Drag and drop funksjoner
-var dragget;
-var source;
-var dragged;
 
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id)
-  dragget = event.target.className;
-  dragged = event.target;
-  source = ev.target.parentElement;
-}
-function drop(ev) {
-  ev.preventDefault();
-  if (ev.target.className == "tavle" && dragget == "card") {
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(dragged);
-    console.log("yes");
-  }
-}
-function drop1(ev) {
-  ev.preventDefault();
-  if (ev.target.className == "listWrap" && dragget == "tavle") {
+Sortable.create(tavle1, {
+  group: 'shared'
+});
 
-    var data = ev.dataTransfer.getData("text");
-    source.innerHTML = ev.target.innerHTML;
-    ev.target.innerHTML = "";
-    ev.target.appendChild(dragged);
-    console.log("wrap");
-  }
-}
+Sortable.create(tavle2, {
+  animation: 150,
+  group: 'shared'
+});
 
-
-let cardInfo = [];
+Sortable.create(tavle3, {
+  animation: 150,
+  group: 'shared'
+});
