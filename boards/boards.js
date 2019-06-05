@@ -141,7 +141,8 @@ const mindBranchBtn = document.getElementById("mindBbtn");
 mindBranchBtn.addEventListener("click", function() {
     mindBranchFrame.style.zIndex = 10;
     mindBranchFrame.style.display = "block";
-    document.body.style.overflow = "scroll";
+
+    document.body.style.overflow = "auto";
 
     mindBranchBtn.classList.add("currentLink");
 

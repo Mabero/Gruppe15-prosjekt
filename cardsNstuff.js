@@ -110,6 +110,7 @@ function createCard(nr) {
 
   xspan.setAttribute("class", "closeCard");
   xspan.innerHTML = "&times;";
+  xspan.setAttribute("onclick", "removeCard(i)")
 
 
   popUpBtn.setAttribute("id", "popUpBtn");
@@ -146,10 +147,7 @@ function createCard(nr) {
   newCard.id = 'card' + cardCounter;
   newCard.className = 'card';
 
-  xspan.onclick = function removeCard(id) {
-    var elem = document.getElementById(id)
-    elem.remove()
-  };
+  
 
 
   // f l a g c o u n t e r
@@ -206,6 +204,11 @@ function createCard(nr) {
 
   }*/
 }
+
+function removeCard(nr) {
+  const card = document.getElementById("card" + nr)
+  card.remove()
+};
 
 // Lager pop up modal window med div funksjoner.
 function createPopUp(nr) {
