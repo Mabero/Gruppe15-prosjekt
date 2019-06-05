@@ -292,7 +292,92 @@ function createDiv3(nr) {
   textTitle3.setAttribute("class", "inputTitle");
   textTitle3.setAttribute("placeholder", "Idea");
   button3.setAttribute("id", "progressButton");
-  button3.setAttribute("onclick", "createDiv4()");
+
+  if (nr == 0) {
+    if (y0 == 0) {
+      button3.setAttribute("onclick", "createDiv4(0)");
+    } if (y0 == 1) {
+      button3.setAttribute("onclick", "createDiv4(1)");
+    }
+  }
+  if (nr == 1) {
+    if (y1 == 0) {
+      button3.setAttribute("onclick", "createDiv4(2)");
+    } if (y1 == 1) {
+      button3.setAttribute("onclick", "createDiv4(3)");
+    }
+  }
+  if (nr == 2) {
+    if (y2 == 0) {
+      button3.setAttribute("onclick", "createDiv4(4)");
+    } if (y2 == 1) {
+      button3.setAttribute("onclick", "createDiv4(5)");
+    }
+  }
+  if (nr == 3) {
+    if (y3 == 0) {
+      button3.setAttribute("onclick", "createDiv4(6)");
+    } if (y3 == 1) {
+      button3.setAttribute("onclick", "createDiv4(7)");
+    }
+  }
+  if (nr == 4) {
+    if (y4 == 0) {
+      button3.setAttribute("onclick", "createDiv4(8)");
+    } if (y4 == 1) {
+      button3.setAttribute("onclick", "createDiv4(9)");
+    }
+  }
+  if (nr == 5) {
+    if (y5 == 0) {
+      button3.setAttribute("onclick", "createDiv4(11)");
+    } if (y5 == 1) {
+      button3.setAttribute("onclick", "createDiv4(12)");
+    }
+  }
+  if (nr == 6) {
+    if (y6 == 0) {
+      button3.setAttribute("onclick", "createDiv4(13)");
+    } if (y6 == 1) {
+      button3.setAttribute("onclick", "createDiv4(14)");
+    }
+  }
+  if (nr == 7) {
+    if (y7 == 0) {
+      button3.setAttribute("onclick", "createDiv4(15)");
+    } if (y7 == 1) {
+      button3.setAttribute("onclick", "createDiv4(15)");
+    }
+  }
+  if (nr == 8) {
+    if (y8 == 0) {
+      button3.setAttribute("onclick", "createDiv4(16)");
+    } if (y8 == 1) {
+      button3.setAttribute("onclick", "createDiv4(17)");
+    }
+  }
+  if (nr == 9) {
+    if (y9 == 0) {
+      button3.setAttribute("onclick", "createDiv4(18)");
+    } if (y9 == 1) {
+      button3.setAttribute("onclick", "createDiv4(19)");
+    }
+  }
+  if (nr == 10) {
+    if (y10 == 0) {
+      button3.setAttribute("onclick", "createDiv4(20)");
+    } if (y10 == 1) {
+      button3.setAttribute("onclick", "createDiv4(21)");
+    }
+  }
+  if (nr == 11) {
+    if (y11 == 0) {
+      button3.setAttribute("onclick", "createDiv4(22)");
+    } if (y11 == 1) {
+      button3.setAttribute("onclick", "createDiv4(23)");
+    }
+  }
+
 
 
   fixBox.appendChild(newDiv3);
@@ -377,7 +462,7 @@ function createDiv3(nr) {
     y2 = y2 + 1;
   }
 
- 
+
 
   if (nr == 3) {
     if (y3 == 0) {
@@ -511,7 +596,7 @@ function createDiv3(nr) {
 // Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
 
 
-function createDiv4() {
+function createDiv4(nr) {
   var newDiv4 = document.createElement('div');
   var textTitle4 = document.createElement("input");
   var button4 = document.createElement('button');
