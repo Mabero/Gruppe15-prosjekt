@@ -3,13 +3,20 @@ var array2 = [];
 var array3 = [];
 var array4 = [];
 
+// teller for unik id på kort
 var counter = 1;
+// teller for hoved noden
 var z = 0;
-var x0 = 0;
-var x1 = 0;
-var x2 = 0;
-var x3 = 0;
-
+// teller for den første laget
+var x0 = 0; var x1 = 0; var x2 = 0; var x3 = 0;
+// teller for den andre laget, øvert venstre
+var y0 = 0; var y1 = 0; var y2 = 0;
+// teller for den andre laget, nederst venstre
+var y3 = 0; var y4 = 0; var y5 = 0;
+// teller for den andre laget, øverst høyre
+var y6 = 0; var y7 = 0; var y8 = 0;
+// // teller for den andre laget, nedest høyre
+var y9 = 0; var y10 = 0; var y11 = 0;
 
 
 function createDiv() {
@@ -144,16 +151,16 @@ function createDiv2(nr) {
     } if (x2 == 1) {
       button2.setAttribute("onclick", "createDiv3(7)");
     } if (x2 == 2) {
-      button2.setAttribute("onclick", "createDiv3(2)");
+      button2.setAttribute("onclick", "createDiv3(8)");
     }
   }
   if (nr == 3) {
     if (x3 == 0) {
-      button2.setAttribute("onclick", "createDiv3(8)");
-    } if (x3 == 1) {
       button2.setAttribute("onclick", "createDiv3(9)");
-    } if (x3 == 2) {
+    } if (x3 == 1) {
       button2.setAttribute("onclick", "createDiv3(10)");
+    } if (x3 == 2) {
+      button2.setAttribute("onclick", "createDiv3(11)");
     }
   }
 
@@ -304,7 +311,6 @@ function createDiv3(nr) {
   newDiv3.style.border = "solid blue";
   newDiv3.style.opacity = "0.7";
   newDiv3.style.borderRadius = "50%";
-  newDiv3.style.left = "20%";
   newDiv3.style.position = "absolute";
   newDiv3.style.margin = "1em";
 
@@ -328,6 +334,176 @@ function createDiv3(nr) {
   button3.textContent = "+";
   button3.textContent.fontsize = "100px";
   button3.style.background = "#ff00bf46"
+
+  if (nr == 0) {
+    if (y0 == 0) {
+      newDiv3.style.left = "-140%"
+      newDiv3.style.top = "-160%"
+    } if (y0 == 1) {
+      newDiv3.style.left = "-180%"
+      newDiv3.style.top = "-110%"
+    } if (y0 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y0 = y0 + 1;
+  }
+
+  if (nr == 1) {
+    if (y1 == 0) {
+      newDiv3.style.left = "-200%"
+      newDiv3.style.top = "-60%"
+    } if (y1 == 1) {
+      newDiv3.style.left = "-200%"
+      newDiv3.style.top = "-0%"
+    } if (y1 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y1 = y1 + 1;
+  }
+
+  if (nr == 2) {
+    if (y2 == 0) {
+      newDiv3.style.left = "-0%"
+      newDiv3.style.top = "-180%"
+    } if (y2 == 1) {
+      newDiv3.style.left = "-70%"
+      newDiv3.style.top = "-180%"
+    } if (y2 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y2 = y2 + 1;
+  }
+
+ 
+
+  if (nr == 3) {
+    if (y3 == 0) {
+      newDiv3.style.left = "-140%"
+      newDiv3.style.bottom = "-160%"
+    } if (y3 == 1) {
+      newDiv3.style.left = "-180%"
+      newDiv3.style.bottom = "-110%"
+    } if (y3 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y3 = y3 + 1;
+  }
+
+  if (nr == 4) {
+    if (y4 == 0) {
+      newDiv3.style.left = "-200%"
+      newDiv3.style.bottom = "-60%"
+    } if (y4 == 1) {
+      newDiv3.style.left = "-200%"
+      newDiv3.style.bottom = "-0%"
+    } if (y4 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y4 = y4 + 1;
+  }
+
+  if (nr == 5) {
+    if (y5 == 0) {
+      newDiv3.style.left = "-0%"
+      newDiv3.style.bottom = "-180%"
+    } if (y5 == 1) {
+      newDiv3.style.left = "-70%"
+      newDiv3.style.bottom = "-180%"
+    } if (y5 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y5 = y5 + 1;
+  }
+
+  if (nr == 6) {
+    if (y6 == 0) {
+      newDiv3.style.right = "-140%"
+      newDiv3.style.top = "-160%"
+    } if (y6 == 1) {
+      newDiv3.style.right = "-180%"
+      newDiv3.style.top = "-110%"
+    } if (y6 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y6 = y6 + 1;
+  }
+
+  if (nr == 7) {
+    if (y7 == 0) {
+      newDiv3.style.right = "-200%"
+      newDiv3.style.top = "-60%"
+    } if (y7 == 1) {
+      newDiv3.style.right = "-200%"
+      newDiv3.style.top = "-0%"
+    } if (y7 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y7 = y7 + 1;
+  }
+
+  if (nr == 8) {
+    if (y8 == 0) {
+      newDiv3.style.right = "-0%"
+      newDiv3.style.top = "-180%"
+    } if (y8 == 1) {
+      newDiv3.style.right = "-70%"
+      newDiv3.style.top = "-180%"
+    } if (y8 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y8 = y8 + 1;
+  }
+
+  if (nr == 9) {
+    if (y9 == 0) {
+      newDiv3.style.right = "-140%"
+      newDiv3.style.bottom = "-160%"
+    } if (y9 == 1) {
+      newDiv3.style.right = "-180%"
+      newDiv3.style.bottom = "-110%"
+    } if (y9 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y9 = y9 + 1;
+  }
+
+  if (nr == 10) {
+    if (y10 == 0) {
+      newDiv3.style.right = "-200%"
+      newDiv3.style.bottom = "-60%"
+    } if (y10 == 1) {
+      newDiv3.style.right = "-200%"
+      newDiv3.style.bottom = "-0%"
+    } if (y10 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y10 = y10 + 1;
+  }
+
+  if (nr == 11) {
+    if (y11 == 0) {
+      newDiv3.style.right = "-0%"
+      newDiv3.style.bottom = "-180%"
+    } if (y11 == 1) {
+      newDiv3.style.right = "-70%"
+      newDiv3.style.bottom = "-180%"
+    } if (y11 > 1) {
+      alert("max 2 here")
+      return
+    }
+    y11 = y11 + 1;
+  }
 
   counter = counter + 1;
 };
