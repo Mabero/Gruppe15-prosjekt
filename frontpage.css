@@ -145,6 +145,13 @@ header {
     line-height: 1.5;
 }
 
+#heroBox h3 {
+    color: #FFD460;
+    font-size: 16px;
+    font-weight: 500;
+    display: none;
+}
+
 #mainBtn {
     margin-top: 60px;
     font-size: 20px;

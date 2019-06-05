@@ -135,18 +135,20 @@ const boardsMain = document.getElementById("boardsMain");
 const calendarFrame = document.getElementById("calendarIfrm");
 const calendarBtn = document.getElementById("calendarBtn");
 
-profileBtn.addEventListener("click", function() {
+profileBtn.addEventListener("click", function () {
     profileFrame.style.zIndex = 10;
     profileFrame.style.display = "block";
     document.body.style.overflow = "hidden";
 
     profileBtn.classList.add("currentLink")
     boardsMain.classList.remove("currentLink")
+    calendarBtn.classList.remove("currentLink")
 
+    calendarFrame.style.display = "none"
     hideShowFrame();
 })
 
-boardsMain.addEventListener("click", function() {
+boardsMain.addEventListener("click", function () {
     profileFrame.style.display = "none";
     calendarFrame.style.display = "none"
     boardsMain.classList.add("currentLink");
@@ -155,7 +157,7 @@ boardsMain.addEventListener("click", function() {
 
 })
 
-calendarBtn.addEventListener("click", function() {
+calendarBtn.addEventListener("click", function () {
     calendarFrame.style.zIndex = 10;
     calendarFrame.style.display = "block";
     document.body.style.overflow = "hidden";
@@ -165,3 +167,26 @@ calendarBtn.addEventListener("click", function() {
 
     hideShowFrame();
 })
+
+/*======= CHAT FUNCTION =========*/
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+
+// Hente verdier
+var inputElement = document.getElementById("input");
+var outputElement = document.getElementById("output");
+var btnElement = document.getElementById("btn-1");
+
+// Få brukern til å sende meldingen sin og kalle brukern for user
+btnElement.addEventListener("click", function (event) {
+    event.preventDefault();
+    outputElement.innerHTML += "<br/>Me: " + inputElement.value
+    inputElement.value = "";
+    
+});

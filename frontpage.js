@@ -8,6 +8,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+const goToBoardsF = document.getElementById("goToFeedback")
+const goToBoardsBtn = document.getElementById("mainBtn")
+
+goToBoardsBtn.addEventListener("click", function(){
+    goToBoardsF.style.display = "block";
+    setTimeout(function(){
+         goToBoardsF.style.display = "none" }, 5000);
+})
+
+
 const inputUsername = document.getElementById("inputUsername");
 const inputPassword = document.getElementById("inputPassword");
 const loginBtn = document.getElementById("loginBtn");
