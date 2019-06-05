@@ -3,10 +3,9 @@ const boardsContainer = document.getElementById("boardsContainer");
 
 // diverse counters
 var flagCounter = 0;
-var cardCounter = 0;
 
 var cardBtnsArray = [];
-let counter = 3;
+let counterList = 3;
 
 //funskjon som lager ny tavle
 boardsBtn.addEventListener("click", function () {
@@ -15,10 +14,10 @@ boardsBtn.addEventListener("click", function () {
   const newCardBtns = document.createElement("button");
   newDiv.className = "tavle";
 
-  
-  counter++;
 
-  newDiv.id = "tavle" + counter;
+  counterList++;
+
+  newDiv.id = "tavle" + counterList;
 
   //append child for ny tavle:
   tavleContainer.appendChild(newDiv);
@@ -26,20 +25,18 @@ boardsBtn.addEventListener("click", function () {
 
   newCardBtns.textContent = "+ Add new card";
   newCardBtns.className = "cardBtns";
-  
+  newCardBtns.setAttribute("onclick", "createCard(" + counterList + ")")
+
   cardBtnsArray.push(newCardBtns);
 
   newDiv.appendChild(newCardBtns);
 
-  for (i = 0; i < cardBtnsArray.length; i++) {
-    
-      cardBtnsArray[i].setAttribute("onclick", "createCard("+ counter +")")
-  }
 
   return newDiv;
 });
 
 const stars = []
+let cardCounter = 0;
 
 //funksjon som lager kortene
 function createCard(nr) {
@@ -53,45 +50,41 @@ function createCard(nr) {
   var flagSpan = document.createElement("span");
   var prioDiv = document.createElement("div");
   var flagged = 0;
-  const stars = [document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p")]
+  //const stars = [document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p")]
 
 
-  xspan.onclick = function removeCard(){
-    var elem = document.querySelector('#card');
-    elem.parentNode.removeChild(elem);
-  };
-
+  
 
 
   const starContainer = document.createElement("div");
   starContainer.id = "starContainer";
   newCard.appendChild(starContainer);
 
-/*
- stars.onclick = function changeColor1(nr) {
+
+  stars.onclick = function changeColor1(nr) {
     console.log(nr)
-    for(var i = 1; i <= 5; i++) {
-        if(i <= nr) {
-            document.getElementById('star' + i).style.color = "gold"
-            document.getElementById('star'+i).innerHTML = "★"
-        } else {
-            document.getElementById('star' + i).style.color = "gold"
-            document.getElementById('star'+i).innerHTML = "☆"
-        }
+    for (var i = 1; i <= 5; i++) {
+      if (i <= nr) {
+        document.getElementById('star' + i).style.color = "gold"
+        document.getElementById('star' + i).innerHTML = "★"
+      } else {
+        document.getElementById('star' + i).style.color = "gold"
+        document.getElementById('star' + i).innerHTML = "☆"
+      }
     }
-}
-
-  var span = document.createElement("span");
-  var flagSpan = document.createElement("span");
-  var prioDiv = document.createElement("div");
-  var flagged = 0;
-
-
-  const starContainer = document.createElement("div");
-  starContainer.id = "starContainer";
-  newCard.appendChild(starContainer);
-
-*/
+  }
+  /*
+    var span = document.createElement("span");
+    var flagSpan = document.createElement("span");
+    var prioDiv = document.createElement("div");
+    var flagged = 0;
+  
+  
+    const starContainer = document.createElement("div");
+    starContainer.id = "starContainer";
+    newCard.appendChild(starContainer);
+  
+  */
 
   //Flagg og onclick funskjon som endrer fargen på flagget.
   flagSpan.innerHTML = "⚑";
@@ -139,16 +132,25 @@ function createCard(nr) {
    skal være på kortet. */
   newCard.appendChild(xspan);
   newCard.appendChild(text);
-  newCard.setAttribute("draggable","true");
-  newCard.setAttribute("ondragstart","drag(event)");
+  newCard.setAttribute("draggable", "true");
+  newCard.setAttribute("ondragstart", "drag(event)");
   newCard.appendChild(popUpBtn);
   newCard.appendChild(prioDiv);
   newCard.setAttribute("draggable", "true");
   newCard.setAttribute("ondragstart", "drag(event)");
   newCard.appendChild(flagDiv);
   newCard.appendChild(popUpBtn);
-  newCard.id = 'card';
+  
+  cardCounter++;
+  
+  newCard.id = 'card' + cardCounter;
   newCard.className = 'card';
+
+  xspan.onclick = function removeCard(id) {
+    var elem = document.getElementById(id)
+    elem.remove()
+  };
+
 
   // f l a g c o u n t e r
   flagCounter = flagCounter + 1;
@@ -173,15 +175,15 @@ function createCard(nr) {
   function starchange() {
     for (var i = 0; i < stars.length; i++) {
 
-    const star = document.getElementById('star' + i);
-    star.classList.add = "fav";
+      const star = document.getElementById('star' + i);
+      star.classList.add = "fav";
 
       console.log("klikka på" + stars[i]);
 
       if (star.className = "fav") {
         star.innerHTML = "★";
         star.classList.remove = "fav";
-      } else if(star.className = "nofav") {
+      } else if (star.className = "nofav") {
         star.innerHTML = "☆"
       }
 
@@ -337,11 +339,11 @@ function createPopUp(nr) {
   }
 
   // unfinished business
-/*  window.onclick = function(event) {
-    if (event.target == modalDiv) {
-      modalDiv.style.display = "none";
-    }
-  } */
+  /*  window.onclick = function(event) {
+      if (event.target == modalDiv) {
+        modalDiv.style.display = "none";
+      }
+    } */
 
 }
 
