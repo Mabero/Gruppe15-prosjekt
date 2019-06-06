@@ -235,9 +235,7 @@ function createDiv2(nr) {
     button2.textContent = "+";
     button2.textContent.fontsize = "100px";
     button2.style.background = "#f06969";
-    button2.style.border = "1px";
-    button2.style.borderStyle = "solid";
-    button2.style.borderColor = "#f5c339";
+    button2.style.border = "none";
 
     // Line styling
     newLine2.style.height = "7px"
