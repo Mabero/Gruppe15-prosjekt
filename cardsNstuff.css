@@ -6,74 +6,8 @@ font-family: 'Montserrat', sans-serif;
 
 body {
 margin: 0px;
-overflow-y: scroll;
 overflow-x: scroll;
 background-color: #f2f2f2;
-}
-
-.topnav {
-background-image: url("/git/bilder/headerImage.png");
-padding-top: 20px;
-background-size: 100vw 100vh;
-z-index: 10;
-height: 150px;
-padding-left: 5vw;
-width: 100vw;
-display: grid;
-grid-template-columns: 30vw 30vw 30vw;
-}
-
-#logo {
-margin-top: -40px;
-transform: scale(1) !important;
-}
-
-.navRight {
-text-decoration: none;
-float: right;
-}
-
-.topCenter {
-height: 45px;
-border-bottom: 2px solid #ffd460;
-}
-
-.currentLink {
-color: #ffd460 !important;
-}
-
-.topnav a {
-color: #f2f2f2;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-font-size: 17px;
-font-weight: 500;
-cursor: pointer;
-}
-
-.topnav a:active {
-color: #ffd460;
-}
-
-#logo {
-margin-top: -40px;
-transform: scale(1) !important;
-}
-
-.navLeft {
-float: left;
-}
-
-.navRight {
-float: Right;
-}
-
-.topnav a:hover {
-color: #ffd460;
-text-decoration: none;
-transition: 0.5s;
-transform: scale(1.2);
 }
 
 /* ============= Tavler ==============*/
@@ -81,7 +15,6 @@ transform: scale(1.2);
 #tavleContainer {
 display: flex;
 width: auto;
-margin-left: 70px;
 margin-right: auto;
 flex-direction: row;
 }
@@ -105,27 +38,11 @@ flex-direction: row;
   border-bottom-right-radius: 10px;
 }
 
-#boardsBtn {
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-top: 15px;
-  color: #f2f2f2;
-  background-color: #50D160;
-  font-weight: 600;
-  font-size: 14px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  height: 40px;
-  margin-left: 30px;
-  min-width: 220px;
-}
-
 .cardBtns {
   margin-top: 15px;
   padding: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 21%;
+  padding-right: 21%;
   font-size: 14px;
   font-weight: 600;
   color: #f2f2f2;
@@ -140,8 +57,6 @@ flex-direction: row;
   cursor: pointer;
 }
 
-
-
 .tavle {
 background-color: #fff;
 height: auto;
@@ -151,7 +66,6 @@ border-radius: 15px;
 display: table;
 min-height: 69px;
 margin-left: 30px;
-
 margin-bottom: 30px;
 min-width: 250px;
 }
@@ -202,13 +116,13 @@ min-width: 250px;
   overflow: auto;
   background-color: #4F6976;
 }
+
 p {
   margin: 5px;
   color: #f2f2f2;
   display: block
-
-
 }
+
 .headerDiv {
   background-color: #4F6976;
   height: auto;
@@ -345,6 +259,7 @@ p {
   color: #d3d3d3;
   width: 20px;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .dueDateP {
@@ -360,6 +275,7 @@ p {
   width: 100px;
   display: flex;
   position: absolute;
+  cursor: pointer;
 }
 
 #starContainer * {

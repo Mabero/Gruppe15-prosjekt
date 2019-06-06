@@ -7,28 +7,10 @@ var flagCounter = 0;
 var cardBtnsArray = [];
 let counterList = 3;
 
-//funskjon som lager ny tavle
-boardsBtn.addEventListener("click", function () {
-  //DOM elementer
-  var newDiv = document.createElement("div")
-  const newCardBtns = document.createElement("button");
-  newDiv.className = "tavle";
 
 
-  counterList++;
 
-  newDiv.id = "tavle" + counterList;
-
-  //append child for ny tavle:
-  tavleContainer.appendChild(newDiv);
-  newDiv.after(boardsBtn);
-
-  newCardBtns.textContent = "+ Add new card";
-  newCardBtns.className = "cardBtns";
-  newCardBtns.setAttribute("onclick", "createCard(" + counterList + ")")
-
-  cardBtnsArray.push(newCardBtns);
-
+<<<<<<< HEAD
   newDiv.appendChild(newCardBtns);
 
 
@@ -36,7 +18,13 @@ boardsBtn.addEventListener("click", function () {
 });
 
 const stars = []
+=======
+const stars = [];
+var xspanArray = [];
+>>>>>>> d32a3e8e92fd2a22b73e2e748db905deceecfc9b
 let cardCounter = 0;
+var starcounter = 0;
+
 
 // ======================== CREATE CARD ======================== //
 function createCard(nr) {
@@ -50,12 +38,16 @@ function createCard(nr) {
   var flagSpan = document.createElement("span");
   var prioDiv = document.createElement("div");
   var flagged = 0;
+<<<<<<< HEAD
   //const stars = [document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p"), document.createElement("p")]
+=======
+>>>>>>> d32a3e8e92fd2a22b73e2e748db905deceecfc9b
 
   const starContainer = document.createElement("div");
   starContainer.id = "starContainer";
   newCard.appendChild(starContainer);
 
+<<<<<<< HEAD
 
   stars.onclick = function changeColor1(nr) {
     console.log(nr)
@@ -83,6 +75,8 @@ function createCard(nr) {
 
   */
 
+=======
+>>>>>>> d32a3e8e92fd2a22b73e2e748db905deceecfc9b
   //Flagg og onclick funskjon som endrer fargen på flagget.
   flagSpan.innerHTML = "⚑";
   flagSpan.onclick = function changeColor() {
@@ -129,25 +123,33 @@ function createCard(nr) {
    skal være på kortet. */
   newCard.appendChild(xspan);
   newCard.appendChild(text);
-  newCard.setAttribute("draggable", "true");
-  newCard.setAttribute("ondragstart", "drag(event)");
   newCard.appendChild(popUpBtn);
-  newCard.appendChild(prioDiv);
-  newCard.setAttribute("draggable", "true");
-  newCard.setAttribute("ondragstart", "drag(event)");
   newCard.appendChild(flagDiv);
   newCard.appendChild(popUpBtn);
+
+ 
 
   cardCounter++;
 
   newCard.id = 'card' + cardCounter;
   newCard.className = 'card';
 
+<<<<<<< HEAD
   xspan.onclick = function removeCard(id) {
     var elem = document.getElementById(id)
     elem.remove()
   };
+=======
 
+  xspanArray.push(newCard);
+>>>>>>> d32a3e8e92fd2a22b73e2e748db905deceecfc9b
+
+  for (i = 0; i < xspanArray.length; i++) {
+    xspanArray[i].childNodes[1].setAttribute("onclick", "removeCard(" + i + ")");
+  }
+  
+  
+  
 
   // f l a g c o u n t e r
   flagCounter = flagCounter + 1;
@@ -157,35 +159,41 @@ function createCard(nr) {
     const star = document.createElement("p");
     starContainer.appendChild(star);
     star.className = "stars";
-    star.id = "star" + i;
+    star.id = "star" + starcounter + i;
     stars.push(star[i]);
-    document.getElementById("star" + i).innerHTML = "☆";
-    document.getElementById("star" + i).onclick = starchange;
+    document.getElementById("star" + starcounter + i).innerHTML = "★";
+    document.getElementById("star" + starcounter + i).addEventListener("click", function (e) { starchange() });
+    // document.getElementById("star" + starcounter + i).onclick = starchange;
     //document.getElementById('star' + 1).style.color = "gold"
     //star[i].style.color = "gold"
     //star[i].innerHTML = "★"
+
+    starcounter = starcounter + 1;
   }
 
   /*const star1 = document.getElementById("star1");
   star1.innerHTML = "★";
   star1.onclick = starchange;*/
+
   function starchange() {
     for (var i = 0; i < stars.length; i++) {
 
-      const star = document.getElementById('star' + i);
-      star.classList.add = "fav";
+      const star = document.getElementById('star' + starcounter + i);
+      star.setAttribute("class", "fav");
 
       console.log("klikka på" + stars[i]);
 
       if (star.className = "fav") {
         star.innerHTML = "★";
-        star.classList.remove = "fav";
+        document.getElementsByClassName("fav");
       } else if (star.className = "nofav") {
         star.innerHTML = "☆"
       }
 
     }
   }
+
+  
 
   /*
   stars.onclick = function changeColor1(nr) {
@@ -205,11 +213,17 @@ function createCard(nr) {
 }
 // ======================== /CREATE CARD ======================== //
 
+function removeCard(i) {
+  const card = document.getElementById("card" + i)
+  card.remove()
+};
+
 function dropFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
+<<<<<<< HEAD
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdownContent");
@@ -220,6 +234,17 @@ window.onclick = function(event) {
                 openDropdown.classList.remove('show');
             }
         }
+=======
+window.onclick = function (event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdownContent");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+>>>>>>> d32a3e8e92fd2a22b73e2e748db905deceecfc9b
     }
 }
 
@@ -497,7 +522,13 @@ hvilket medlem som er lagt til. */
   //?????????????
   var i = 1;
 
+<<<<<<< HEAD
   chckbxBtn.onclick = function createCheckBox(obj) {
+=======
+  chckbxBtn.addEventListener("click", function (e) { createCheckBox(prod) });
+
+  function createCheckBox(obj) {
+>>>>>>> d32a3e8e92fd2a22b73e2e748db905deceecfc9b
     if (obj.value !== "") {
 
       var checkbox = document.createElement("input");
@@ -584,6 +615,7 @@ var dragget;
 var source;
 var dragged;
 
+<<<<<<< HEAD
 function allowDrop(ev) {
   ev.preventDefault();
 }
@@ -615,3 +647,29 @@ function drop1(ev) {
 
 
 let cardInfo = [];
+=======
+Sortable.create(tavle1, {
+  group: 'shared'
+});
+
+Sortable.create(tavle2, {
+  animation: 150,
+  group: 'shared'
+});
+
+Sortable.create(tavle3, {
+  animation: 150,
+  group: 'shared'
+});
+
+
+Sortable.create(tavle4, {
+  animation: 150,
+  group: 'shared'
+});
+
+Sortable.create(tavle5, {
+  animation: 150,
+  group: 'shared'
+});
+>>>>>>> d32a3e8e92fd2a22b73e2e748db905deceecfc9b
