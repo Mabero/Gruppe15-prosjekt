@@ -13,6 +13,8 @@ let counterList = 3;
 const stars = [];
 var xspanArray = new Array();
 let cardCounter = 0;
+var starcounter = 0;
+
 
 // ======================== CREATE CARD ======================== //
 function createCard(nr) {
@@ -30,32 +32,6 @@ function createCard(nr) {
   const starContainer = document.createElement("div");
   starContainer.id = "starContainer";
   newCard.appendChild(starContainer);
-
-  stars.onclick = function changeColor1(nr) {
-    
-    for (var i = 1; i <= 5; i++) {
-      if (i <= nr) {
-        document.getElementById('star' + i).style.color = "gold"
-        document.getElementById('star' + i).innerHTML = "★"
-      } else {
-        document.getElementById('star' + i).style.color = "gold"
-        document.getElementById('star' + i).innerHTML = "☆"
-      }
-    }
-  }
-
-  /*
-  var span = document.createElement("span");
-  var flagSpan = document.createElement("span");
-  var prioDiv = document.createElement("div");
-  var flagged = 0;
-
-
-  const starContainer = document.createElement("div");
-  starContainer.id = "starContainer";
-  newCard.appendChild(starContainer);
-
-  */
 
   //Flagg og onclick funskjon som endrer fargen på flagget.
   flagSpan.innerHTML = "⚑";
@@ -128,27 +104,31 @@ function createCard(nr) {
     const star = document.createElement("p");
     starContainer.appendChild(star);
     star.className = "stars";
-    star.id = "star" + i;
+    star.id = "star" + starcounter + i;
     stars.push(star[i]);
-    document.getElementById("star" + i).innerHTML = "☆";
-    document.getElementById("star" + i).onclick = starchange;
+    document.getElementById("star" + starcounter + i).innerHTML = "★";
+    document.getElementById("star" + starcounter + i).addEventListener("click", function (e) { starchange() });
+    // document.getElementById("star" + starcounter + i).onclick = starchange;
     //document.getElementById('star' + 1).style.color = "gold"
     //star[i].style.color = "gold"
     //star[i].innerHTML = "★"
+
+    starcounter = starcounter + 1;
   }
 
   /*const star1 = document.getElementById("star1");
   star1.innerHTML = "★";
   star1.onclick = starchange;*/
+
   function starchange() {
     for (var i = 0; i < stars.length; i++) {
 
-      const star = document.getElementById('star' + i);
-      star.classList.add = "fav";
+      const star = document.getElementById('star' + starcounter + i);
+      star.setAttribute("class", "fav");
 
       if (star.className = "fav") {
         star.innerHTML = "★";
-        star.classList.remove = "fav";
+        document.getElementsByClassName("fav");
       } else if (star.className = "nofav") {
         star.innerHTML = "☆"
       }
@@ -181,7 +161,7 @@ function dropFunction() {
 }
 
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdownContent");
     var i;
@@ -471,9 +451,9 @@ function createPopUp(nr) {
 
   var i = 1;
 
-  chckbxBtn.addEventListener("click", function(e) { createCheckBox(prod)});
+  chckbxBtn.addEventListener("click", function (e) { createCheckBox(prod) });
 
-  function createCheckBox(obj){
+  function createCheckBox(obj) {
     if (obj.value !== "") {
 
       var checkbox = document.createElement("input");
