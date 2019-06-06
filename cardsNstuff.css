@@ -407,3 +407,15 @@ p {
    position: relative;
    float: left;
  }
+
+ .newBoardBtn {
+   margin-left: 15px;
+   position: relative;
+   border-radius: 4px;
+   background-color:#50D160;
+   color:#fff;
+   border: none;
+   cursor: pointer;
+   font-size: 20px;
+   display: none;
+ }

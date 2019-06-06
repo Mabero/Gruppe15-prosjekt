@@ -538,7 +538,48 @@ function createPopUp(nr) {
 
 
 // Drag and drop funksjoner
+function closeBoard4() {
+  var elem = document.getElementById('tavlewrap4');
+  elem.style.display = 'none';
+  var newBoardBtn = document.getElementById("newBoardBtn");
+  newBoardBtn.style.display = "block";
+}
 
+function closeBoard5() {
+  var elem = document.getElementById('tavlewrap5');
+  elem.style.display = 'none';
+  var newBoardBtn = document.getElementById("newBoardBtn");
+  newBoardBtn.style.display = "block";
+}
+
+function addBoard() {
+  var buttonbutton = document.getElementById("newBoardBtn");
+
+  var yoyo1 = document.getElementById("tavlewrap4");
+  var yoyo2 = document.getElementById("tavlewrap5");
+
+  if ((yoyo1.style.display == "block" && yoyo2.style.display == "none") || (yoyo1.style.display == "none" && yoyo2.style.display == "block")){
+    if (yoyo1.style.display == "block" && yoyo2.style.display == "none"){
+        yoyo2.style.display = "block";
+
+    }
+    if (yoyo2.style.display == "block" && yoyo1.style.display == "none"){
+      yoyo1.style.display = "block";
+    }
+    if (yoyo1.style.display == "none" && yoyo2.style.display == "block"){
+      yoyo2.style.display = "block";
+    }
+    if (yoyo1.style.display == "none" && yoyo2.style.display == "block"){
+      yoyo1.style.display = "block";
+    }
+  }
+  if (yoyo1.style.display == "none" && yoyo2.style.display == "none"){
+    yoyo1.style.display = "block";
+  }
+  if (yoyo1.style.display == "block" && yoyo2.style.display == "block"){
+    buttonbutton.style.display = "none";
+  }
+}
 
 Sortable.create(tavle1, {
   group: 'shared',
