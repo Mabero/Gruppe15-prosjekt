@@ -389,45 +389,6 @@ p {
 }
 
 .memberButton:hover {
-<<<<<<< HEAD
-    background-color: #f08080;
-    font-size: 22px;
-    transition: 0.5s;
-    color: #ffd460;
-    cursor: pointer;
-}
-
- .mDiv {
-   height: auto;
-   width: auto;
-   display: flex;
-   flex-direction: row;
-   margin-top: 20px;
-   float: left;
- }
-
- .boardName {
-   font-size: 20px;
-   text-align: center;
- }
-
- #showMember {
-   position: relative;
-   float: left;
- }
-
- .newBoardBtn {
-   margin-left: 15px;
-   position: relative;
-   border-radius: 4px;
-   background-color:#50D160;
-   color:#fff;
-   border: none;
-   cursor: pointer;
-   font-size: 20px;
-   display: none;
- }
-=======
   background-color: #f08080;
   font-size: 22px;
   transition: 0.5s;
@@ -483,4 +444,3 @@ p {
   margin-left: 20px;
   margin-top: 10px;
 }
->>>>>>> 31b7c35ece778d419b89b2a72f8d94455f923f3a
