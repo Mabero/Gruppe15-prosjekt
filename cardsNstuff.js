@@ -30,7 +30,6 @@ function createCard(nr) {
   starContainer.id = "starContainer";
   newCard.appendChild(starContainer);
 
-
   stars.onclick = function changeColor1(nr) {
     
     for (var i = 1; i <= 5; i++) {
@@ -217,8 +216,8 @@ function addMember(check) {
 }
 
 
-function removeCard(nr) {
-  const card = document.getElementById("card" + nr)
+function removeCard(i) {
+  const card = document.getElementById("card" + i)
   card.remove()
 };
 
