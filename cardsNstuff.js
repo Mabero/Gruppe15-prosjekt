@@ -545,26 +545,32 @@ function createPopUp(nr) {
 // Drag and drop funksjoner
 
 Sortable.create(tavle1, {
-  group: 'shared'
+  group: 'shared',
+  animation: 150,
+  filter: ".cardBtns"
 });
 
 Sortable.create(tavle2, {
   animation: 150,
-  group: 'shared'
+  group: 'shared',
+  filter: ".cardBtns"
 });
 
 Sortable.create(tavle3, {
   animation: 150,
-  group: 'shared'
+  group: 'shared',
+  filter: ".cardBtns"
 });
 
 
 Sortable.create(tavle4, {
   animation: 150,
-  group: 'shared'
+  group: 'shared',
+  filter: ".cardBtns"
 });
 
 Sortable.create(tavle5, {
   animation: 150,
-  group: 'shared'
+  group: 'shared',
+  filter: ".cardBtns"
 });
