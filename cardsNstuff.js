@@ -404,6 +404,7 @@ function createPopUp(nr) {
   dropdownbtn6.innerHTML = "Even";
 
   modalDiv.appendChild(dropDownDiv);
+  modalDiv.appendChild(dropdownbtn0);
   dropDownDiv.appendChild(dropdownbtn0);
   dropDownDiv.appendChild(dropDownMenu);
   dropDownMenu.appendChild(dropdownbtn1);
@@ -538,7 +539,6 @@ function createPopUp(nr) {
 
 // Drag and drop funksjoner
 
-let cardInfo = [];
 
 Sortable.create(tavle1, {
   group: 'shared',
