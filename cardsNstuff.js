@@ -14,6 +14,11 @@ const stars = []
 let cardCounter = 0;
 var starcounter = 0;
 
+function removeCard(nr) {
+  const card = document.getElementById("card" + nr)
+  console.log(card)
+  card.remove()
+};
 
 // ======================== CREATE CARD ======================== //
 function createCard(nr) {
@@ -56,7 +61,7 @@ function createCard(nr) {
 
   xspan.setAttribute("class", "closeCard");
   xspan.innerHTML = "&times;";
-  xspan.setAttribute("onclick", "removeCard(i)")
+  xspan.setAttribute("onclick", "removeCard(" + (cardCounter + 1) + ")")
 
 
   popUpBtn.setAttribute("id", "popUpBtn");
@@ -157,7 +162,7 @@ function createCard(nr) {
 // ======================== /CREATE CARD ======================== //
 
 function dropFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
@@ -171,38 +176,36 @@ window.onclick = function (event) {
         openDropdown.classList.remove('show');
       }
     }
+  }
 }
 
 // Funksjonen som velger fra dropdown menyen hvilket medlem som er tillagt kortet.
 
 function addMember(check) {
-    var showMember = document.createElement("div");
-    var whichMember = document.createElement("div");
+  var showMember = document.createElement("div");
+  var whichMember = document.createElement("div");
 
-    modalDiv.appendChild(showMember);
-    showMember.appendChild(whichMember);
+  modalDiv.appendChild(showMember);
+  showMember.appendChild(whichMember);
 
-    showMember.setAttribute("id", "showMember");
-    showMember.setAttribute("class", "showMember");
-    showMember.style.height = "50px";
-    showMember.style.width = "50px";
-    showMember.style.backgroundColor = "#f2f2f2";
-    showMember.style.borderRadius = "50%";
+  showMember.setAttribute("id", "showMember");
+  showMember.setAttribute("class", "showMember");
+  showMember.style.height = "50px";
+  showMember.style.width = "50px";
+  showMember.style.backgroundColor = "#f2f2f2";
+  showMember.style.borderRadius = "50%";
 
 
-    whichMember.setAttribute("id", "whichMember");
-    whichMember.textContent = check;
-    whichMember.style.fontSize = "40px";
-    whichMember.align = "center";
+  whichMember.setAttribute("id", "whichMember");
+  whichMember.textContent = check;
+  whichMember.style.fontSize = "40px";
+  whichMember.align = "center";
 
-    console.log(check);
+  console.log(check);
 }
 
 
-function removeCard(nr) {
-  const card = document.getElementById("card" + nr)
-  card.remove()
-};
+
 
 // ======================== POP UP ======================== //
 function createPopUp(nr) {
@@ -242,7 +245,7 @@ function createPopUp(nr) {
   dropDownDiv.setAttribute("class", "dropdown");
   dropdownbtn0.setAttribute("class", "dropbtn");
   dropdownbtn0.onclick = function dropFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("myDropdown").classList.toggle("show");
   }
   dropdownbtn0.innerHTML = "Medlemmer";
   dropDownMenu.setAttribute("id", "myDropdown");
@@ -263,9 +266,9 @@ function createPopUp(nr) {
   dropdownbtn6.setAttribute("class", "memberButton");
 
 
-/* Her ble det litt rotete. Siden alt er inni en modal måtte vi kalle på funksjoner
-rett etter hver knapp. Denne funksjonen lager en runding og første bokstav på
-hvilket medlem som er lagt til. */
+  /* Her ble det litt rotete. Siden alt er inni en modal måtte vi kalle på funksjoner
+  rett etter hver knapp. Denne funksjonen lager en runding og første bokstav på
+  hvilket medlem som er lagt til. */
   dropdownbtn1.onclick = function addMember() {
     var showMember = document.createElement("div");
     var whichMember = document.createElement("div");
@@ -350,27 +353,26 @@ hvilket medlem som er lagt til. */
     whichMember.style.fontSize = "40px";
     whichMember.align = "center";
   }
-}
   dropdownbtn5.onclick = function addMember() {
     var showMember = document.createElement("div");
-  var whichMember = document.createElement("div");
+    var whichMember = document.createElement("div");
 
-  memberDiv.appendChild(showMember);
-  showMember.appendChild(whichMember);
+    memberDiv.appendChild(showMember);
+    showMember.appendChild(whichMember);
 
-  showMember.setAttribute("id", "showMember");
-  showMember.setAttribute("class", "showMember");
-  showMember.style.height = "50px";
-  showMember.style.width = "50px";
-  showMember.style.backgroundColor = "#f2f2f2";
-  showMember.style.borderRadius = "50%";
-  showMember.style.margin = "5px";
+    showMember.setAttribute("id", "showMember");
+    showMember.setAttribute("class", "showMember");
+    showMember.style.height = "50px";
+    showMember.style.width = "50px";
+    showMember.style.backgroundColor = "#f2f2f2";
+    showMember.style.borderRadius = "50%";
+    showMember.style.margin = "5px";
 
 
-  whichMember.setAttribute("id", "whichMember");
-  whichMember.textContent = "S";
-  whichMember.style.fontSize = "40px";
-  whichMember.align = "center";
+    whichMember.setAttribute("id", "whichMember");
+    whichMember.textContent = "S";
+    whichMember.style.fontSize = "40px";
+    whichMember.align = "center";
   }
   dropdownbtn6.onclick = function addMember() {
     var showMember = document.createElement("div");
@@ -477,7 +479,7 @@ hvilket medlem som er lagt til. */
 
       i = i + 1;
     }
-  }
+  };
   chckbxBtn.setAttribute("class", "chckbxBtn");
   chckbxBtn.innerHTML = "Create task";
   chckbxDiv.setAttribute("class", "chckbxDiv");
