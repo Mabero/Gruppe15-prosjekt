@@ -66,7 +66,7 @@ body {
   display: table;
   min-height: 69px;
   margin-bottom: 10px;
-  min-width: 250px;
+  min-width: 240px;
 }
 
 .tavleTitle {
@@ -134,11 +134,7 @@ body {
   font-size: 14px;
 }
 
-#tavlewrap4, #tavlewrap5 {
-  display: none !important;
-}
-
-#BoardBtn {
+#newBoardBtn {
   margin-top: 53px;
   margin-left: 30px;
   padding: 10px;
@@ -149,6 +145,7 @@ body {
   border: none;
   border-radius: 10px;
   width: 220px;
+  min-width: 220px;
   height: 40px;
 }
 

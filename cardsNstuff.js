@@ -547,6 +547,8 @@ function addBoard() {
   var yoyo1 = document.getElementById("tavlewrap4");
   var yoyo2 = document.getElementById("tavlewrap5");
 
+  
+
   if ((yoyo1.style.display == "block" && yoyo2.style.display == "none") || (yoyo1.style.display == "none" && yoyo2.style.display == "block")){
     if (yoyo1.style.display == "block" && yoyo2.style.display == "none"){
         yoyo2.style.display = "block";
@@ -568,35 +570,31 @@ function addBoard() {
   if (yoyo1.style.display == "block" && yoyo2.style.display == "block"){
     buttonbutton.style.display = "none";
   }
+  
 }
 
 Sortable.create(tavle1, {
   group: 'shared',
-  animation: 150,
-  filter: ".cardBtns"
+  animation: 150
 });
 
 Sortable.create(tavle2, {
   animation: 150,
-  group: 'shared',
-  filter: ".cardBtns"
+  group: 'shared'
 });
 
 Sortable.create(tavle3, {
   animation: 150,
-  group: 'shared',
-  filter: ".cardBtns"
+  group: 'shared'
 });
 
 
 Sortable.create(tavle4, {
   animation: 150,
-  group: 'shared',
-  filter: ".cardBtns"
+  group: 'shared'
 });
 
 Sortable.create(tavle5, {
   animation: 150,
-  group: 'shared',
-  filter: ".cardBtns"
+  group: 'shared'
 });
