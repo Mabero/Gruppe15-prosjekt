@@ -549,25 +549,24 @@ function addBoard() {
 
   
 
-  if ((yoyo1.style.display == "block" && yoyo2.style.display == "none") || (yoyo1.style.display == "none" && yoyo2.style.display == "block")){
-    if (yoyo1.style.display == "block" && yoyo2.style.display == "none"){
-        yoyo2.style.display = "block";
-
+  if ((yoyo1.style.display == "table" && yoyo2.style.display == "none") || (yoyo1.style.display == "none" && yoyo2.style.display == "block")){
+    if (yoyo1.style.display == "table" && yoyo2.style.display == "none"){
+        yoyo2.style.display = "table";
     }
-    if (yoyo2.style.display == "block" && yoyo1.style.display == "none"){
-      yoyo1.style.display = "block";
+    if (yoyo2.style.display == "table" && yoyo1.style.display == "none"){
+      yoyo1.style.display = "table";
     }
-    if (yoyo1.style.display == "none" && yoyo2.style.display == "block"){
-      yoyo2.style.display = "block";
+    if (yoyo1.style.display == "none" && yoyo2.style.display == "table"){
+      yoyo2.style.display = "table";
     }
-    if (yoyo1.style.display == "none" && yoyo2.style.display == "block"){
-      yoyo1.style.display = "block";
+    if (yoyo1.style.display == "none" && yoyo2.style.display == "table"){
+      yoyo1.style.display = "table";
     }
   }
   if (yoyo1.style.display == "none" && yoyo2.style.display == "none"){
-    yoyo1.style.display = "block";
+    yoyo1.style.display = "table";
   }
-  if (yoyo1.style.display == "block" && yoyo2.style.display == "block"){
+  if (yoyo1.style.display == "table" && yoyo2.style.display == "table"){
     buttonbutton.style.display = "none";
   }
   
