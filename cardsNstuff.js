@@ -10,8 +10,7 @@ let counterList = 3;
 
 
 
-const stars = [];
-var xspanArray = [];
+const stars = []
 let cardCounter = 0;
 var starcounter = 0;
 
@@ -55,6 +54,7 @@ function createCard(nr) {
 
   xspan.setAttribute("class", "closeCard");
   xspan.innerHTML = "&times;";
+  xspan.setAttribute("onclick", "removeCard(i)")
 
 
   popUpBtn.setAttribute("id", "popUpBtn");
@@ -77,11 +77,14 @@ function createCard(nr) {
   skal være på kortet. */
   newCard.appendChild(xspan);
   newCard.appendChild(text);
+  newCard.setAttribute("draggable", "true");
+  newCard.setAttribute("ondragstart", "drag(event)");
   newCard.appendChild(popUpBtn);
+  newCard.appendChild(prioDiv);
+  newCard.setAttribute("draggable", "true");
+  newCard.setAttribute("ondragstart", "drag(event)");
   newCard.appendChild(flagDiv);
   newCard.appendChild(popUpBtn);
-
- 
 
   cardCounter++;
 
@@ -89,14 +92,7 @@ function createCard(nr) {
   newCard.className = 'card';
 
 
-  xspanArray.push(newCard);
 
-  for (i = 0; i < xspanArray.length; i++) {
-    xspanArray[i].childNodes[1].setAttribute("onclick", "removeCard(" + i + ")");
-  }
-  
-  
-  
 
   // f l a g c o u n t e r
   flagCounter = flagCounter + 1;
@@ -138,8 +134,6 @@ function createCard(nr) {
     }
   }
 
-  
-
   /*
   stars.onclick = function changeColor1(nr) {
 
@@ -157,11 +151,6 @@ document.getElementById('star' + i).innerHTML = "☆"
 }*/
 }
 // ======================== /CREATE CARD ======================== //
-
-function removeCard(i) {
-  const card = document.getElementById("card" + i)
-  card.remove()
-};
 
 function dropFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -207,6 +196,10 @@ function addMember(check) {
 }
 
 
+function removeCard(nr) {
+  const card = document.getElementById("card" + nr)
+  card.remove()
+};
 
 // Lager pop up modal window med div funksjoner.
 function createPopUp(nr) {
