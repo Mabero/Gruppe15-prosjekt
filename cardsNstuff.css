@@ -12,11 +12,7 @@ background-color: #f2f2f2;
 
 /* ============= Tavler ==============*/
 
-.tavleTitle {
-  width: 99%;
-  text-align: center;
 
-}
 
 #tavleContainer {
 display: flex;
@@ -73,6 +69,19 @@ margin-bottom: 10px;
 min-width: 250px;
 }
 
+.tavleTitle {
+  width: 99%;
+  height: 35px;
+  border-top-left-radius: 10px;
+  border: none;
+  border-top-right-radius: 10px;
+  background-color: #5f8091;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 .tavleWrap {
 background-color: #fff;
 height: auto;
@@ -81,8 +90,13 @@ color: #f2f2f2;
 border-radius: 15px;
 display: table;
 min-height: 69px;
-margin-left: 30px;
-min-width: 250px;
+margin-left: 25px;
+max-width: 240px;
+}
+
+.tavleTitle::placeholder {
+  color: #b8b8b8;
+  font-weight: 400;
 }
 
 
@@ -301,6 +315,7 @@ p {
 #starContainer * {
   padding-right: 10px;
   font-size: 16px;
+  color: gold;
 }
 
 .dropbtn {
