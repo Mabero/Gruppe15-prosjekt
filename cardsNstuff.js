@@ -196,8 +196,8 @@ function addMember(check) {
 }
 
 
-function removeCard(nr) {
-  const card = document.getElementById("card" + nr)
+function removeCard(i) {
+  const card = document.getElementById("card" + i)
   card.remove()
 };
 
