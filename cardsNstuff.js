@@ -541,14 +541,17 @@ function closeBoard5() {
   newBoardBtn.style.display = "block";
 }
 
+var yoyo1 = document.getElementById("tavlewrap4");
+var yoyo2 = document.getElementById("tavlewrap5");
+
+yoyo1.style.display = "none";
+yoyo2.style.display = "none";
+
+
 function addBoard() {
   var buttonbutton = document.getElementById("newBoardBtn");
 
-  var yoyo1 = document.getElementById("tavlewrap4");
-  var yoyo2 = document.getElementById("tavlewrap5");
-
-  
-
+ 
   if ((yoyo1.style.display == "table" && yoyo2.style.display == "none") || (yoyo1.style.display == "none" && yoyo2.style.display == "block")){
     if (yoyo1.style.display == "table" && yoyo2.style.display == "none"){
         yoyo2.style.display = "table";
