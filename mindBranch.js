@@ -32,6 +32,7 @@ var y11 = 0;
 // Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
 
 function createDiv() {
+  // sjekker om det er max noder alt. 4 er max.
   if (z < 4) {
     var newDiv = document.createElement('div');
     var textTitle = document.createElement("input");
@@ -46,6 +47,7 @@ function createDiv() {
     textTitle.setAttribute("placeholder", "Idea ...");
     button.setAttribute("id", "progressButton");
 
+    // lager forskjellige verier for knappene sånn neste knapp vet hva den skal lage
     if (z == 0) {
       button.setAttribute("onclick", "createDiv2(0)");
 
@@ -60,6 +62,7 @@ function createDiv() {
       button.setAttribute("onclick", "createDiv2(3)");
     }
 
+    // legger delene til som barn der de skal
     fixBox.appendChild(newDiv);
     newDiv.appendChild(textTitle);
     newDiv.appendChild(button);
@@ -79,7 +82,7 @@ function createDiv() {
 
     //Text box styling
     textTitle.style.backgroundColor = "#f06969"
-    
+
 
     // Button styling
     button.style.height = "40px";
@@ -99,7 +102,7 @@ function createDiv() {
     newLine.style.zIndex = "1";
 
 
-
+    // lager posjoneringen for node 1
     if (z == 0) {
       newDiv.style.left = "-75%";
       newDiv.style.top = "-50%";
@@ -107,6 +110,7 @@ function createDiv() {
       newLine.style.top = "20%";
       newLine.style.transform = "rotate(40deg)"
     }
+    // lager posjoneringen for node 2
     if (z == 1) {
       newDiv.style.left = "-75%";
       newDiv.style.bottom = "-50%";
@@ -114,6 +118,7 @@ function createDiv() {
       newLine.style.bottom = "20%";
       newLine.style.transform = "rotate(325deg)"
     }
+    // lager posjoneringen for node 3
     if (z == 2) {
       newDiv.style.right = "-75%";
       newDiv.style.top = "-50%";
@@ -121,6 +126,7 @@ function createDiv() {
       newLine.style.top = "20%";
       newLine.style.transform = "rotate(140deg)"
     }
+    // lager posjoneringen for node 4
     if (z == 3) {
       newDiv.style.right = "-75%";
       newDiv.style.bottom = "-50%";
@@ -128,10 +134,12 @@ function createDiv() {
       newLine.style.bottom = "20%";
       newLine.style.transform = "rotate(220deg)"
     }
-
+    // legger til 1 på z sånn at neste gang knappen blir trykket 
     z = z + 1;
+    // legger til 1 i counter sånn at ideen blir forskjellig på alle nodene
     counter = counter + 1;
   } else {
+    // skulle vært en melding til bruker here
     console.log("4");
   }
 };
@@ -140,6 +148,7 @@ function createDiv() {
 
 
 function createDiv2(nr) {
+  // sjekker om det er 3 noder laget på hver node
   if ((nr == 0 && x0 < 3) || (nr == 1 && x1 < 3) || (nr == 2 && x2 < 3) || (nr == 3 && x3 < 3)) {
     var newDiv2 = document.createElement('div');
     var textTitle2 = document.createElement("input");
@@ -149,10 +158,13 @@ function createDiv2(nr) {
 
     array2.push(newDiv2);
 
+    // setter fast tingene der de skal
     textTitle2.setAttribute("class", "inputTitle");
     textTitle2.setAttribute("placeholder", "Idea ...");
     button2.setAttribute("id", "progressButton");
 
+    // sjekker om node 1 har blit trykket og hvor mange ganger og
+    //  lager neste knapp riktig i fohold
     if (nr == 0) {
       if (x0 == 0) {
         button2.setAttribute("onclick", "createDiv3(0)");
@@ -164,6 +176,7 @@ function createDiv2(nr) {
         button2.setAttribute("onclick", "createDiv3(2)");
       }
     }
+    // her skjer det samme som over men for node 2
     if (nr == 1) {
       if (x1 == 0) {
         button2.setAttribute("onclick", "createDiv3(3)");
@@ -175,6 +188,7 @@ function createDiv2(nr) {
         button2.setAttribute("onclick", "createDiv3(5)");
       }
     }
+    // her skjer det samme som over men for node 3
     if (nr == 2) {
       if (x2 == 0) {
         button2.setAttribute("onclick", "createDiv3(6)");
@@ -186,6 +200,7 @@ function createDiv2(nr) {
         button2.setAttribute("onclick", "createDiv3(8)");
       }
     }
+    // her skjer det samme som over men for node 4
     if (nr == 3) {
       if (x3 == 0) {
         button2.setAttribute("onclick", "createDiv3(9)");
@@ -199,7 +214,7 @@ function createDiv2(nr) {
     }
 
 
-
+    // fester tingen der de skal
     fixBox.appendChild(newDiv2);
     newDiv2.appendChild(textTitle2);
     newDiv2.appendChild(button2);
@@ -230,7 +245,6 @@ function createDiv2(nr) {
     button2.style.width = "40px";
     button2.style.top = "-10%";
     button2.style.right = "-10%";
-    
     button2.style.borderRadius = "50%";
     button2.textContent = "+";
     button2.textContent.fontsize = "100px";
@@ -245,6 +259,7 @@ function createDiv2(nr) {
     newLine2.style.backgroundColor = "#4f6976"
     newLine2.style.zIndex = "-1";
 
+    // lager posisjonering fra node 1
     if (nr == 0) {
       if (x0 == 0) {
         newDiv2.style.left = "-125%";
@@ -270,6 +285,7 @@ function createDiv2(nr) {
       x0 = x0 + 1;
     }
 
+    // lager posisjonering fra node 2
     if (nr == 1) {
       if (x1 == 0) {
         newDiv2.style.left = "-125%";
@@ -294,6 +310,7 @@ function createDiv2(nr) {
       }
       x1 = x1 + 1;
     }
+    // lager posisjonering fra node 3
     if (nr == 2) {
       if (x2 == 0) {
         newDiv2.style.right = "-125%";
@@ -319,7 +336,7 @@ function createDiv2(nr) {
       x2 = x2 + 1;
     }
 
-
+    // lager posisjonering fra node 4
     if (nr == 3) {
       if (x3 == 0) {
         newDiv2.style.right = "-125%";
@@ -359,10 +376,12 @@ function createDiv2(nr) {
 
 
 function createDiv3(nr) {
+  // en heftig if statment for å sjekke hvilken knap som blir trykket og hvor mange noder de har
   if ((nr == 0 && y0 < 2) || (nr == 1 && y1 < 2) || (nr == 2 && y2 < 2) || (nr == 3 && y3 < 2) || (nr == 4 && y4 < 2) || (nr == 5 && y5 < 2) ||
     (nr == 6 && y6 < 2) || (nr == 7 && y7 < 2) || (nr == 8 && y8 < 2) || (nr == 9 && y9 < 2) || (nr == 10 && y10 < 2) || (nr == 11 && y11 < 2)) {
     var newDiv3 = document.createElement('div');
     var textTitle3 = document.createElement("input");
+    // fjernet butten 3 for å lage mindre tidskrevende arbeid
     // var button3 = document.createElement('button');
     var newLine3 = document.createElement("div");
 
@@ -372,97 +391,100 @@ function createDiv3(nr) {
 
     textTitle3.setAttribute("class", "inputTitle");
     textTitle3.setAttribute("placeholder", "Idea ...");
+
+    // fjernet butten 3 for å lage mindre tidskrevende arbeid
     // button3.setAttribute("id", "progressButton");
-/*
-    if (nr == 0) {
-      if (y0 == 0) {
-        button3.setAttribute("onclick", "createDiv4(0)");
-      } if (y0 == 1) {
-        button3.setAttribute("onclick", "createDiv4(1)");
-      }
-    }
-    if (nr == 1) {
-      if (y1 == 0) {
-        button3.setAttribute("onclick", "createDiv4(2)");
-      } if (y1 == 1) {
-        button3.setAttribute("onclick", "createDiv4(3)");
-      }
-    }
-    if (nr == 2) {
-      if (y2 == 0) {
-        button3.setAttribute("onclick", "createDiv4(4)");
-      } if (y2 == 1) {
-        button3.setAttribute("onclick", "createDiv4(5)");
-      }
-    }
-    if (nr == 3) {
-      if (y3 == 0) {
-        button3.setAttribute("onclick", "createDiv4(6)");
-      } if (y3 == 1) {
-        button3.setAttribute("onclick", "createDiv4(7)");
-      }
-    }
-    if (nr == 4) {
-      if (y4 == 0) {
-        button3.setAttribute("onclick", "createDiv4(8)");
-      } if (y4 == 1) {
-        button3.setAttribute("onclick", "createDiv4(9)");
-      }
-    }
-    if (nr == 5) {
-      if (y5 == 0) {
-        button3.setAttribute("onclick", "createDiv4(11)");
-      } if (y5 == 1) {
-        button3.setAttribute("onclick", "createDiv4(12)");
-      }
-    }
-    if (nr == 6) {
-      if (y6 == 0) {
-        button3.setAttribute("onclick", "createDiv4(13)");
-      } if (y6 == 1) {
-        button3.setAttribute("onclick", "createDiv4(14)");
-      }
-    }
-    if (nr == 7) {
-      if (y7 == 0) {
-        button3.setAttribute("onclick", "createDiv4(15)");
-      } if (y7 == 1) {
-        button3.setAttribute("onclick", "createDiv4(15)");
-      }
-    }
-    if (nr == 8) {
-      if (y8 == 0) {
-        button3.setAttribute("onclick", "createDiv4(16)");
-      } if (y8 == 1) {
-        button3.setAttribute("onclick", "createDiv4(17)");
-      }
-    }
-    if (nr == 9) {
-      if (y9 == 0) {
-        button3.setAttribute("onclick", "createDiv4(18)");
-      } if (y9 == 1) {
-        button3.setAttribute("onclick", "createDiv4(19)");
-      }
-    }
-    if (nr == 10) {
-      if (y10 == 0) {
-        button3.setAttribute("onclick", "createDiv4(20)");
-      } if (y10 == 1) {
-        button3.setAttribute("onclick", "createDiv4(21)");
-      }
-    }
-    if (nr == 11) {
-      if (y11 == 0) {
-        button3.setAttribute("onclick", "createDiv4(22)");
-      } if (y11 == 1) {
-        button3.setAttribute("onclick", "createDiv4(23)");
-      }
-    }
-*/
+    /*
+        if (nr == 0) {
+          if (y0 == 0) {
+            button3.setAttribute("onclick", "createDiv4(0)");
+          } if (y0 == 1) {
+            button3.setAttribute("onclick", "createDiv4(1)");
+          }
+        }
+        if (nr == 1) {
+          if (y1 == 0) {
+            button3.setAttribute("onclick", "createDiv4(2)");
+          } if (y1 == 1) {
+            button3.setAttribute("onclick", "createDiv4(3)");
+          }
+        }
+        if (nr == 2) {
+          if (y2 == 0) {
+            button3.setAttribute("onclick", "createDiv4(4)");
+          } if (y2 == 1) {
+            button3.setAttribute("onclick", "createDiv4(5)");
+          }
+        }
+        if (nr == 3) {
+          if (y3 == 0) {
+            button3.setAttribute("onclick", "createDiv4(6)");
+          } if (y3 == 1) {
+            button3.setAttribute("onclick", "createDiv4(7)");
+          }
+        }
+        if (nr == 4) {
+          if (y4 == 0) {
+            button3.setAttribute("onclick", "createDiv4(8)");
+          } if (y4 == 1) {
+            button3.setAttribute("onclick", "createDiv4(9)");
+          }
+        }
+        if (nr == 5) {
+          if (y5 == 0) {
+            button3.setAttribute("onclick", "createDiv4(11)");
+          } if (y5 == 1) {
+            button3.setAttribute("onclick", "createDiv4(12)");
+          }
+        }
+        if (nr == 6) {
+          if (y6 == 0) {
+            button3.setAttribute("onclick", "createDiv4(13)");
+          } if (y6 == 1) {
+            button3.setAttribute("onclick", "createDiv4(14)");
+          }
+        }
+        if (nr == 7) {
+          if (y7 == 0) {
+            button3.setAttribute("onclick", "createDiv4(15)");
+          } if (y7 == 1) {
+            button3.setAttribute("onclick", "createDiv4(15)");
+          }
+        }
+        if (nr == 8) {
+          if (y8 == 0) {
+            button3.setAttribute("onclick", "createDiv4(16)");
+          } if (y8 == 1) {
+            button3.setAttribute("onclick", "createDiv4(17)");
+          }
+        }
+        if (nr == 9) {
+          if (y9 == 0) {
+            button3.setAttribute("onclick", "createDiv4(18)");
+          } if (y9 == 1) {
+            button3.setAttribute("onclick", "createDiv4(19)");
+          }
+        }
+        if (nr == 10) {
+          if (y10 == 0) {
+            button3.setAttribute("onclick", "createDiv4(20)");
+          } if (y10 == 1) {
+            button3.setAttribute("onclick", "createDiv4(21)");
+          }
+        }
+        if (nr == 11) {
+          if (y11 == 0) {
+            button3.setAttribute("onclick", "createDiv4(22)");
+          } if (y11 == 1) {
+            button3.setAttribute("onclick", "createDiv4(23)");
+          }
+        }
+    */
 
 
     fixBox.appendChild(newDiv3);
     newDiv3.appendChild(textTitle3);
+    // fjernet butten 3 for å lage mindre tidskrevende arbeid
     // newDiv3.appendChild(button3);
     fixBox.appendChild(newLine3)
 
@@ -486,20 +508,21 @@ function createDiv3(nr) {
     //Text box styling
     textTitle3.style.backgroundColor = "#50d160"
 
-/*
-    // button3 styling
-    button3.style.height = "40px";
-    button3.style.width = "40px";
-    button3.style.top = "0%";
-    button3.style.left = "70%";
-    button3.style.position = "absolute";
-    button3.style.borderRadius = "50%";
-    button3.style.opacity = "0.90";
-    button3.style.borderColor = "#f370d246"
-    button3.textContent = "+";
-    button3.textContent.fontsize = "100px";
-    button3.style.background = "#ff00bf46";
-*/
+    // fjernet butten 3 for å lage mindre tidskrevende arbeid
+    /*
+        // button3 styling
+        button3.style.height = "40px";
+        button3.style.width = "40px";
+        button3.style.top = "0%";
+        button3.style.left = "70%";
+        button3.style.position = "absolute";
+        button3.style.borderRadius = "50%";
+        button3.style.opacity = "0.90";
+        button3.style.borderColor = "#f370d246"
+        button3.textContent = "+";
+        button3.textContent.fontsize = "100px";
+        button3.style.background = "#ff00bf46";
+    */
 
     // Line styling
     newLine3.style.height = "7px"
@@ -507,6 +530,7 @@ function createDiv3(nr) {
     newLine3.style.backgroundColor = "#4f6976"
     newLine3.style.zIndex = "-1";
 
+    // posisjonerer de node som kommer ut av 0; 
     if (nr == 0) {
       if (y0 == 0) {
         newDiv3.style.left = "-140%";
@@ -523,6 +547,8 @@ function createDiv3(nr) {
       }
       y0 = y0 + 1;
     }
+
+    // posisjonerer de node som kommer ut av 1 
     if (nr == 1) {
       if (y1 == 0) {
         newDiv3.style.left = "-200%";
@@ -541,6 +567,7 @@ function createDiv3(nr) {
       y1 = y1 + 1;
     }
 
+    // posisjonerer de node som kommer ut av 2
     if (nr == 2) {
       if (y2 == 0) {
         newDiv3.style.left = "-10%"
@@ -559,7 +586,7 @@ function createDiv3(nr) {
       y2 = y2 + 1;
     }
 
-
+    // posisjonerer de node som kommer ut av 3 
     if (nr == 3) {
       if (y3 == 0) {
         newDiv3.style.left = "-140%"
@@ -577,6 +604,7 @@ function createDiv3(nr) {
       y3 = y3 + 1;
     }
 
+    // posisjonerer de node som kommer ut av 4
     if (nr == 4) {
       if (y4 == 0) {
         newDiv3.style.left = "-200%"
@@ -595,6 +623,7 @@ function createDiv3(nr) {
       y4 = y4 + 1;
     }
 
+    // posisjonerer de node som kommer ut av 5
     if (nr == 5) {
       if (y5 == 0) {
         newDiv3.style.left = "-5%";
@@ -613,6 +642,7 @@ function createDiv3(nr) {
       y5 = y5 + 1;
     }
 
+    // posisjonerer de node som kommer ut av 6
     if (nr == 6) {
       if (y6 == 0) {
         newDiv3.style.right = "-140%";
@@ -631,6 +661,7 @@ function createDiv3(nr) {
       y6 = y6 + 1;
     }
 
+    // posisjonerer de node som kommer ut av 7 
     if (nr == 7) {
       if (y7 == 0) {
         newDiv3.style.right = "-200%";
@@ -649,6 +680,7 @@ function createDiv3(nr) {
       y7 = y7 + 1;
     }
 
+    // posisjonerer de node som kommer ut av 8 
     if (nr == 8) {
       if (y8 == 0) {
         newDiv3.style.right = "-10%";
@@ -667,6 +699,7 @@ function createDiv3(nr) {
       y8 = y8 + 1;
     }
 
+    // posisjonerer de node som kommer ut av 9 
     if (nr == 9) {
       if (y9 == 0) {
         newDiv3.style.right = "-140%";
@@ -685,6 +718,7 @@ function createDiv3(nr) {
       y9 = y9 + 1;
     }
 
+    // posisjonerer de node som kommer ut av 10 
     if (nr == 10) {
       if (y10 == 0) {
         newDiv3.style.right = "-200%";
@@ -703,6 +737,7 @@ function createDiv3(nr) {
       y10 = y10 + 1;
     }
 
+    // posisjonerer de node som kommer ut av 11 
     if (nr == 11) {
       if (y11 == 0) {
         newDiv3.style.right = "-10%"
@@ -729,7 +764,7 @@ function createDiv3(nr) {
   }
 };
 // Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div Next div
-
+// fjernet for å redusere mengen med tidkrevende arbeid
 /*
 function createDiv4() {
   var newDiv4 = document.createElement('div');
