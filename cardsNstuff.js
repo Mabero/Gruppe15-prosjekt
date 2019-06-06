@@ -247,7 +247,7 @@ function createPopUp(nr) {
   dropdownbtn0.onclick = function dropFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
-  dropdownbtn0.innerHTML = "Medlemmer";
+  dropdownbtn0.innerHTML = "Members";
   dropDownMenu.setAttribute("id", "myDropdown");
   dropDownMenu.setAttribute("class", "dropdownContent");
 
