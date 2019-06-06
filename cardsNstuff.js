@@ -10,7 +10,8 @@ let counterList = 3;
 
 
 
-const stars = []
+const stars = [];
+var xspanArray = new Array();
 let cardCounter = 0;
 
 // ======================== CREATE CARD ======================== //
@@ -78,7 +79,6 @@ function createCard(nr) {
 
   xspan.setAttribute("class", "closeCard");
   xspan.innerHTML = "&times;";
-  xspan.setAttribute("onclick", "removeCard(i)")
 
 
   popUpBtn.setAttribute("id", "popUpBtn");
@@ -110,13 +110,15 @@ function createCard(nr) {
   newCard.appendChild(flagDiv);
   newCard.appendChild(popUpBtn);
 
+ 
+
   cardCounter++;
 
   newCard.id = 'card' + cardCounter;
   newCard.className = 'card';
 
 
-
+  xspanArray.push("faen");
 
   // f l a g c o u n t e r
   flagCounter = flagCounter + 1;
@@ -153,6 +155,8 @@ function createCard(nr) {
 
     }
   }
+
+  
 
   /*
   stars.onclick = function changeColor1(nr) {
