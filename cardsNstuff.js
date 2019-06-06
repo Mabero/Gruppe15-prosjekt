@@ -13,7 +13,7 @@ let counterList = 3;
 const stars = []
 let cardCounter = 0;
 
-//funksjon som lager kortene
+// ======================== CREATE CARD ======================== //
 function createCard(nr) {
   //DOM elementer
   var newCard = document.createElement("div");
@@ -43,18 +43,18 @@ function createCard(nr) {
       }
     }
   }
-  
+
   /*
-    var span = document.createElement("span");
-    var flagSpan = document.createElement("span");
-    var prioDiv = document.createElement("div");
-    var flagged = 0;
-  
-  
-    const starContainer = document.createElement("div");
-    starContainer.id = "starContainer";
-    newCard.appendChild(starContainer);
-  
+  var span = document.createElement("span");
+  var flagSpan = document.createElement("span");
+  var prioDiv = document.createElement("div");
+  var flagged = 0;
+
+
+  const starContainer = document.createElement("div");
+  starContainer.id = "starContainer";
+  newCard.appendChild(starContainer);
+
   */
 
   //Flagg og onclick funskjon som endrer fargen på flagget.
@@ -99,7 +99,7 @@ function createCard(nr) {
   popUpBtn.setAttribute("onclick", "createPopUp()");
 
   /* Styler og setter daddy (new card) til alle elementene som
-   skal være på kortet. */
+  skal være på kortet. */
   newCard.appendChild(xspan);
   newCard.appendChild(text);
   newCard.setAttribute("draggable", "true");
@@ -110,13 +110,13 @@ function createCard(nr) {
   newCard.setAttribute("ondragstart", "drag(event)");
   newCard.appendChild(flagDiv);
   newCard.appendChild(popUpBtn);
-  
+
   cardCounter++;
-  
+
   newCard.id = 'card' + cardCounter;
   newCard.className = 'card';
 
-  
+
 
 
   // f l a g c o u n t e r
@@ -158,19 +158,64 @@ function createCard(nr) {
   /*
   stars.onclick = function changeColor1(nr) {
 
-    for (var i = 1; i <= 5; i++) {
-      if (i <= nr) {
-        document.getElementById('star' + i).style.color = "gold"
-        document.getElementById('star' + i).innerHTML = "★"
-      } else {
-        document.getElementById('star' + i).style.color = "gold"
-        document.getElementById('star' + i).innerHTML = "☆"
-      }
-
-    }
-
-  }*/
+  for (var i = 1; i <= 5; i++) {
+  if (i <= nr) {
+  document.getElementById('star' + i).style.color = "gold"
+  document.getElementById('star' + i).innerHTML = "★"
+} else {
+document.getElementById('star' + i).style.color = "gold"
+document.getElementById('star' + i).innerHTML = "☆"
 }
+
+}
+
+}*/
+}
+// ======================== /CREATE CARD ======================== //
+
+function dropFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdownContent");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+// Funksjonen som velger fra dropdown menyen hvilket medlem som er tillagt kortet.
+
+function addMember(check) {
+  var showMember = document.createElement("div");
+  var whichMember = document.createElement("div");
+
+  modalDiv.appendChild(showMember);
+  showMember.appendChild(whichMember);
+
+  showMember.setAttribute("id", "showMember");
+  showMember.setAttribute("class", "showMember");
+  showMember.style.height = "50px";
+  showMember.style.width = "50px";
+  showMember.style.backgroundColor = "#f2f2f2";
+  showMember.style.borderRadius = "50%";
+
+
+  whichMember.setAttribute("id", "whichMember");
+  whichMember.textContent = check;
+  whichMember.style.fontSize = "40px";
+  whichMember.align = "center";
+
+  console.log(check);
+}
+
 
 function removeCard(nr) {
   const card = document.getElementById("card" + nr)
@@ -198,6 +243,190 @@ function createPopUp(nr) {
   var dueDateInput = document.createElement("input");
   var dueP = document.createElement("p");
   var textnode = document.createTextNode("Deadline");
+
+
+  var dropDownDiv = document.createElement("div");
+  var dropDownMenu = document.createElement("div");
+  var dropdownbtn0 = document.createElement("button");
+  var dropdownbtn1 = document.createElement("button");
+  var dropdownbtn2 = document.createElement("button");
+  var dropdownbtn3 = document.createElement("button");
+  var dropdownbtn4 = document.createElement("button");
+  var dropdownbtn5 = document.createElement("button");
+  var dropdownbtn6 = document.createElement("button");
+  var memberDiv = document.createElement("div");
+
+  memberDiv.setAttribute("class", "mDiv");
+  dropDownDiv.setAttribute("class", "dropdown");
+  dropdownbtn0.setAttribute("class", "dropbtn");
+  dropdownbtn0.onclick = function dropFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  dropdownbtn0.innerHTML = "Medlemmer";
+  dropDownMenu.setAttribute("id", "myDropdown");
+  dropDownMenu.setAttribute("class", "dropdownContent");
+
+  dropdownbtn1.setAttribute("id", "member1");
+  dropdownbtn1.setAttribute("id", "member2");
+  dropdownbtn1.setAttribute("id", "member3");
+  dropdownbtn1.setAttribute("id", "member4");
+  dropdownbtn1.setAttribute("id", "member5");
+  dropdownbtn1.setAttribute("id", "member6");
+
+  dropdownbtn1.setAttribute("class", "memberButton");
+  dropdownbtn2.setAttribute("class", "memberButton");
+  dropdownbtn3.setAttribute("class", "memberButton");
+  dropdownbtn4.setAttribute("class", "memberButton");
+  dropdownbtn5.setAttribute("class", "memberButton");
+  dropdownbtn6.setAttribute("class", "memberButton");
+
+
+  /* Her ble det litt rotete. Siden alt er inni en modal måtte vi kalle på funksjoner
+  rett etter hver knapp. Denne funksjonen lager en runding og første bokstav på
+  hvilket medlem som er lagt til. */
+  dropdownbtn1.onclick = function addMember() {
+    var showMember = document.createElement("div");
+    var whichMember = document.createElement("div");
+
+    memberDiv.appendChild(showMember);
+    showMember.appendChild(whichMember);
+
+    showMember.setAttribute("id", "showMember");
+    showMember.setAttribute("class", "showMember");
+    showMember.style.height = "50px";
+    showMember.style.width = "50px";
+    showMember.style.backgroundColor = "#f2f2f2";
+    showMember.style.borderRadius = "50%";
+    showMember.style.margin = "5px";
+
+
+    whichMember.setAttribute("id", "whichMember");
+    whichMember.textContent = "B";
+    whichMember.style.fontSize = "40px";
+    whichMember.align = "center";
+  }
+  dropdownbtn2.onclick = function addMember() {
+    var showMember = document.createElement("div");
+    var whichMember = document.createElement("div");
+
+    memberDiv.appendChild(showMember);
+    showMember.appendChild(whichMember);
+
+    showMember.setAttribute("id", "showMember");
+    showMember.setAttribute("class", "showMember");
+    showMember.style.height = "50px";
+    showMember.style.width = "50px";
+    showMember.style.backgroundColor = "#f2f2f2";
+    showMember.style.borderRadius = "50%";
+    showMember.style.margin = "5px";
+
+
+    whichMember.setAttribute("id", "whichMember");
+    whichMember.textContent = "M";
+    whichMember.style.fontSize = "40px";
+    whichMember.align = "center";
+  }
+  dropdownbtn3.onclick = function addMember() {
+    var showMember = document.createElement("div");
+    var whichMember = document.createElement("div");
+
+    memberDiv.appendChild(showMember);
+    showMember.appendChild(whichMember);
+
+    showMember.setAttribute("id", "showMember");
+    showMember.setAttribute("class", "showMember");
+    showMember.style.height = "50px";
+    showMember.style.width = "50px";
+    showMember.style.backgroundColor = "#f2f2f2";
+    showMember.style.borderRadius = "50%";
+    showMember.style.margin = "5px";
+
+
+    whichMember.setAttribute("id", "whichMember");
+    whichMember.textContent = "F";
+    whichMember.style.fontSize = "40px";
+    whichMember.align = "center";
+  }
+  dropdownbtn4.onclick = function addMember() {
+    var showMember = document.createElement("div");
+    var whichMember = document.createElement("div");
+
+    memberDiv.appendChild(showMember);
+    showMember.appendChild(whichMember);
+
+    showMember.setAttribute("id", "showMember");
+    showMember.setAttribute("class", "showMember");
+    showMember.style.height = "50px";
+    showMember.style.width = "50px";
+    showMember.style.backgroundColor = "#f2f2f2";
+    showMember.style.borderRadius = "50%";
+    showMember.style.margin = "5px";
+
+
+    whichMember.setAttribute("id", "whichMember");
+    whichMember.textContent = "M";
+    whichMember.style.fontSize = "40px";
+    whichMember.align = "center";
+  }
+  dropdownbtn5.onclick = function addMember() {
+    var showMember = document.createElement("div");
+    var whichMember = document.createElement("div");
+
+    memberDiv.appendChild(showMember);
+    showMember.appendChild(whichMember);
+
+    showMember.setAttribute("id", "showMember");
+    showMember.setAttribute("class", "showMember");
+    showMember.style.height = "50px";
+    showMember.style.width = "50px";
+    showMember.style.backgroundColor = "#f2f2f2";
+    showMember.style.borderRadius = "50%";
+    showMember.style.margin = "5px";
+
+
+    whichMember.setAttribute("id", "whichMember");
+    whichMember.textContent = "S";
+    whichMember.style.fontSize = "40px";
+    whichMember.align = "center";
+  }
+  dropdownbtn6.onclick = function addMember() {
+    var showMember = document.createElement("div");
+    var whichMember = document.createElement("div");
+
+    memberDiv.appendChild(showMember);
+    showMember.appendChild(whichMember);
+
+    showMember.setAttribute("id", "showMember");
+    showMember.setAttribute("class", "showMember");
+    showMember.style.height = "50px";
+    showMember.style.width = "50px";
+    showMember.style.backgroundColor = "#f2f2f2";
+    showMember.style.borderRadius = "50%";
+    showMember.style.margin = "5px";
+
+
+    whichMember.setAttribute("id", "whichMember");
+    whichMember.textContent = "E";
+    whichMember.style.fontSize = "40px";
+    whichMember.align = "center";
+  }
+
+  dropdownbtn1.innerHTML = "Bjarne";
+  dropdownbtn2.innerHTML = "Mats";
+  dropdownbtn3.innerHTML = "Fazal";
+  dropdownbtn4.innerHTML = "Martin";
+  dropdownbtn5.innerHTML = "Stian";
+  dropdownbtn6.innerHTML = "Even";
+
+  modalDiv.appendChild(dropDownDiv);
+  dropDownDiv.appendChild(dropdownbtn0);
+  dropDownDiv.appendChild(dropDownMenu);
+  dropDownMenu.appendChild(dropdownbtn1);
+  dropDownMenu.appendChild(dropdownbtn2);
+  dropDownMenu.appendChild(dropdownbtn3);
+  dropDownMenu.appendChild(dropdownbtn4);
+  dropDownMenu.appendChild(dropdownbtn5);
+  dropDownMenu.appendChild(dropdownbtn6);
 
 
   dueP.setAttribute("class", "dueDateP");
@@ -237,10 +466,11 @@ function createPopUp(nr) {
     newText.textContent = inputText;
   }
 
-  //?????????????
   var i = 1;
 
-  chckbxBtn.onclick = function createCheckBox(obj) {
+  chckbxBtn.addEventListener("click", function(e) { createCheckBox(prod)});
+
+  function createCheckBox(obj){
     if (obj.value !== "") {
 
       var checkbox = document.createElement("input");
@@ -254,6 +484,7 @@ function createPopUp(nr) {
       label.setAttribute("for", "prodName" + i);
 
       label.appendChild(document.createTextNode(obj.value));
+      label.style.color = "#f2f2f2";
 
       chckbxDiv.appendChild(checkbox);
       chckbxDiv.appendChild(label);
@@ -263,7 +494,9 @@ function createPopUp(nr) {
 
       i = i + 1;
     }
-  }
+  };
+
+
   chckbxBtn.setAttribute("class", "chckbxBtn");
   chckbxBtn.innerHTML = "Create task";
   chckbxDiv.setAttribute("class", "chckbxDiv");
@@ -301,6 +534,8 @@ function createPopUp(nr) {
   modalDiv.appendChild(descDiv)
   modalDiv.appendChild(chckbxDiv)
   modalDiv.appendChild(addFile);
+  modalDiv.appendChild(memberDiv);
+
 
   headerDiv.innerHTML = document.getElementById("input").value;
 
@@ -310,12 +545,15 @@ function createPopUp(nr) {
 
   // unfinished business
   /*  window.onclick = function(event) {
-      if (event.target == modalDiv) {
-        modalDiv.style.display = "none";
-      }
-    } */
-
+  if (event.target == modalDiv) {
+  modalDiv.style.display = "none";
 }
+} */
+}
+// ======================== /POP UP ======================== //
+
+
+
 
 
 // Drag and drop funksjoner
@@ -333,6 +571,7 @@ Sortable.create(tavle3, {
   animation: 150,
   group: 'shared'
 });
+
 
 Sortable.create(tavle4, {
   animation: 150,
