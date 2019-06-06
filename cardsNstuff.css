@@ -14,9 +14,7 @@ background-color: #f2f2f2;
 
 #tavleContainer {
 display: flex;
-width: auto;
-margin-right: auto;
-flex-direction: row;
+margin-left: 2%;
 }
 
 .popUpBtns {
@@ -94,6 +92,7 @@ min-width: 250px;
   border-radius: 10px;
   opacity:0.9;
   display: block;
+  cursor: move;
 }
 .textInput {
   border-top-left-radius: 10px;
@@ -197,8 +196,10 @@ p {
 .chckbxBtn {
    margin: 5px;
    position: relative;
-   height:auto;
-   width: auto;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 20px;
+   padding-right: 20px;
    border-radius: 4px;
    background-color:#50D160;
    color:#fff;
@@ -260,6 +261,7 @@ p {
   padding: 3px 5px;
   width: 140px;
 }
+
 .flagDiv {
   position:relative;
   float: right;
