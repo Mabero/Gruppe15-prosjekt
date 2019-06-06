@@ -8,7 +8,6 @@ body {
 margin: 0px;
 overflow-x: scroll;
 background-color: #f2f2f2;
-height: auto;
 }
 
 /* ============= Tavler ==============*/
@@ -66,10 +65,22 @@ color: #f2f2f2;
 border-radius: 15px;
 display: table;
 min-height: 69px;
-margin-left: 30px;
-margin-bottom: 30px;
+margin-bottom: 10px;
 min-width: 250px;
 }
+
+.tavleWrap {
+background-color: #fff;
+height: auto;
+text-align: center;
+color: #f2f2f2;
+border-radius: 15px;
+display: table;
+min-height: 69px;
+margin-left: 30px;
+min-width: 250px;
+}
+
 
 .card {
   margin-left: auto;

@@ -1,0 +1,20 @@
+#ratingContainer {
+    height: 50px;
+    width: 300px;
+    color: gold;
+}
+
+ .rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > p {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > p:hover:before,
+.rating > p:hover ~ p:before {
+   content: "\2605";
+   position: absolute;
+}

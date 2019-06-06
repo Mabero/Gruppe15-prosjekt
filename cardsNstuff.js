@@ -38,10 +38,12 @@ function createCard(nr) {
     if (flagged == 0) {
       flagSpan.style.color = "#f06969"
       flagged = 1
+      console.log(1)
       return false;
     } else {
       flagSpan.style.color = "#d3d3d3"
       flagged = 0
+      console.log(0)
       return false;
     }
   }
@@ -74,7 +76,7 @@ function createCard(nr) {
   popUpBtn.setAttribute("onclick", "createPopUp()");
 
   /* Styler og setter daddy (new card) til alle elementene som
-  skal være på kortet. */
+   skal være på kortet. */
   newCard.appendChild(xspan);
   newCard.appendChild(text);
   newCard.setAttribute("draggable", "true");
@@ -124,6 +126,8 @@ function createCard(nr) {
       const star = document.getElementById('star' + starcounter + i);
       star.setAttribute("class", "fav");
 
+      console.log("klikka på" + stars[i]);
+
       if (star.className = "fav") {
         star.innerHTML = "★";
         document.getElementsByClassName("fav");
@@ -137,23 +141,23 @@ function createCard(nr) {
   /*
   stars.onclick = function changeColor1(nr) {
 
-  for (var i = 1; i <= 5; i++) {
-  if (i <= nr) {
-  document.getElementById('star' + i).style.color = "gold"
-  document.getElementById('star' + i).innerHTML = "★"
-} else {
-document.getElementById('star' + i).style.color = "gold"
-document.getElementById('star' + i).innerHTML = "☆"
-}
+    for (var i = 1; i <= 5; i++) {
+      if (i <= nr) {
+        document.getElementById('star' + i).style.color = "gold"
+        document.getElementById('star' + i).innerHTML = "★"
+      } else {
+        document.getElementById('star' + i).style.color = "gold"
+        document.getElementById('star' + i).innerHTML = "☆"
+      }
 
-}
+    }
 
-}*/
+  }*/
 }
 // ======================== /CREATE CARD ======================== //
 
 function dropFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("myDropdown").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
@@ -167,32 +171,31 @@ window.onclick = function (event) {
         openDropdown.classList.remove('show');
       }
     }
-  }
 }
 
 // Funksjonen som velger fra dropdown menyen hvilket medlem som er tillagt kortet.
 
 function addMember(check) {
-  var showMember = document.createElement("div");
-  var whichMember = document.createElement("div");
+    var showMember = document.createElement("div");
+    var whichMember = document.createElement("div");
 
-  modalDiv.appendChild(showMember);
-  showMember.appendChild(whichMember);
+    modalDiv.appendChild(showMember);
+    showMember.appendChild(whichMember);
 
-  showMember.setAttribute("id", "showMember");
-  showMember.setAttribute("class", "showMember");
-  showMember.style.height = "50px";
-  showMember.style.width = "50px";
-  showMember.style.backgroundColor = "#f2f2f2";
-  showMember.style.borderRadius = "50%";
+    showMember.setAttribute("id", "showMember");
+    showMember.setAttribute("class", "showMember");
+    showMember.style.height = "50px";
+    showMember.style.width = "50px";
+    showMember.style.backgroundColor = "#f2f2f2";
+    showMember.style.borderRadius = "50%";
 
 
-  whichMember.setAttribute("id", "whichMember");
-  whichMember.textContent = check;
-  whichMember.style.fontSize = "40px";
-  whichMember.align = "center";
+    whichMember.setAttribute("id", "whichMember");
+    whichMember.textContent = check;
+    whichMember.style.fontSize = "40px";
+    whichMember.align = "center";
 
-  console.log(check);
+    console.log(check);
 }
 
 
@@ -201,7 +204,7 @@ function removeCard(nr) {
   card.remove()
 };
 
-// Lager pop up modal window med div funksjoner.
+// ======================== POP UP ======================== //
 function createPopUp(nr) {
   var modalDiv = document.createElement("div");
   var headerDiv = document.createElement("div");
@@ -239,7 +242,7 @@ function createPopUp(nr) {
   dropDownDiv.setAttribute("class", "dropdown");
   dropdownbtn0.setAttribute("class", "dropbtn");
   dropdownbtn0.onclick = function dropFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+      document.getElementById("myDropdown").classList.toggle("show");
   }
   dropdownbtn0.innerHTML = "Medlemmer";
   dropDownMenu.setAttribute("id", "myDropdown");
@@ -260,9 +263,9 @@ function createPopUp(nr) {
   dropdownbtn6.setAttribute("class", "memberButton");
 
 
-  /* Her ble det litt rotete. Siden alt er inni en modal måtte vi kalle på funksjoner
-  rett etter hver knapp. Denne funksjonen lager en runding og første bokstav på
-  hvilket medlem som er lagt til. */
+/* Her ble det litt rotete. Siden alt er inni en modal måtte vi kalle på funksjoner
+rett etter hver knapp. Denne funksjonen lager en runding og første bokstav på
+hvilket medlem som er lagt til. */
   dropdownbtn1.onclick = function addMember() {
     var showMember = document.createElement("div");
     var whichMember = document.createElement("div");
@@ -347,26 +350,27 @@ function createPopUp(nr) {
     whichMember.style.fontSize = "40px";
     whichMember.align = "center";
   }
+}
   dropdownbtn5.onclick = function addMember() {
     var showMember = document.createElement("div");
-    var whichMember = document.createElement("div");
+  var whichMember = document.createElement("div");
 
-    memberDiv.appendChild(showMember);
-    showMember.appendChild(whichMember);
+  memberDiv.appendChild(showMember);
+  showMember.appendChild(whichMember);
 
-    showMember.setAttribute("id", "showMember");
-    showMember.setAttribute("class", "showMember");
-    showMember.style.height = "50px";
-    showMember.style.width = "50px";
-    showMember.style.backgroundColor = "#f2f2f2";
-    showMember.style.borderRadius = "50%";
-    showMember.style.margin = "5px";
+  showMember.setAttribute("id", "showMember");
+  showMember.setAttribute("class", "showMember");
+  showMember.style.height = "50px";
+  showMember.style.width = "50px";
+  showMember.style.backgroundColor = "#f2f2f2";
+  showMember.style.borderRadius = "50%";
+  showMember.style.margin = "5px";
 
 
-    whichMember.setAttribute("id", "whichMember");
-    whichMember.textContent = "S";
-    whichMember.style.fontSize = "40px";
-    whichMember.align = "center";
+  whichMember.setAttribute("id", "whichMember");
+  whichMember.textContent = "S";
+  whichMember.style.fontSize = "40px";
+  whichMember.align = "center";
   }
   dropdownbtn6.onclick = function addMember() {
     var showMember = document.createElement("div");
@@ -445,6 +449,7 @@ function createPopUp(nr) {
     newText.textContent = inputText;
   }
 
+  //?????????????
   var i = 1;
 
   chckbxBtn.addEventListener("click", function (e) { createCheckBox(prod) });
@@ -463,7 +468,6 @@ function createPopUp(nr) {
       label.setAttribute("for", "prodName" + i);
 
       label.appendChild(document.createTextNode(obj.value));
-      label.style.color = "#f2f2f2";
 
       chckbxDiv.appendChild(checkbox);
       chckbxDiv.appendChild(label);
@@ -473,9 +477,7 @@ function createPopUp(nr) {
 
       i = i + 1;
     }
-  };
-
-
+  }
   chckbxBtn.setAttribute("class", "chckbxBtn");
   chckbxBtn.innerHTML = "Create task";
   chckbxDiv.setAttribute("class", "chckbxDiv");
@@ -524,40 +526,45 @@ function createPopUp(nr) {
 
   // unfinished business
   /*  window.onclick = function(event) {
-  if (event.target == modalDiv) {
-  modalDiv.style.display = "none";
-}
-} */
+      if (event.target == modalDiv) {
+        modalDiv.style.display = "none";
+      }
+    } */
 }
 // ======================== /POP UP ======================== //
 
 
-
-
-
 // Drag and drop funksjoner
 
+let cardInfo = [];
+
 Sortable.create(tavle1, {
-  group: 'shared'
+  group: 'shared',
+  animation: 150,
+  filter: ".cardBtns"
 });
 
 Sortable.create(tavle2, {
   animation: 150,
-  group: 'shared'
+  group: 'shared',
+  filter: ".cardBtns"
 });
 
 Sortable.create(tavle3, {
   animation: 150,
-  group: 'shared'
+  group: 'shared',
+  filter: ".cardBtns"
 });
 
 
 Sortable.create(tavle4, {
   animation: 150,
-  group: 'shared'
+  group: 'shared',
+  filter: ".cardBtns"
 });
 
 Sortable.create(tavle5, {
   animation: 150,
-  group: 'shared'
+  group: 'shared',
+  filter: ".cardBtns"
 });

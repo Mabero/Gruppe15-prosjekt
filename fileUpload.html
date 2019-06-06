@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <head>
+            <style>
+                #fileButton {
+                    padding: 7px;
+                    color: white;
+                    background-color: #50D160;  
+                    border: none;
+                    border-radius: 6px;
+                    cursor: pointer;
+                }
+
+                #fileButton:hover {
+                    background-color: #F29696;
+
+                }
+
+                #addFileText {
+                    margin-left: 10px;
+                    /*font-famlily:;*/
+                    color: #000;
+
+
+                }
+            
+            </style>
+
+        </head>
+        <input type="file" id="realFileButton" hidden="hidden" multiple/>
+        <button type="button" id="fileButton">Upload file</button>
+        <span id="addFileText">No file chosen.</span>
+
+        <script type="text/javascript">
+            var realFileButton = document.getElementById("realFileButton");
+            var fileButton = document.getElementById("fileButton");
+            var addFileText = document.getElementById("addFileText");
+
+            fileButton.addEventListener("click", function() {
+                realFileButton.click();
+            });
+
+            realFileButton.addEventListener("change", function() {
+                if(realFileButton.value) {
+                    addFileText.innerHTML = realFileButton.value;
+                } else {
+                    addFileText.innerHTML = "No file chosen";
+                }
+            })
+        </script>
+
+    </body>
+</html>
