@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
 
 * {
-font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-margin: 0px;
-overflow-x: scroll;
-background-color: #f2f2f2;
+  margin: 0px;
+  overflow-x: scroll;
+  background-color: #f2f2f2;
 }
 
 /* ============= Tavler ==============*/
 
-
-
 #tavleContainer {
-display: flex;
-margin-left: 2%;
+  display: flex;
+  margin-left: 2%;
 }
 
 .popUpBtns {
@@ -27,8 +25,8 @@ margin-left: 2%;
   margin-left: auto;
   margin-right: auto;
   padding-right: 10px;
-  background-color:#50D160;
-  color:#f2f2f2;
+  background-color: #50d160;
+  color: #f2f2f2;
   font-weight: 500;
   border: none;
   cursor: pointer;
@@ -46,27 +44,29 @@ margin-left: 2%;
   font-size: 14px;
   font-weight: 600;
   color: #f2f2f2;
-  background-color: #50D160;
+  background-color: #50d160;
   border: none;
   border-radius: 10px;
 }
 
-.cardBtns:hover, .popUpBtns:hover, #boardsBtn:hover  {
+.cardBtns:hover,
+.popUpBtns:hover,
+#boardsBtn:hover {
   background-color: #3ca048;
   transition: 0.5s;
   cursor: pointer;
 }
 
 .tavle {
-background-color: #fff;
-height: auto;
-text-align: center;
-color: #f2f2f2;
-border-radius: 15px;
-display: table;
-min-height: 69px;
-margin-bottom: 10px;
-min-width: 250px;
+  background-color: #fff;
+  height: auto;
+  text-align: center;
+  color: #f2f2f2;
+  border-radius: 15px;
+  display: table;
+  min-height: 69px;
+  margin-bottom: 10px;
+  min-width: 250px;
 }
 
 .tavleTitle {
@@ -83,22 +83,21 @@ min-width: 250px;
 }
 
 .tavleWrap {
-background-color: #fff;
-height: auto;
-text-align: center;
-color: #f2f2f2;
-border-radius: 15px;
-display: table;
-min-height: 69px;
-margin-left: 25px;
-max-width: 240px;
+  background-color: #fff;
+  height: auto;
+  text-align: center;
+  color: #f2f2f2;
+  border-radius: 15px;
+  display: table;
+  min-height: 69px;
+  margin-left: 25px;
+  max-width: 240px;
 }
 
 .tavleTitle::placeholder {
   color: #b8b8b8;
   font-weight: 400;
 }
-
 
 .card {
   margin-left: auto;
@@ -108,9 +107,9 @@ max-width: 240px;
   height: 100px;
   width: 220px;
   color: #f2f2f2;
-  background-color: #4F6976;
+  background-color: #4f6976;
   border-radius: 10px;
-  opacity:0.9;
+  opacity: 0.9;
   display: block;
   cursor: move;
 }
@@ -123,7 +122,7 @@ max-width: 240px;
   color: #f2f2f2;
   font-size: 22px;
   font-weight: 500;
-  border:none;
+  border: none;
   width: 99%;
   height: 35px;
   margin-left: auto;
@@ -142,25 +141,32 @@ max-width: 240px;
   border-radius: 10px;
   z-index: 1;
   left: 25vw;
-  top: 5vw;
+  top: 50px;
   width: 50%;
   height: 80%;
-  background-color: #4F6976;
+  background-color: #4f6976;
 }
 
 p {
   margin: 5px;
   color: #f2f2f2;
-  display: block
+  display: block;
 }
 
 .headerDiv {
-  background-color: #4F6976;
-  height: auto;
+  background-color: #5f8091;
   margin: 15px;
-  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  padding-left: 130px;
+  font-weight: 500;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0px;
+  padding-top: 10px;
+  margin-bottom: 30px;
   border: none;
-  width: 80%;
   color: #f2f2f2;
 }
 
@@ -173,8 +179,10 @@ p {
   margin-bottom: 5px;
   color: #f2f2f2;
   float: left;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
+  padding-left: 15px;
+  padding-top: 3px;
   height: 20px;
   width: 20px;
 }
@@ -205,85 +213,84 @@ p {
 }
 
 #prod {
-   margin:5px;
-   border-radius: 4px;
-   width: auto;
-   border: none;
-   display: block;
-   background-color: #f2f2f2;
+  margin-left: 20px;
+  margin-top: 0;
+  width: 225px;
+  padding: 10px;
+  border: none;
+  display: block;
+  background-color: #f2f2f2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .chckbxBtn {
-   margin: 5px;
-   position: relative;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   padding-left: 20px;
-   padding-right: 20px;
-   border-radius: 4px;
-   background-color:#50D160;
-   color:#fff;
-   border: none;
-   cursor: pointer;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #50d160;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  width: 245px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .descBtn {
-   position: relative;
-   top: 2px;
-   left: 500px;
-   height:auto;
-   width: auto;
-   border-radius: 4px;
-   background-color:#50D160;
-   color:#fff;
-   border: none;
-   cursor: pointer;
+  position: relative;
+  height: auto;
+  width: 244px;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #50d160;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 .addFileButton {
-   margin:5px;
-   position: relative;
-   top: 20px;
-   height:auto;
-   width: auto;
-   border-radius: 4px;
-   background-color:#50D160;
-   color:#fff;
-   border: none;
-   cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  height: auto;
+  width: auto;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #50d160;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
- textarea {
-    display: block;
-    font-size: 14px;
-    width:200px;
-    margin: 10px auto;
-    margin-top: 30px;
-    padding: none;
-    border-radius: 14px;
-    background-color: #f2f2f2;
-    border: none;
-    width: 400px;
-    height: 70px;
-    border: none;
-    }
-
 p {
-    margin: 10px auto;
-    margin-top: 30px;
+  margin: 10px auto;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .dueDate {
-  margin: 5px;
+  margin-left: 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #f2f2f2;
-  padding: 3px 5px;
-  width: 140px;
+  padding: 5px 5px;
+  width: 235px;
+  color: black !important;
 }
 
 .flagDiv {
-  position:relative;
+  position: relative;
   float: right;
   margin-right: 10px;
   font-size: 20px;
@@ -297,15 +304,15 @@ p {
 }
 
 .dueDateP {
-  margin: 3px;
+  margin-left: 20px;
   padding: 3px;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 #starContainer {
   height: 100px;
   margin-top: 34px;
-  padding-left: 10px;
   width: 100px;
   display: flex;
   position: absolute;
@@ -313,75 +320,76 @@ p {
 }
 
 #starContainer * {
-  padding-right: 10px;
   font-size: 16px;
+  margin-left: 5px;
+  padding-left: 5px;
   color: gold;
 }
 
 .dropbtn {
-    background-color: #f06969;
-    color: white;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-size: 23px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    width: 510px;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 15px;
-    float: right;
+  background-color: #f06969;
+  color: white;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 23px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 140px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 15px;
+  float: right;
 }
 
 .dropbtn:hover,
 .dropbtn:focus {
-
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
-    width: 510px;
+  position: relative;
+  display: inline-block;
+  float: right;
 }
 
 .dropdownContent {
-    display: none;
-    position: absolute;
-    overflow: auto;
-    z-index: 1;
-    top: 50px;
-    height: 200px;
-    padding-top: 30px;
-    background-color: #f06969;
-    border-bottom-right-radius: 15px;
+  display: none;
+  position: absolute;
+  overflow: auto;
+  z-index: 1;
+  top: 50px;
+  height: 200px;
+  width: 140px;
+  padding-top: 30px;
+  background-color: #f06969;
+  border-bottom-left-radius: 15px;
 }
 
 .dropdownContent button {
-  width: 145.2px;
   background-color: #f06969;
-  border:none;
+  border: none;
   color: #f2f2f2;
 }
 
 .dropdown a:hover {
-    background-color: #F29696;
+  background-color: #f29696;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
 .memberButton {
-    display: grid;
-    grid-column: auto;
-    width: 131px;
-    height: 30px;
-    margin: 2px;
-    background-color: #eec4c4;
-    font-size: 14px;
-  }
+  display: grid;
+  grid-column: auto;
+  width: 131px;
+  height: 30px;
+  margin: 2px;
+  background-color: #eec4c4;
+  font-size: 14px;
+}
 
 .memberButton:hover {
+<<<<<<< HEAD
     background-color: #f08080;
     font-size: 22px;
     transition: 0.5s;
@@ -419,3 +427,60 @@ p {
    font-size: 20px;
    display: none;
  }
+=======
+  background-color: #f08080;
+  font-size: 22px;
+  transition: 0.5s;
+  color: #ffd460;
+  cursor: pointer;
+}
+
+.mDiv {
+  display: flex;
+  position: aboslute;
+  bottom: 10px;
+  padding-left: 10px;
+  display: block;
+  width: 250px;
+}
+
+.boardName {
+  font-size: 20px;
+  text-align: center;
+}
+
+#showMember {
+  position: relative;
+  float: left;
+}
+
+.textArea {
+  display: block;
+  width: 240px;
+  height: 150px;
+  border: none;
+  margin-left: 10px;
+  margin-top: 30px;
+  border-radius: 5px;
+  resize: none;
+  padding: none;
+  font-size: 14px;
+  background-color: #f2f2f2;
+}
+
+.chckbxDiv label {
+  color: #f2f2f2;
+  margin-left: 20px;
+}
+
+.chckbxDiv {
+  position: absolute;
+  top: 23.2%;
+  left: 40%;
+}
+
+.chckbxDiv input {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+>>>>>>> 31b7c35ece778d419b89b2a72f8d94455f923f3a

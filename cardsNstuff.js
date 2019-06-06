@@ -220,14 +220,13 @@ function createPopUp(nr) {
   var fileTextSpan = document.createElement("span");
   var fileInput = document.createElement("input");
   var descDiv = document.createElement("div");
-  var textArea = document.createElement("TEXTAREA");
-  var descBtn = document.createElement("button");
+  var textArea = document.createElement("textarea");
   var addFile = document.createElement("INPUT");
   var dueDateDiv = document.createElement("div");
   var dueDateLabel = document.createElement("label");
   var dueDateInput = document.createElement("input");
   var dueP = document.createElement("p");
-  var textnode = document.createTextNode("Deadline");
+  var textnode = document.createTextNode("Set deadline");
 
 
   var dropDownDiv = document.createElement("div");
@@ -443,15 +442,6 @@ function createPopUp(nr) {
   textArea.placeholder = "Type description here";
   textArea.setAttribute("class", "descArea");
 
-  descBtn.setAttribute("class", "descBtn");
-  descBtn.innerHTML = "Add Description";
-  descBtn.onclick = function text2() {
-    var inputText = document.getElementsByName("tekst")[0].value;
-    var newText = document.createElement("p");
-    descDiv.appendChild(newText);
-    newText.textContent = inputText;
-  }
-
   //?????????????
   var i = 1;
 
@@ -504,7 +494,6 @@ function createPopUp(nr) {
 
   //set daddy (descDiv) til textarea og button.
   descDiv.appendChild(textArea)
-  descDiv.appendChild(descBtn)
 
   //set daddy (chckbxDiv) til checkbox og checkboxbutton
   chckbxDiv.appendChild(chckbx)
