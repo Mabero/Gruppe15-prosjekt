@@ -134,6 +134,24 @@ body {
   font-size: 14px;
 }
 
+#tavlewrap4, #tavlewrap5 {
+  display: none !important;
+}
+
+#BoardBtn {
+  margin-top: 53px;
+  margin-left: 30px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f2f2f2;
+  background-color: #50d160;
+  border: none;
+  border-radius: 10px;
+  width: 220px;
+  height: 40px;
+}
+
 /* ============== MODAL BOX ============== */
 
 .modal {
@@ -175,15 +193,13 @@ p {
 }
 
 .close {
-  position: relative;
-  margin-bottom: 5px;
+  position: absolute;
   color: #f2f2f2;
   float: left;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
-  padding-left: 15px;
-  padding-top: 3px;
-  height: 20px;
+  padding-left: 5px;
+  height: 30px;
   width: 20px;
 }
 
@@ -339,10 +355,6 @@ p {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 15px;
   float: right;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
 }
 
 .dropdown {
