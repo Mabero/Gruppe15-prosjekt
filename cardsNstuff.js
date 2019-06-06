@@ -7,34 +7,6 @@ var flagCounter = 0;
 var cardBtnsArray = [];
 let counterList = 3;
 
-//funskjon som lager ny tavle
-boardsBtn.addEventListener("click", function () {
-  //DOM elementer
-  var newDiv = document.createElement("div")
-  const newCardBtns = document.createElement("button");
-  newDiv.className = "tavle";
-
-
-  counterList++;
-
-  newDiv.id = "tavle" + counterList;
-
-  //append child for ny tavle:
-  tavleContainer.appendChild(newDiv);
-  newDiv.after(boardsBtn);
-
-  newCardBtns.textContent = "+ Add new card";
-  newCardBtns.className = "cardBtns";
-  newCardBtns.setAttribute("onclick", "createCard(" + counterList + ")")
-
-  cardBtnsArray.push(newCardBtns);
-
-  newDiv.appendChild(newCardBtns);
-
-  
-
-  return newDiv;
-});
 
 
 
@@ -368,31 +340,6 @@ Sortable.create(tavle4, {
 });
 
 Sortable.create(tavle5, {
-  animation: 150,
-  group: 'shared'
-});
-
-Sortable.create(tavle6, {
-  animation: 150,
-  group: 'shared'
-});
-
-Sortable.create(tavle7, {
-  animation: 150,
-  group: 'shared'
-});
-
-Sortable.create(tavle8, {
-  animation: 150,
-  group: 'shared'
-});
-
-Sortable.create(tavle9, {
-  animation: 150,
-  group: 'shared'
-});
-
-Sortable.create(tavle10, {
   animation: 150,
   group: 'shared'
 });
