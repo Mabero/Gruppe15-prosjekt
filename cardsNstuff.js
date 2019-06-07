@@ -547,7 +547,6 @@ var yoyo2 = document.getElementById("tavlewrap5");
 yoyo1.style.display = "none";
 yoyo2.style.display = "none";
 
-
 function addBoard() {
   var buttonbutton = document.getElementById("newBoardBtn");
 
@@ -577,26 +576,26 @@ function addBoard() {
 
 Sortable.create(tavle1, {
   group: 'shared',
-  animation: 150
+  animation: 100
 });
 
 Sortable.create(tavle2, {
-  animation: 150,
+  animation: 100,
   group: 'shared'
 });
 
 Sortable.create(tavle3, {
-  animation: 150,
+  animation: 100,
   group: 'shared'
 });
 
 
 Sortable.create(tavle4, {
-  animation: 150,
+  animation: 100,
   group: 'shared'
 });
 
 Sortable.create(tavle5, {
-  animation: 150,
+  animation: 100,
   group: 'shared'
 });
